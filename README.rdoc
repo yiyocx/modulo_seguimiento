@@ -1,9 +1,9 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Implementación del Modulo de Seguimiento que hace parte del Sistema de Información Integrado Comunidad Colciencias
+como proyecto de desarrollo para la asignatura "Ingenieria de Software 3" de la Universidad del Quindio.
 
-Things you may want to cover:
+Requerimientos:
 
 * Ruby version
 
