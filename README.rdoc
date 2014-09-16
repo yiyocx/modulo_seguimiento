@@ -1,4 +1,4 @@
-= SII Comunidad Colciencias - Modulo de Seguimiento
+== SII Comunidad Colciencias - Modulo de Seguimiento
 
 Implementación del Modulo de Seguimiento que hace parte del Sistema de Información Integrado Comunidad Colciencias
 como proyecto de desarrollo para la asignatura "Ingenieria de Software 3" de la Universidad del Quindio.
