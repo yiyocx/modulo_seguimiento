@@ -26,6 +26,22 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
+# Gemas para ser usadas solo en el ambiente de desarrollo
+group :development do
+
+  # Gema para ver descripciones mas claras de los errores en el navegador
+  gem "better_errors"
+
+  # Gema que agrega una consola REPL para hacer debug sobre el codigo 
+  gem "binding_of_caller"
+
+  # Gema para provee una interfaz para manipular la base de datos mas facilmente
+  gem "rails_admin"
+
+  # Gema que añade comentarios automáticamente sobre el código
+  gem 'annotate'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
