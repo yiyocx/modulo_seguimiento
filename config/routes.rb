@@ -53,4 +53,8 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  if Rails.env.development?
+    mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  end
 end
