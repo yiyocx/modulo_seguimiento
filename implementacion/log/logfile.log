@@ -1,0 +1,1980 @@
+# Logfile created on 2014-10-04 11:29:28 -0500 by logger.rb/44203
+Connecting to database specified by database.yml
+Creating scope :system. Overwriting existing method Enumeration.system.
+Creating scope :sorted. Overwriting existing method Group.sorted.
+Creating scope :sorted. Overwriting existing method User.sorted.
+Started GET "/" for 127.0.0.1 at 2014-10-04 11:29:31 -0500
+Processing by WelcomeController#index as HTML
+  Current user: admin (id=1)
+  Rendered welcome/index.html.erb within layouts/base (49.3ms)
+Completed 200 OK in 182.8ms (Views: 80.7ms | ActiveRecord: 47.1ms)
+Started GET "/my/page" for 127.0.0.1 at 2014-10-04 11:29:50 -0500
+Processing by MyController#page as HTML
+  Current user: admin (id=1)
+  Rendered issues/_list_simple.html.erb (1.8ms)
+  Rendered my/blocks/_issuesassignedtome.html.erb (48.5ms)
+  Rendered issues/_list_simple.html.erb (0.1ms)
+  Rendered my/blocks/_issuesreportedbyme.html.erb (9.5ms)
+  Rendered my/page.html.erb within layouts/base (66.1ms)
+Completed 200 OK in 85.9ms (Views: 46.4ms | ActiveRecord: 34.6ms)
+Started GET "/projects" for 127.0.0.1 at 2014-10-04 11:29:52 -0500
+Processing by ProjectsController#index as HTML
+  Current user: admin (id=1)
+  Rendered projects/index.html.erb within layouts/base (4.9ms)
+Completed 200 OK in 22.2ms (Views: 14.1ms | ActiveRecord: 4.9ms)
+Started GET "/admin" for 127.0.0.1 at 2014-10-04 11:29:55 -0500
+Processing by AdminController#index as HTML
+  Current user: admin (id=1)
+  Rendered admin/_menu.html.erb (4.5ms)
+  Rendered admin/index.html.erb within layouts/admin (5.9ms)
+  Rendered layouts/base.html.erb (10.5ms)
+Completed 200 OK in 23.5ms (Views: 16.3ms | ActiveRecord: 4.2ms)
+Started GET "/settings" for 127.0.0.1 at 2014-10-04 11:29:59 -0500
+Processing by SettingsController#index as HTML
+  Current user: admin (id=1)
+  Rendered settings/_general.html.erb (16.5ms)
+  Rendered settings/_display.html.erb (16.6ms)
+  Rendered settings/_authentication.html.erb (14.6ms)
+  Rendered settings/_projects.html.erb (22.9ms)
+  Rendered queries/_columns.html.erb (9.2ms)
+  Rendered settings/_issues.html.erb (43.8ms)
+  Rendered settings/_notifications.html.erb (12.5ms)
+  Rendered settings/_mail_handler.html.erb (6.6ms)
+  Rendered settings/_repositories.html.erb (87.5ms)
+  Rendered common/_tabs.html.erb (230.5ms)
+  Rendered settings/edit.html.erb within layouts/admin (231.8ms)
+  Rendered admin/_menu.html.erb (3.9ms)
+  Rendered layouts/base.html.erb (9.1ms)
+Completed 200 OK in 251.4ms (Views: 204.1ms | ActiveRecord: 44.4ms)
+Started POST "/settings/edit" for 127.0.0.1 at 2014-10-04 11:30:24 -0500
+Processing by SettingsController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IaRv3lWRxBVGKQmyiZuEnTm91HuyCcJAgj/wbhJZfQo=", "settings"=>{"app_title"=>"Redmine Issues and Bug Tracking", "welcome_text"=>"", "attachment_max_size"=>"5120", "per_page_options"=>"25,50,100", "activity_days_default"=>"30", "host_name"=>"localhost:3000", "protocol"=>"http", "text_formatting"=>"textile", "cache_formatted_text"=>"0", "wiki_compression"=>"", "feeds_limit"=>"15", "file_max_size_displayed"=>"512", "diff_max_lines_displayed"=>"1500", "repositories_encodings"=>""}, "commit"=>"Guardar"}
+  Current user: admin (id=1)
+Redirected to http://0.0.0.0:3000/settings
+Completed 302 Found in 193.0ms (ActiveRecord: 134.2ms)
+Started GET "/settings" for 127.0.0.1 at 2014-10-04 11:30:24 -0500
+Processing by SettingsController#index as HTML
+Settings cache cleared.
+  Current user: admin (id=1)
+  Rendered settings/_general.html.erb (22.3ms)
+  Rendered settings/_display.html.erb (15.5ms)
+  Rendered settings/_authentication.html.erb (16.0ms)
+  Rendered settings/_projects.html.erb (12.1ms)
+  Rendered queries/_columns.html.erb (4.2ms)
+  Rendered settings/_issues.html.erb (19.1ms)
+  Rendered settings/_notifications.html.erb (11.4ms)
+  Rendered settings/_mail_handler.html.erb (5.6ms)
+  Rendered settings/_repositories.html.erb (25.0ms)
+  Rendered common/_tabs.html.erb (130.7ms)
+  Rendered settings/edit.html.erb within layouts/admin (131.0ms)
+  Rendered admin/_menu.html.erb (13.1ms)
+  Rendered layouts/base.html.erb (9.4ms)
+Completed 200 OK in 160.3ms (Views: 111.5ms | ActiveRecord: 45.8ms)
+Started POST "/settings/edit" for 127.0.0.1 at 2014-10-04 11:30:39 -0500
+Processing by SettingsController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IaRv3lWRxBVGKQmyiZuEnTm91HuyCcJAgj/wbhJZfQo=", "settings"=>{"app_title"=>"Redmine Issues and Bug Tracking - Modulo de Seguimiento", "welcome_text"=>"", "attachment_max_size"=>"5120", "per_page_options"=>"25,50,100", "activity_days_default"=>"30", "host_name"=>"localhost:3000", "protocol"=>"http", "text_formatting"=>"textile", "cache_formatted_text"=>"0", "wiki_compression"=>"", "feeds_limit"=>"15", "file_max_size_displayed"=>"512", "diff_max_lines_displayed"=>"1500", "repositories_encodings"=>""}, "commit"=>"Guardar"}
+  Current user: admin (id=1)
+Redirected to http://0.0.0.0:3000/settings
+Completed 302 Found in 109.8ms (ActiveRecord: 82.4ms)
+Started GET "/settings" for 127.0.0.1 at 2014-10-04 11:30:40 -0500
+Processing by SettingsController#index as HTML
+Settings cache cleared.
+  Current user: admin (id=1)
+  Rendered settings/_general.html.erb (14.3ms)
+  Rendered settings/_display.html.erb (13.9ms)
+  Rendered settings/_authentication.html.erb (14.6ms)
+  Rendered settings/_projects.html.erb (11.2ms)
+  Rendered queries/_columns.html.erb (3.9ms)
+  Rendered settings/_issues.html.erb (17.8ms)
+  Rendered settings/_notifications.html.erb (11.4ms)
+  Rendered settings/_mail_handler.html.erb (5.1ms)
+  Rendered settings/_repositories.html.erb (18.8ms)
+  Rendered common/_tabs.html.erb (111.4ms)
+  Rendered settings/edit.html.erb within layouts/admin (111.8ms)
+  Rendered admin/_menu.html.erb (3.8ms)
+  Rendered layouts/base.html.erb (9.9ms)
+Completed 200 OK in 132.4ms (Views: 88.0ms | ActiveRecord: 40.0ms)
+Started POST "/settings/edit" for 127.0.0.1 at 2014-10-04 11:31:25 -0500
+Processing by SettingsController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IaRv3lWRxBVGKQmyiZuEnTm91HuyCcJAgj/wbhJZfQo=", "settings"=>{"app_title"=>"Redmine - Modulo de Seguimiento", "welcome_text"=>"Herramienta mediante la cual se realizan peticiones de Issues and Bug Tracking", "attachment_max_size"=>"5120", "per_page_options"=>"25,50,100", "activity_days_default"=>"30", "host_name"=>"localhost:3000", "protocol"=>"http", "text_formatting"=>"textile", "cache_formatted_text"=>"0", "wiki_compression"=>"", "feeds_limit"=>"15", "file_max_size_displayed"=>"512", "diff_max_lines_displayed"=>"1500", "repositories_encodings"=>""}, "commit"=>"Guardar"}
+  Current user: admin (id=1)
+Redirected to http://0.0.0.0:3000/settings
+Completed 302 Found in 191.9ms (ActiveRecord: 153.6ms)
+Started GET "/settings" for 127.0.0.1 at 2014-10-04 11:31:25 -0500
+Processing by SettingsController#index as HTML
+Settings cache cleared.
+  Current user: admin (id=1)
+  Rendered settings/_general.html.erb (18.3ms)
+  Rendered settings/_display.html.erb (14.0ms)
+  Rendered settings/_authentication.html.erb (13.8ms)
+  Rendered settings/_projects.html.erb (11.6ms)
+  Rendered queries/_columns.html.erb (3.7ms)
+  Rendered settings/_issues.html.erb (18.0ms)
+  Rendered settings/_notifications.html.erb (11.0ms)
+  Rendered settings/_mail_handler.html.erb (5.3ms)
+  Rendered settings/_repositories.html.erb (18.3ms)
+  Rendered common/_tabs.html.erb (114.5ms)
+  Rendered settings/edit.html.erb within layouts/admin (114.8ms)
+  Rendered admin/_menu.html.erb (3.4ms)
+  Rendered layouts/base.html.erb (9.1ms)
+Completed 200 OK in 136.3ms (Views: 87.7ms | ActiveRecord: 43.3ms)
+Started GET "/" for 127.0.0.1 at 2014-10-04 11:31:28 -0500
+Processing by WelcomeController#index as HTML
+  Current user: admin (id=1)
+  Rendered welcome/index.html.erb within layouts/base (5.3ms)
+Completed 200 OK in 24.4ms (Views: 13.3ms | ActiveRecord: 6.9ms)
+Started GET "/my/page" for 127.0.0.1 at 2014-10-04 11:31:30 -0500
+Processing by MyController#page as HTML
+  Current user: admin (id=1)
+  Rendered issues/_list_simple.html.erb (0.1ms)
+  Rendered my/blocks/_issuesassignedtome.html.erb (18.2ms)
+  Rendered issues/_list_simple.html.erb (0.1ms)
+  Rendered my/blocks/_issuesreportedbyme.html.erb (10.6ms)
+  Rendered my/page.html.erb within layouts/base (31.4ms)
+Completed 200 OK in 45.6ms (Views: 25.6ms | ActiveRecord: 17.1ms)
+Started GET "/admin" for 127.0.0.1 at 2014-10-04 11:31:32 -0500
+Processing by AdminController#index as HTML
+  Current user: admin (id=1)
+  Rendered admin/_menu.html.erb (3.1ms)
+  Rendered admin/index.html.erb within layouts/admin (3.4ms)
+  Rendered layouts/base.html.erb (15.4ms)
+Completed 200 OK in 23.7ms (Views: 11.7ms | ActiveRecord: 9.4ms)
+Started GET "/admin/projects" for 127.0.0.1 at 2014-10-04 11:31:36 -0500
+Processing by AdminController#projects as HTML
+  Current user: admin (id=1)
+  Rendered admin/projects.html.erb within layouts/admin (3.2ms)
+  Rendered admin/_menu.html.erb (3.1ms)
+  Rendered layouts/base.html.erb (9.3ms)
+Completed 200 OK in 23.8ms (Views: 15.0ms | ActiveRecord: 4.1ms)
+Started GET "/projects/new" for 127.0.0.1 at 2014-10-04 11:32:05 -0500
+Processing by ProjectsController#new as HTML
+  Current user: admin (id=1)
+  Rendered projects/_form.html.erb (12.4ms)
+  Rendered projects/new.html.erb within layouts/base (15.4ms)
+Completed 200 OK in 54.9ms (Views: 21.5ms | ActiveRecord: 8.4ms)
+Started POST "/projects" for 127.0.0.1 at 2014-10-04 11:32:44 -0500
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IaRv3lWRxBVGKQmyiZuEnTm91HuyCcJAgj/wbhJZfQo=", "project"=>{"name"=>"Modulo de Seguimiento", "description"=>"Modulo de Seguimiento para el Sistema de Información Integrado - Comunidad Colciencias", "identifier"=>"modulo-de-seguimiento", "homepage"=>"", "is_public"=>"1", "inherit_members"=>"0", "enabled_module_names"=>["issue_tracking", "time_tracking", "news", "documents", "files", "wiki", "repository", "boards", "calendar", "gantt", ""], "tracker_ids"=>["1", "2", "3", ""]}, "commit"=>"Crear"}
+  Current user: admin (id=1)
+Redirected to http://0.0.0.0:3000/projects/modulo-de-seguimiento/settings
+Expire fragment views/0.0.0.0:3000/robots.txt 0.2ms
+Completed 302 Found in 118.5ms (ActiveRecord: 59.2ms)
+Started GET "/projects/modulo-de-seguimiento/settings" for 127.0.0.1 at 2014-10-04 11:32:44 -0500
+Processing by ProjectsController#settings as HTML
+  Parameters: {"id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered projects/_form.html.erb (11.3ms)
+  Rendered projects/_edit.html.erb (12.8ms)
+  Rendered projects/settings/_modules.html.erb (2.4ms)
+  Rendered projects/settings/_members.html.erb (18.2ms)
+  Rendered projects/settings/_versions.html.erb (13.8ms)
+  Rendered projects/settings/_issue_categories.html.erb (3.5ms)
+  Rendered projects/settings/_wiki.html.erb (2.1ms)
+  Rendered projects/settings/_repositories.html.erb (6.7ms)
+  Rendered projects/settings/_boards.html.erb (7.2ms)
+  Rendered projects/settings/_activities.html.erb (11.1ms)
+  Rendered common/_tabs.html.erb (98.2ms)
+  Rendered projects/settings.html.erb within layouts/base (99.2ms)
+Completed 200 OK in 143.4ms (Views: 89.3ms | ActiveRecord: 36.6ms)
+Started GET "/projects/modulo-de-seguimiento/activity" for 127.0.0.1 at 2014-10-04 11:33:57 -0500
+Processing by ActivitiesController#index as HTML
+  Parameters: {"id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered activities/index.html.erb within layouts/base (14.2ms)
+Completed 200 OK in 121.0ms (Views: 30.3ms | ActiveRecord: 49.3ms)
+Started GET "/projects/modulo-de-seguimiento/issues/gantt" for 127.0.0.1 at 2014-10-04 11:33:58 -0500
+Processing by GanttsController#show as HTML
+  Parameters: {"project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (27.3ms)
+  Rendered issues/_sidebar.html.erb (8.0ms)
+  Rendered gantts/show.html.erb within layouts/base (75.4ms)
+Completed 200 OK in 166.7ms (Views: 67.4ms | ActiveRecord: 54.7ms)
+Started GET "/projects/modulo-de-seguimiento/issues/calendar" for 127.0.0.1 at 2014-10-04 11:34:03 -0500
+Processing by CalendarsController#show as HTML
+  Parameters: {"project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (15.7ms)
+  Rendered common/_calendar.html.erb (2.3ms)
+  Rendered issues/_sidebar.html.erb (3.8ms)
+  Rendered calendars/show.html.erb within layouts/base (27.9ms)
+Completed 200 OK in 98.5ms (Views: 41.8ms | ActiveRecord: 30.0ms)
+Started GET "/projects/modulo-de-seguimiento/news" for 127.0.0.1 at 2014-10-04 11:34:05 -0500
+Processing by NewsController#index as HTML
+  Parameters: {"project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered attachments/_form.html.erb (4.6ms)
+  Rendered news/_form.html.erb (8.7ms)
+  Rendered news/index.html.erb within layouts/base (25.3ms)
+Completed 200 OK in 64.0ms (Views: 31.9ms | ActiveRecord: 16.4ms)
+Started GET "/projects/modulo-de-seguimiento/wiki" for 127.0.0.1 at 2014-10-04 11:34:06 -0500
+Processing by WikiController#show as HTML
+  Parameters: {"project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered attachments/_form.html.erb (3.2ms)
+  Rendered wiki/edit.html.erb within layouts/base (9.2ms)
+Completed 200 OK in 70.9ms (Views: 24.2ms | ActiveRecord: 17.3ms)
+Started GET "/projects/modulo-de-seguimiento" for 127.0.0.1 at 2014-10-04 11:34:08 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered projects/_members_box.html.erb (0.6ms)
+  Rendered projects/show.html.erb within layouts/base (11.5ms)
+Completed 200 OK in 78.3ms (Views: 26.6ms | ActiveRecord: 21.5ms)
+Started GET "/projects" for 127.0.0.1 at 2014-10-04 11:34:26 -0500
+Processing by ProjectsController#index as HTML
+  Current user: admin (id=1)
+  Rendered projects/index.html.erb within layouts/base (8.6ms)
+Completed 200 OK in 24.2ms (Views: 16.4ms | ActiveRecord: 4.5ms)
+Started GET "/admin" for 127.0.0.1 at 2014-10-04 11:34:31 -0500
+Processing by AdminController#index as HTML
+  Current user: admin (id=1)
+  Rendered admin/_menu.html.erb (2.3ms)
+  Rendered admin/index.html.erb within layouts/admin (2.5ms)
+  Rendered layouts/base.html.erb (8.1ms)
+Completed 200 OK in 15.0ms (Views: 9.0ms | ActiveRecord: 4.0ms)
+Started GET "/projects" for 127.0.0.1 at 2014-10-04 11:34:35 -0500
+Processing by ProjectsController#index as HTML
+  Current user: admin (id=1)
+  Rendered projects/index.html.erb within layouts/base (7.8ms)
+Completed 200 OK in 23.7ms (Views: 15.1ms | ActiveRecord: 3.5ms)
+Started GET "/admin" for 127.0.0.1 at 2014-10-04 11:35:22 -0500
+Processing by AdminController#index as HTML
+  Current user: admin (id=1)
+  Rendered admin/_menu.html.erb (3.3ms)
+  Rendered admin/index.html.erb within layouts/admin (3.7ms)
+  Rendered layouts/base.html.erb (8.7ms)
+Completed 200 OK in 18.9ms (Views: 12.0ms | ActiveRecord: 2.4ms)
+Started GET "/users" for 127.0.0.1 at 2014-10-04 11:35:24 -0500
+Processing by UsersController#index as HTML
+  Current user: admin (id=1)
+  Rendered users/index.html.erb within layouts/admin (12.1ms)
+  Rendered admin/_menu.html.erb (3.0ms)
+  Rendered layouts/base.html.erb (7.0ms)
+Completed 200 OK in 31.2ms (Views: 20.7ms | ActiveRecord: 5.2ms)
+Started GET "/users/new" for 127.0.0.1 at 2014-10-04 11:35:27 -0500
+Processing by UsersController#new as HTML
+  Current user: admin (id=1)
+  Rendered users/_mail_notifications.html.erb (3.9ms)
+  Rendered users/_preferences.html.erb (98.4ms)
+  Rendered users/_form.html.erb (112.2ms)
+  Rendered users/new.html.erb within layouts/admin (115.7ms)
+  Rendered admin/_menu.html.erb (2.0ms)
+  Rendered layouts/base.html.erb (8.3ms)
+Completed 200 OK in 137.2ms (Views: 123.8ms | ActiveRecord: 8.7ms)
+Started POST "/users" for 127.0.0.1 at 2014-10-04 11:37:57 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IaRv3lWRxBVGKQmyiZuEnTm91HuyCcJAgj/wbhJZfQo=", "user"=>{"login"=>"yiyo", "firstname"=>"Yiyo", "lastname"=>"Castillo", "mail"=>"yiyocx@gmail.com", "language"=>"es", "admin"=>"1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "generate_password"=>"[FILTERED]", "must_change_passwd"=>"0", "mail_notification"=>"only_my_events", "notified_project_ids"=>[""]}, "pref"=>{"no_self_notified"=>"0", "hide_mail"=>"0", "time_zone"=>"Bogota", "comments_sorting"=>"asc", "warn_on_leaving_unsaved"=>"1"}, "send_information"=>"1", "commit"=>"Crear"}
+  Current user: admin (id=1)
+  Rendered users/_mail_notifications.html.erb (1.0ms)
+  Rendered users/_preferences.html.erb (4.0ms)
+  Rendered users/_form.html.erb (10.0ms)
+  Rendered users/new.html.erb within layouts/admin (11.4ms)
+  Rendered admin/_menu.html.erb (2.7ms)
+  Rendered layouts/base.html.erb (9.4ms)
+Completed 200 OK in 38.5ms (Views: 22.2ms | ActiveRecord: 6.6ms)
+Started POST "/users" for 127.0.0.1 at 2014-10-04 11:38:35 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IaRv3lWRxBVGKQmyiZuEnTm91HuyCcJAgj/wbhJZfQo=", "user"=>{"login"=>"yiyo", "firstname"=>"Yiyo", "lastname"=>"Castillo", "mail"=>"yiyocx@gmail.com", "language"=>"es", "admin"=>"1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "generate_password"=>"[FILTERED]", "must_change_passwd"=>"0", "mail_notification"=>"only_my_events", "notified_project_ids"=>[""]}, "pref"=>{"no_self_notified"=>"0", "hide_mail"=>"0", "time_zone"=>"Bogota", "comments_sorting"=>"asc", "warn_on_leaving_unsaved"=>"1"}, "send_information"=>"1", "commit"=>"Crear"}
+  Current user: admin (id=1)
+  Rendered mailer/account_information.text.erb within layouts/mailer (0.7ms)
+  Rendered mailer/account_information.html.erb within layouts/mailer (0.5ms)
+Email delivery error: getaddrinfo: Name or service not known
+Redirected to http://0.0.0.0:3000/users/3/edit
+Completed 302 Found in 571.6ms (ActiveRecord: 46.7ms)
+Started GET "/users/3/edit" for 127.0.0.1 at 2014-10-04 11:38:36 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  Current user: admin (id=1)
+  Rendered users/_mail_notifications.html.erb (7.5ms)
+  Rendered users/_preferences.html.erb (3.6ms)
+  Rendered users/_form.html.erb (16.9ms)
+  Rendered users/_general.html.erb (18.7ms)
+  Rendered users/_memberships.html.erb (7.8ms)
+  Rendered common/_tabs.html.erb (28.7ms)
+  Rendered users/edit.html.erb within layouts/admin (32.1ms)
+  Rendered admin/_menu.html.erb (3.4ms)
+  Rendered layouts/base.html.erb (9.4ms)
+Completed 200 OK in 55.6ms (Views: 37.9ms | ActiveRecord: 11.5ms)
+Started GET "/admin/projects" for 127.0.0.1 at 2014-10-04 11:38:52 -0500
+Processing by AdminController#projects as HTML
+  Current user: admin (id=1)
+  Rendered admin/projects.html.erb within layouts/admin (4.9ms)
+  Rendered admin/_menu.html.erb (3.2ms)
+  Rendered layouts/base.html.erb (10.8ms)
+Completed 200 OK in 26.6ms (Views: 17.8ms | ActiveRecord: 4.3ms)
+Started GET "/projects/modulo-de-seguimiento/settings" for 127.0.0.1 at 2014-10-04 11:38:54 -0500
+Processing by ProjectsController#settings as HTML
+  Parameters: {"id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered projects/_form.html.erb (12.3ms)
+  Rendered projects/_edit.html.erb (13.5ms)
+  Rendered projects/settings/_modules.html.erb (2.9ms)
+  Rendered projects/settings/_members.html.erb (11.6ms)
+  Rendered projects/settings/_versions.html.erb (4.1ms)
+  Rendered projects/settings/_issue_categories.html.erb (1.6ms)
+  Rendered projects/settings/_wiki.html.erb (1.4ms)
+  Rendered projects/settings/_repositories.html.erb (1.5ms)
+  Rendered projects/settings/_boards.html.erb (1.7ms)
+  Rendered projects/settings/_activities.html.erb (8.0ms)
+  Rendered common/_tabs.html.erb (50.8ms)
+  Rendered projects/settings.html.erb within layouts/base (51.3ms)
+Completed 200 OK in 79.0ms (Views: 51.0ms | ActiveRecord: 20.8ms)
+Started POST "/projects/modulo-de-seguimiento/memberships" for 127.0.0.1 at 2014-10-04 11:39:07 -0500
+Processing by MembersController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IaRv3lWRxBVGKQmyiZuEnTm91HuyCcJAgj/wbhJZfQo=", "principal_search"=>"", "membership"=>{"user_ids"=>["3"]}, "commit"=>"Añadir", "project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered projects/settings/_members.html.erb (19.5ms)
+  Rendered members/create.js.erb (26.6ms)
+Completed 200 OK in 55.4ms (Views: 30.0ms | ActiveRecord: 8.9ms)
+Started POST "/projects/modulo-de-seguimiento/memberships" for 127.0.0.1 at 2014-10-04 11:39:22 -0500
+Processing by MembersController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IaRv3lWRxBVGKQmyiZuEnTm91HuyCcJAgj/wbhJZfQo=", "principal_search"=>"", "membership"=>{"user_ids"=>["3"], "role_ids"=>["3", "4", "5"]}, "commit"=>"Añadir", "project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered projects/settings/_members.html.erb (22.2ms)
+  Rendered members/create.js.erb (24.3ms)
+Completed 200 OK in 85.2ms (Views: 19.3ms | ActiveRecord: 44.0ms)
+Started GET "/admin" for 127.0.0.1 at 2014-10-04 11:39:58 -0500
+Processing by AdminController#index as HTML
+  Current user: admin (id=1)
+  Rendered admin/_menu.html.erb (2.6ms)
+  Rendered admin/index.html.erb within layouts/admin (3.0ms)
+  Rendered layouts/base.html.erb (8.0ms)
+Completed 200 OK in 19.4ms (Views: 10.2ms | ActiveRecord: 3.3ms)
+Started GET "/users" for 127.0.0.1 at 2014-10-04 11:39:59 -0500
+Processing by UsersController#index as HTML
+  Current user: admin (id=1)
+  Rendered users/index.html.erb within layouts/admin (9.4ms)
+  Rendered admin/_menu.html.erb (3.2ms)
+  Rendered layouts/base.html.erb (6.6ms)
+Completed 200 OK in 26.9ms (Views: 17.4ms | ActiveRecord: 6.1ms)
+Started GET "/users/new" for 127.0.0.1 at 2014-10-04 11:40:03 -0500
+Processing by UsersController#new as HTML
+  Current user: admin (id=1)
+  Rendered users/_mail_notifications.html.erb (1.8ms)
+  Rendered users/_preferences.html.erb (3.5ms)
+  Rendered users/_form.html.erb (12.2ms)
+  Rendered users/new.html.erb within layouts/admin (14.0ms)
+  Rendered admin/_menu.html.erb (2.6ms)
+  Rendered layouts/base.html.erb (7.3ms)
+Completed 200 OK in 27.5ms (Views: 21.5ms | ActiveRecord: 4.2ms)
+Started POST "/users" for 127.0.0.1 at 2014-10-04 11:42:53 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IaRv3lWRxBVGKQmyiZuEnTm91HuyCcJAgj/wbhJZfQo=", "user"=>{"login"=>"gustavo", "firstname"=>"Gustavo Adolfo ", "lastname"=>"Lopez Blandon", "mail"=>"gustavo725595@gmail.com", "language"=>"es", "admin"=>"1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "generate_password"=>"[FILTERED]", "must_change_passwd"=>"0", "mail_notification"=>"only_my_events", "notified_project_ids"=>[""]}, "pref"=>{"no_self_notified"=>"0", "hide_mail"=>"0", "time_zone"=>"Bogota", "comments_sorting"=>"asc", "warn_on_leaving_unsaved"=>"1"}, "send_information"=>"1", "commit"=>"Crear"}
+  Current user: admin (id=1)
+  Rendered mailer/account_information.text.erb within layouts/mailer (0.3ms)
+  Rendered mailer/account_information.html.erb within layouts/mailer (0.2ms)
+Email delivery error: getaddrinfo: Name or service not known
+Redirected to http://0.0.0.0:3000/users/4/edit
+Completed 302 Found in 419.3ms (ActiveRecord: 27.0ms)
+Started GET "/users/4/edit" for 127.0.0.1 at 2014-10-04 11:42:53 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  Current user: admin (id=1)
+  Rendered users/_mail_notifications.html.erb (7.3ms)
+  Rendered users/_preferences.html.erb (3.4ms)
+  Rendered users/_form.html.erb (15.6ms)
+  Rendered users/_general.html.erb (16.6ms)
+  Rendered users/_memberships.html.erb (4.9ms)
+  Rendered common/_tabs.html.erb (22.6ms)
+  Rendered users/edit.html.erb within layouts/admin (25.3ms)
+  Rendered admin/_menu.html.erb (3.6ms)
+  Rendered layouts/base.html.erb (9.7ms)
+Completed 200 OK in 46.3ms (Views: 31.4ms | ActiveRecord: 10.7ms)
+Started GET "/users" for 127.0.0.1 at 2014-10-04 11:42:57 -0500
+Processing by UsersController#index as HTML
+  Current user: admin (id=1)
+  Rendered users/index.html.erb within layouts/admin (11.1ms)
+  Rendered admin/_menu.html.erb (3.2ms)
+  Rendered layouts/base.html.erb (6.0ms)
+Completed 200 OK in 26.9ms (Views: 18.3ms | ActiveRecord: 5.0ms)
+Started GET "/admin" for 127.0.0.1 at 2014-10-04 11:43:02 -0500
+Processing by AdminController#index as HTML
+  Current user: admin (id=1)
+  Rendered admin/_menu.html.erb (3.6ms)
+  Rendered admin/index.html.erb within layouts/admin (4.0ms)
+  Rendered layouts/base.html.erb (9.2ms)
+Completed 200 OK in 19.9ms (Views: 12.0ms | ActiveRecord: 4.0ms)
+Started GET "/users" for 127.0.0.1 at 2014-10-04 11:43:26 -0500
+Processing by UsersController#index as HTML
+  Current user: admin (id=1)
+  Rendered users/index.html.erb within layouts/admin (13.1ms)
+  Rendered admin/_menu.html.erb (11.3ms)
+  Rendered layouts/base.html.erb (5.2ms)
+Completed 200 OK in 36.5ms (Views: 29.2ms | ActiveRecord: 3.6ms)
+Started GET "/groups" for 127.0.0.1 at 2014-10-04 11:44:10 -0500
+Processing by GroupsController#index as HTML
+  Current user: admin (id=1)
+  Rendered groups/index.html.erb within layouts/admin (1.2ms)
+  Rendered admin/_menu.html.erb (2.8ms)
+  Rendered layouts/base.html.erb (9.9ms)
+Completed 200 OK in 23.8ms (Views: 13.2ms | ActiveRecord: 4.6ms)
+Started GET "/groups/new" for 127.0.0.1 at 2014-10-04 11:44:17 -0500
+Processing by GroupsController#new as HTML
+  Current user: admin (id=1)
+  Rendered groups/_form.html.erb (1.9ms)
+  Rendered groups/new.html.erb within layouts/admin (4.1ms)
+  Rendered admin/_menu.html.erb (2.0ms)
+  Rendered layouts/base.html.erb (10.5ms)
+Completed 200 OK in 36.9ms (Views: 14.7ms | ActiveRecord: 4.4ms)
+Started POST "/groups" for 127.0.0.1 at 2014-10-04 11:44:30 -0500
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IaRv3lWRxBVGKQmyiZuEnTm91HuyCcJAgj/wbhJZfQo=", "group"=>{"name"=>"Change Control Management"}, "commit"=>"Crear"}
+  Current user: admin (id=1)
+Redirected to http://0.0.0.0:3000/groups
+Completed 302 Found in 46.4ms (ActiveRecord: 36.8ms)
+Started GET "/groups" for 127.0.0.1 at 2014-10-04 11:44:30 -0500
+Processing by GroupsController#index as HTML
+  Current user: admin (id=1)
+  Rendered groups/index.html.erb within layouts/admin (3.7ms)
+  Rendered admin/_menu.html.erb (3.0ms)
+  Rendered layouts/base.html.erb (9.5ms)
+Completed 200 OK in 22.1ms (Views: 14.0ms | ActiveRecord: 5.0ms)
+Started GET "/users" for 127.0.0.1 at 2014-10-04 11:44:33 -0500
+Processing by UsersController#index as HTML
+  Current user: admin (id=1)
+  Rendered users/index.html.erb within layouts/admin (12.6ms)
+  Rendered admin/_menu.html.erb (3.1ms)
+  Rendered layouts/base.html.erb (6.2ms)
+Completed 200 OK in 32.1ms (Views: 19.9ms | ActiveRecord: 6.4ms)
+Started GET "/users/3/edit" for 127.0.0.1 at 2014-10-04 11:44:36 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  Current user: admin (id=1)
+  Rendered users/_mail_notifications.html.erb (10.7ms)
+  Rendered users/_preferences.html.erb (4.2ms)
+  Rendered users/_form.html.erb (20.2ms)
+  Rendered users/_general.html.erb (21.4ms)
+  Rendered users/_groups.html.erb (4.2ms)
+  Rendered users/_memberships.html.erb (6.6ms)
+  Rendered common/_tabs.html.erb (34.3ms)
+  Rendered users/edit.html.erb within layouts/admin (37.7ms)
+  Rendered admin/_menu.html.erb (3.0ms)
+  Rendered layouts/base.html.erb (9.7ms)
+Completed 200 OK in 58.5ms (Views: 40.9ms | ActiveRecord: 13.1ms)
+Started PUT "/users/3" for 127.0.0.1 at 2014-10-04 11:44:46 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IaRv3lWRxBVGKQmyiZuEnTm91HuyCcJAgj/wbhJZfQo=", "user"=>{"group_ids"=>["5", ""]}, "commit"=>"Guardar", "id"=>"3"}
+  Current user: admin (id=1)
+Redirected to http://0.0.0.0:3000/users/3/edit?tab=groups
+Completed 302 Found in 52.9ms (ActiveRecord: 36.8ms)
+Started GET "/users/3/edit?tab=groups" for 127.0.0.1 at 2014-10-04 11:44:46 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"tab"=>"groups", "id"=>"3"}
+  Current user: admin (id=1)
+  Rendered users/_mail_notifications.html.erb (10.6ms)
+  Rendered users/_preferences.html.erb (4.1ms)
+  Rendered users/_form.html.erb (19.8ms)
+  Rendered users/_general.html.erb (20.8ms)
+  Rendered users/_groups.html.erb (4.0ms)
+  Rendered users/_memberships.html.erb (8.4ms)
+  Rendered common/_tabs.html.erb (34.9ms)
+  Rendered users/edit.html.erb within layouts/admin (37.4ms)
+  Rendered admin/_menu.html.erb (3.7ms)
+  Rendered layouts/base.html.erb (9.5ms)
+Completed 200 OK in 57.3ms (Views: 41.2ms | ActiveRecord: 12.7ms)
+Started GET "/groups" for 127.0.0.1 at 2014-10-04 11:44:48 -0500
+Processing by GroupsController#index as HTML
+  Current user: admin (id=1)
+  Rendered groups/index.html.erb within layouts/admin (3.1ms)
+  Rendered admin/_menu.html.erb (3.4ms)
+  Rendered layouts/base.html.erb (10.1ms)
+Completed 200 OK in 22.6ms (Views: 14.9ms | ActiveRecord: 4.3ms)
+Started GET "/groups/new" for 127.0.0.1 at 2014-10-04 11:44:50 -0500
+Processing by GroupsController#new as HTML
+  Current user: admin (id=1)
+  Rendered groups/_form.html.erb (1.4ms)
+  Rendered groups/new.html.erb within layouts/admin (2.7ms)
+  Rendered admin/_menu.html.erb (3.3ms)
+  Rendered layouts/base.html.erb (9.7ms)
+Completed 200 OK in 19.6ms (Views: 13.9ms | ActiveRecord: 3.5ms)
+Started POST "/groups" for 127.0.0.1 at 2014-10-04 11:45:06 -0500
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IaRv3lWRxBVGKQmyiZuEnTm91HuyCcJAgj/wbhJZfQo=", "group"=>{"name"=>"Integrator"}, "continue"=>"Crear y continuar"}
+  Current user: admin (id=1)
+Redirected to http://0.0.0.0:3000/groups/new
+Completed 302 Found in 63.4ms (ActiveRecord: 53.7ms)
+Started GET "/groups/new" for 127.0.0.1 at 2014-10-04 11:45:06 -0500
+Processing by GroupsController#new as HTML
+  Current user: admin (id=1)
+  Rendered groups/_form.html.erb (1.4ms)
+  Rendered groups/new.html.erb within layouts/admin (2.7ms)
+  Rendered admin/_menu.html.erb (3.1ms)
+  Rendered layouts/base.html.erb (8.6ms)
+Completed 200 OK in 18.5ms (Views: 12.9ms | ActiveRecord: 3.3ms)
+Started POST "/groups" for 127.0.0.1 at 2014-10-04 11:45:20 -0500
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IaRv3lWRxBVGKQmyiZuEnTm91HuyCcJAgj/wbhJZfQo=", "group"=>{"name"=>"Configuration Manager"}, "commit"=>"Crear"}
+  Current user: admin (id=1)
+Redirected to http://0.0.0.0:3000/groups
+Completed 302 Found in 55.1ms (ActiveRecord: 47.0ms)
+Started GET "/groups" for 127.0.0.1 at 2014-10-04 11:45:20 -0500
+Processing by GroupsController#index as HTML
+  Current user: admin (id=1)
+  Rendered groups/index.html.erb within layouts/admin (7.1ms)
+  Rendered admin/_menu.html.erb (3.3ms)
+  Rendered layouts/base.html.erb (10.5ms)
+Completed 200 OK in 26.6ms (Views: 16.8ms | ActiveRecord: 6.9ms)
+Started GET "/users" for 127.0.0.1 at 2014-10-04 11:45:26 -0500
+Processing by UsersController#index as HTML
+  Current user: admin (id=1)
+  Rendered users/index.html.erb within layouts/admin (11.8ms)
+  Rendered admin/_menu.html.erb (2.6ms)
+  Rendered layouts/base.html.erb (7.3ms)
+Completed 200 OK in 32.1ms (Views: 20.0ms | ActiveRecord: 6.3ms)
+Started GET "/users/3/edit" for 127.0.0.1 at 2014-10-04 11:45:29 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  Current user: admin (id=1)
+  Rendered users/_mail_notifications.html.erb (10.3ms)
+  Rendered users/_preferences.html.erb (3.2ms)
+  Rendered users/_form.html.erb (18.0ms)
+  Rendered users/_general.html.erb (18.9ms)
+  Rendered users/_groups.html.erb (4.8ms)
+  Rendered users/_memberships.html.erb (6.3ms)
+  Rendered common/_tabs.html.erb (31.5ms)
+  Rendered users/edit.html.erb within layouts/admin (34.2ms)
+  Rendered admin/_menu.html.erb (3.0ms)
+  Rendered layouts/base.html.erb (9.1ms)
+Completed 200 OK in 52.6ms (Views: 36.9ms | ActiveRecord: 12.2ms)
+Started PUT "/users/3" for 127.0.0.1 at 2014-10-04 11:45:41 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IaRv3lWRxBVGKQmyiZuEnTm91HuyCcJAgj/wbhJZfQo=", "user"=>{"group_ids"=>["5", "7", "6", ""]}, "commit"=>"Guardar", "id"=>"3"}
+  Current user: admin (id=1)
+Redirected to http://0.0.0.0:3000/users/3/edit?tab=groups
+Completed 302 Found in 65.0ms (ActiveRecord: 49.3ms)
+Started GET "/users/3/edit?tab=groups" for 127.0.0.1 at 2014-10-04 11:45:41 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"tab"=>"groups", "id"=>"3"}
+  Current user: admin (id=1)
+  Rendered users/_mail_notifications.html.erb (9.4ms)
+  Rendered users/_preferences.html.erb (3.7ms)
+  Rendered users/_form.html.erb (19.7ms)
+  Rendered users/_general.html.erb (20.9ms)
+  Rendered users/_groups.html.erb (7.1ms)
+  Rendered users/_memberships.html.erb (7.0ms)
+  Rendered common/_tabs.html.erb (37.1ms)
+  Rendered users/edit.html.erb within layouts/admin (40.9ms)
+  Rendered admin/_menu.html.erb (3.4ms)
+  Rendered layouts/base.html.erb (19.3ms)
+Completed 200 OK in 71.0ms (Views: 52.6ms | ActiveRecord: 14.3ms)
+Started GET "/users" for 127.0.0.1 at 2014-10-04 11:45:44 -0500
+Processing by UsersController#index as HTML
+  Current user: admin (id=1)
+  Rendered users/index.html.erb within layouts/admin (11.5ms)
+  Rendered admin/_menu.html.erb (3.2ms)
+  Rendered layouts/base.html.erb (7.4ms)
+Completed 200 OK in 32.0ms (Views: 20.0ms | ActiveRecord: 6.5ms)
+Started GET "/users/4/edit" for 127.0.0.1 at 2014-10-04 11:45:46 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  Current user: admin (id=1)
+  Rendered users/_mail_notifications.html.erb (10.1ms)
+  Rendered users/_preferences.html.erb (6.0ms)
+  Rendered users/_form.html.erb (21.0ms)
+  Rendered users/_general.html.erb (22.0ms)
+  Rendered users/_groups.html.erb (4.4ms)
+  Rendered users/_memberships.html.erb (4.7ms)
+  Rendered common/_tabs.html.erb (32.4ms)
+  Rendered users/edit.html.erb within layouts/admin (34.5ms)
+  Rendered admin/_menu.html.erb (3.0ms)
+  Rendered layouts/base.html.erb (9.5ms)
+Completed 200 OK in 51.8ms (Views: 37.8ms | ActiveRecord: 12.1ms)
+Started PUT "/users/4" for 127.0.0.1 at 2014-10-04 11:45:53 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IaRv3lWRxBVGKQmyiZuEnTm91HuyCcJAgj/wbhJZfQo=", "user"=>{"group_ids"=>["5", "7", "6", ""]}, "commit"=>"Guardar", "id"=>"4"}
+  Current user: admin (id=1)
+Redirected to http://0.0.0.0:3000/users/4/edit?tab=groups
+Completed 302 Found in 57.3ms (ActiveRecord: 38.8ms)
+Started GET "/users/4/edit?tab=groups" for 127.0.0.1 at 2014-10-04 11:45:53 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"tab"=>"groups", "id"=>"4"}
+  Current user: admin (id=1)
+  Rendered users/_mail_notifications.html.erb (7.3ms)
+  Rendered users/_preferences.html.erb (6.0ms)
+  Rendered users/_form.html.erb (17.3ms)
+  Rendered users/_general.html.erb (18.1ms)
+  Rendered users/_groups.html.erb (5.5ms)
+  Rendered users/_memberships.html.erb (4.5ms)
+  Rendered common/_tabs.html.erb (29.2ms)
+  Rendered users/edit.html.erb within layouts/admin (31.1ms)
+  Rendered admin/_menu.html.erb (3.4ms)
+  Rendered layouts/base.html.erb (9.9ms)
+Completed 200 OK in 48.6ms (Views: 35.7ms | ActiveRecord: 11.0ms)
+Started GET "/admin/projects" for 127.0.0.1 at 2014-10-04 11:46:05 -0500
+Processing by AdminController#projects as HTML
+  Current user: admin (id=1)
+  Rendered admin/projects.html.erb within layouts/admin (3.5ms)
+  Rendered admin/_menu.html.erb (3.1ms)
+  Rendered layouts/base.html.erb (9.7ms)
+Completed 200 OK in 23.3ms (Views: 15.2ms | ActiveRecord: 4.2ms)
+Started GET "/projects/modulo-de-seguimiento/settings" for 127.0.0.1 at 2014-10-04 11:46:09 -0500
+Processing by ProjectsController#settings as HTML
+  Parameters: {"id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered projects/_form.html.erb (12.2ms)
+  Rendered projects/_edit.html.erb (13.2ms)
+  Rendered projects/settings/_modules.html.erb (2.1ms)
+  Rendered projects/settings/_members.html.erb (14.6ms)
+  Rendered projects/settings/_versions.html.erb (2.9ms)
+  Rendered projects/settings/_issue_categories.html.erb (1.2ms)
+  Rendered projects/settings/_wiki.html.erb (0.9ms)
+  Rendered projects/settings/_repositories.html.erb (1.2ms)
+  Rendered projects/settings/_boards.html.erb (1.1ms)
+  Rendered projects/settings/_activities.html.erb (5.3ms)
+  Rendered common/_tabs.html.erb (46.7ms)
+  Rendered projects/settings.html.erb within layouts/base (47.1ms)
+Completed 200 OK in 77.6ms (Views: 53.5ms | ActiveRecord: 18.1ms)
+Started POST "/projects/modulo-de-seguimiento/memberships" for 127.0.0.1 at 2014-10-04 11:46:24 -0500
+Processing by MembersController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IaRv3lWRxBVGKQmyiZuEnTm91HuyCcJAgj/wbhJZfQo=", "principal_search"=>"", "membership"=>{"user_ids"=>["4"], "role_ids"=>["3", "4", "5"]}, "commit"=>"Añadir", "project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered projects/settings/_members.html.erb (25.1ms)
+  Rendered members/create.js.erb (27.3ms)
+Completed 200 OK in 75.2ms (Views: 21.5ms | ActiveRecord: 37.3ms)
+Started GET "/projects/modulo-de-seguimiento/settings" for 127.0.0.1 at 2014-10-04 11:46:30 -0500
+Processing by ProjectsController#settings as HTML
+  Parameters: {"id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered projects/_form.html.erb (12.3ms)
+  Rendered projects/_edit.html.erb (13.5ms)
+  Rendered projects/settings/_modules.html.erb (3.0ms)
+  Rendered projects/settings/_members.html.erb (20.3ms)
+  Rendered projects/settings/_versions.html.erb (4.2ms)
+  Rendered projects/settings/_issue_categories.html.erb (1.5ms)
+  Rendered projects/settings/_wiki.html.erb (1.4ms)
+  Rendered projects/settings/_repositories.html.erb (1.5ms)
+  Rendered projects/settings/_boards.html.erb (1.5ms)
+  Rendered projects/settings/_activities.html.erb (7.8ms)
+  Rendered common/_tabs.html.erb (59.2ms)
+  Rendered projects/settings.html.erb within layouts/base (59.7ms)
+Completed 200 OK in 89.1ms (Views: 59.4ms | ActiveRecord: 22.3ms)
+Started GET "/projects/modulo-de-seguimiento" for 127.0.0.1 at 2014-10-04 11:46:33 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered projects/_members_box.html.erb (1.8ms)
+  Rendered projects/show.html.erb within layouts/base (8.8ms)
+Completed 200 OK in 58.4ms (Views: 23.2ms | ActiveRecord: 18.7ms)
+Started GET "/admin" for 127.0.0.1 at 2014-10-04 11:46:43 -0500
+Processing by AdminController#index as HTML
+  Current user: admin (id=1)
+  Rendered admin/_menu.html.erb (4.3ms)
+  Rendered admin/index.html.erb within layouts/admin (4.7ms)
+  Rendered layouts/base.html.erb (9.3ms)
+Completed 200 OK in 21.2ms (Views: 12.8ms | ActiveRecord: 4.1ms)
+Started GET "/groups" for 127.0.0.1 at 2014-10-04 11:46:46 -0500
+Processing by GroupsController#index as HTML
+  Current user: admin (id=1)
+  Rendered groups/index.html.erb within layouts/admin (8.4ms)
+  Rendered admin/_menu.html.erb (2.9ms)
+  Rendered layouts/base.html.erb (9.7ms)
+Completed 200 OK in 29.2ms (Views: 17.1ms | ActiveRecord: 7.2ms)
+Started GET "/roles" for 127.0.0.1 at 2014-10-04 11:47:14 -0500
+Processing by RolesController#index as HTML
+  Current user: admin (id=1)
+  Rendered roles/index.html.erb within layouts/admin (11.2ms)
+  Rendered admin/_menu.html.erb (2.7ms)
+  Rendered layouts/base.html.erb (9.0ms)
+Completed 200 OK in 32.3ms (Views: 22.8ms | ActiveRecord: 4.7ms)
+Started GET "/trackers" for 127.0.0.1 at 2014-10-04 11:47:30 -0500
+Processing by TrackersController#index as HTML
+  Current user: admin (id=1)
+  Rendered trackers/index.html.erb within layouts/admin (18.6ms)
+  Rendered admin/_menu.html.erb (3.0ms)
+  Rendered layouts/base.html.erb (17.2ms)
+Completed 200 OK in 46.9ms (Views: 25.7ms | ActiveRecord: 17.1ms)
+Started GET "/trackers/1/edit" for 127.0.0.1 at 2014-10-04 11:47:35 -0500
+Processing by TrackersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Current user: admin (id=1)
+  Rendered trackers/_form.html.erb (5.9ms)
+  Rendered trackers/edit.html.erb within layouts/admin (8.9ms)
+  Rendered admin/_menu.html.erb (3.3ms)
+  Rendered layouts/base.html.erb (10.8ms)
+Completed 200 OK in 29.9ms (Views: 20.9ms | ActiveRecord: 5.6ms)
+Started GET "/trackers" for 127.0.0.1 at 2014-10-04 11:47:40 -0500
+Processing by TrackersController#index as HTML
+  Current user: admin (id=1)
+  Rendered trackers/index.html.erb within layouts/admin (10.4ms)
+  Rendered admin/_menu.html.erb (3.3ms)
+  Rendered layouts/base.html.erb (9.5ms)
+Completed 200 OK in 29.1ms (Views: 19.9ms | ActiveRecord: 6.6ms)
+Started GET "/trackers/2/edit" for 127.0.0.1 at 2014-10-04 11:50:16 -0500
+Processing by TrackersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  Current user: admin (id=1)
+  Rendered trackers/_form.html.erb (4.7ms)
+  Rendered trackers/edit.html.erb within layouts/admin (5.9ms)
+  Rendered admin/_menu.html.erb (3.2ms)
+  Rendered layouts/base.html.erb (9.4ms)
+Completed 200 OK in 25.5ms (Views: 15.7ms | ActiveRecord: 6.0ms)
+Started GET "/trackers" for 127.0.0.1 at 2014-10-04 11:50:19 -0500
+Processing by TrackersController#index as HTML
+  Current user: admin (id=1)
+  Rendered trackers/index.html.erb within layouts/admin (11.4ms)
+  Rendered admin/_menu.html.erb (3.1ms)
+  Rendered layouts/base.html.erb (9.3ms)
+Completed 200 OK in 30.5ms (Views: 20.7ms | ActiveRecord: 6.2ms)
+Started GET "/issue_statuses" for 127.0.0.1 at 2014-10-04 11:50:55 -0500
+Processing by IssueStatusesController#index as HTML
+  Current user: admin (id=1)
+  Rendered issue_statuses/index.html.erb within layouts/admin (13.3ms)
+  Rendered admin/_menu.html.erb (2.0ms)
+  Rendered layouts/base.html.erb (8.1ms)
+Completed 200 OK in 32.5ms (Views: 22.8ms | ActiveRecord: 4.8ms)
+Started GET "/projects" for 127.0.0.1 at 2014-10-04 11:51:01 -0500
+Processing by ProjectsController#index as HTML
+  Current user: admin (id=1)
+  Rendered projects/index.html.erb within layouts/base (6.3ms)
+Completed 200 OK in 23.9ms (Views: 13.5ms | ActiveRecord: 5.7ms)
+Started GET "/projects/modulo-de-seguimiento" for 127.0.0.1 at 2014-10-04 11:51:02 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered projects/_members_box.html.erb (1.7ms)
+  Rendered projects/show.html.erb within layouts/base (8.9ms)
+Completed 200 OK in 60.5ms (Views: 22.3ms | ActiveRecord: 19.2ms)
+Started GET "/projects/modulo-de-seguimiento/issues" for 127.0.0.1 at 2014-10-04 11:51:08 -0500
+Processing by IssuesController#index as HTML
+  Parameters: {"project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (5.9ms)
+  Rendered queries/_columns.html.erb (1.3ms)
+  Rendered issues/_sidebar.html.erb (3.2ms)
+  Rendered issues/index.html.erb within layouts/base (19.4ms)
+Completed 200 OK in 97.0ms (Views: 29.4ms | ActiveRecord: 40.3ms)
+Started GET "/projects/modulo-de-seguimiento/issues?utf8=%E2%9C%93&set_filter=1&f%5B%5D=status_id&op%5Bstatus_id%5D=o&f%5B%5D=&c%5B%5D=tracker&c%5B%5D=status&c%5B%5D=priority&c%5B%5D=subject&c%5B%5D=assigned_to&c%5B%5D=updated_on&group_by=" for 127.0.0.1 at 2014-10-04 11:51:18 -0500
+Processing by IssuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "set_filter"=>"1", "f"=>["status_id", ""], "op"=>{"status_id"=>"o"}, "c"=>["tracker", "status", "priority", "subject", "assigned_to", "updated_on"], "group_by"=>"", "project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (6.7ms)
+  Rendered queries/_columns.html.erb (1.1ms)
+  Rendered issues/_sidebar.html.erb (2.6ms)
+  Rendered issues/index.html.erb within layouts/base (17.4ms)
+Completed 200 OK in 88.6ms (Views: 29.5ms | ActiveRecord: 36.9ms)
+Started GET "/projects/modulo-de-seguimiento/queries/new?utf8=%E2%9C%93&set_filter=1&f%5B%5D=status_id&op%5Bstatus_id%5D=o&f%5B%5D=&c%5B%5D=tracker&c%5B%5D=status&c%5B%5D=priority&c%5B%5D=subject&c%5B%5D=assigned_to&c%5B%5D=updated_on&group_by=" for 127.0.0.1 at 2014-10-04 11:51:19 -0500
+Processing by QueriesController#new as HTML
+  Parameters: {"utf8"=>"✓", "set_filter"=>"1", "f"=>["status_id", ""], "op"=>{"status_id"=>"o"}, "c"=>["tracker", "status", "priority", "subject", "assigned_to", "updated_on"], "group_by"=>"", "project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (8.8ms)
+  Rendered queries/_columns.html.erb (0.9ms)
+  Rendered queries/_form.html.erb (27.9ms)
+  Rendered queries/new.html.erb within layouts/base (30.1ms)
+Completed 200 OK in 70.9ms (Views: 34.9ms | ActiveRecord: 21.1ms)
+Started GET "/projects/modulo-de-seguimiento/issues" for 127.0.0.1 at 2014-10-04 11:51:24 -0500
+Processing by IssuesController#index as HTML
+  Parameters: {"project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (13.1ms)
+  Rendered queries/_columns.html.erb (1.1ms)
+  Rendered issues/_sidebar.html.erb (2.4ms)
+  Rendered issues/index.html.erb within layouts/base (22.5ms)
+Completed 200 OK in 95.4ms (Views: 32.6ms | ActiveRecord: 36.3ms)
+Started GET "/projects/modulo-de-seguimiento/queries/new?utf8=%E2%9C%93&set_filter=1&f%5B%5D=status_id&op%5Bstatus_id%5D=o&f%5B%5D=&c%5B%5D=tracker&c%5B%5D=status&c%5B%5D=priority&c%5B%5D=subject&c%5B%5D=assigned_to&c%5B%5D=updated_on&group_by=" for 127.0.0.1 at 2014-10-04 11:51:30 -0500
+Processing by QueriesController#new as HTML
+  Parameters: {"utf8"=>"✓", "set_filter"=>"1", "f"=>["status_id", ""], "op"=>{"status_id"=>"o"}, "c"=>["tracker", "status", "priority", "subject", "assigned_to", "updated_on"], "group_by"=>"", "project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (8.9ms)
+  Rendered queries/_columns.html.erb (1.6ms)
+  Rendered queries/_form.html.erb (29.9ms)
+  Rendered queries/new.html.erb within layouts/base (30.7ms)
+Completed 200 OK in 83.8ms (Views: 39.5ms | ActiveRecord: 19.9ms)
+Started GET "/projects/modulo-de-seguimiento/issues/new" for 127.0.0.1 at 2014-10-04 11:52:59 -0500
+Processing by IssuesController#new as HTML
+  Parameters: {"project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered issues/_form_custom_fields.html.erb (11.0ms)
+  Rendered issues/_attributes.html.erb (42.6ms)
+  Rendered issues/_form.html.erb (70.3ms)
+  Rendered attachments/_form.html.erb (3.0ms)
+  Rendered issues/new.html.erb within layouts/base (84.6ms)
+Completed 200 OK in 225.6ms (Views: 100.8ms | ActiveRecord: 29.7ms)
+Started POST "/projects/modulo-de-seguimiento/issues/update_form.js" for 127.0.0.1 at 2014-10-04 11:55:21 -0500
+Processing by IssuesController#update_form as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IaRv3lWRxBVGKQmyiZuEnTm91HuyCcJAgj/wbhJZfQo=", "issue"=>{"is_private"=>"0", "tracker_id"=>"1", "subject"=>"Implementar los modelos", "description"=>"Implementar los modelos para poder generar las conexiones con la base de datos.", "status_id"=>"2", "priority_id"=>"2", "assigned_to_id"=>"", "parent_issue_id"=>"", "start_date"=>"2014-10-04", "due_date"=>"", "estimated_hours"=>"", "done_ratio"=>"0"}, "project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered issues/_form_custom_fields.html.erb (5.2ms)
+  Rendered issues/_attributes.html.erb (22.6ms)
+  Rendered issues/_form.html.erb (31.6ms)
+  Rendered issues/update_form.js.erb (33.6ms)
+Completed 200 OK in 78.9ms (Views: 28.0ms | ActiveRecord: 19.9ms)
+Started POST "/issues/preview/new/modulo-de-seguimiento" for 127.0.0.1 at 2014-10-04 11:56:27 -0500
+Processing by PreviewsController#issue as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IaRv3lWRxBVGKQmyiZuEnTm91HuyCcJAgj/wbhJZfQo=", "issue"=>{"is_private"=>"0", "tracker_id"=>"1", "subject"=>"Implementar los modelos", "description"=>"Implementar los modelos para poder generar las conexiones con la base de datos.", "status_id"=>"2", "priority_id"=>"3", "assigned_to_id"=>"4", "parent_issue_id"=>"", "start_date"=>"2014-10-04", "due_date"=>"2014-10-04", "estimated_hours"=>"6", "done_ratio"=>"0", "watcher_user_ids"=>["4", "3"]}, "project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered previews/issue.html.erb (0.9ms)
+Completed 200 OK in 6.6ms (Views: 3.0ms | ActiveRecord: 1.1ms)
+Started POST "/projects/modulo-de-seguimiento/issues" for 127.0.0.1 at 2014-10-04 11:56:53 -0500
+Processing by IssuesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IaRv3lWRxBVGKQmyiZuEnTm91HuyCcJAgj/wbhJZfQo=", "issue"=>{"is_private"=>"0", "tracker_id"=>"1", "subject"=>"Implementar los modelos", "description"=>"Implementar los modelos para poder generar las conexiones con la base de datos.", "status_id"=>"2", "priority_id"=>"3", "assigned_to_id"=>"4", "parent_issue_id"=>"", "start_date"=>"2014-10-04", "due_date"=>"2014-10-04", "estimated_hours"=>"6", "done_ratio"=>"0", "watcher_user_ids"=>["4", "3"]}, "commit"=>"Crear", "project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered mailer/_issue.text.erb (2.9ms)
+  Rendered mailer/issue_add.text.erb within layouts/mailer (4.5ms)
+  Rendered mailer/_issue.html.erb (1.0ms)
+  Rendered mailer/issue_add.html.erb within layouts/mailer (1.7ms)
+Email delivery error: getaddrinfo: Name or service not known
+Redirected to http://0.0.0.0:3000/issues/1
+Completed 302 Found in 480.5ms (ActiveRecord: 34.1ms)
+Started GET "/issues/1" for 127.0.0.1 at 2014-10-04 11:56:54 -0500
+Processing by IssuesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Current user: admin (id=1)
+  Rendered issues/_action_menu.html.erb (4.8ms)
+  Rendered issue_relations/_form.html.erb (2.2ms)
+  Rendered issues/_relations.html.erb (5.3ms)
+  Rendered issues/_action_menu.html.erb (2.4ms)
+  Rendered issues/_form_custom_fields.html.erb (0.0ms)
+  Rendered issues/_attributes.html.erb (14.5ms)
+  Rendered issues/_form.html.erb (25.6ms)
+  Rendered attachments/_form.html.erb (1.9ms)
+  Rendered issues/_edit.html.erb (39.3ms)
+  Rendered issues/_sidebar.html.erb (4.8ms)
+  Rendered watchers/_watchers.html.erb (8.0ms)
+  Rendered issues/show.html.erb within layouts/base (90.9ms)
+Completed 200 OK in 209.5ms (Views: 98.4ms | ActiveRecord: 53.3ms)
+Started PUT "/issues/1" for 127.0.0.1 at 2014-10-04 11:57:30 -0500
+Processing by IssuesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IaRv3lWRxBVGKQmyiZuEnTm91HuyCcJAgj/wbhJZfQo=", "issue"=>{"is_private"=>"0", "tracker_id"=>"1", "subject"=>"Implementar los modelos", "description"=>"Implementar los modelos para poder generar las conexiones con la base de datos.", "status_id"=>"2", "priority_id"=>"3", "assigned_to_id"=>"4", "parent_issue_id"=>"", "start_date"=>"2014-10-04", "due_date"=>"2014-10-04", "estimated_hours"=>"6", "done_ratio"=>"30", "notes"=>"", "private_notes"=>"0", "lock_version"=>"0"}, "time_entry"=>{"hours"=>"", "activity_id"=>"9", "comments"=>""}, "last_journal_id"=>"", "commit"=>"Aceptar", "id"=>"1"}
+  Current user: admin (id=1)
+  Rendered mailer/_issue.text.erb (3.9ms)
+  Rendered mailer/issue_edit.text.erb within layouts/mailer (5.3ms)
+  Rendered mailer/_issue.html.erb (0.6ms)
+  Rendered mailer/issue_edit.html.erb within layouts/mailer (1.4ms)
+Email delivery error: getaddrinfo: Name or service not known
+Redirected to http://0.0.0.0:3000/issues/1
+Completed 302 Found in 196.0ms (ActiveRecord: 45.4ms)
+Started GET "/issues/1" for 127.0.0.1 at 2014-10-04 11:57:31 -0500
+Processing by IssuesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Current user: admin (id=1)
+  Rendered issues/_action_menu.html.erb (4.1ms)
+  Rendered issue_relations/_form.html.erb (1.6ms)
+  Rendered issues/_relations.html.erb (2.7ms)
+  Rendered issues/_history.html.erb (4.4ms)
+  Rendered issues/_action_menu.html.erb (2.4ms)
+  Rendered issues/_form_custom_fields.html.erb (0.0ms)
+  Rendered issues/_attributes.html.erb (16.7ms)
+  Rendered issues/_form.html.erb (28.0ms)
+  Rendered attachments/_form.html.erb (1.9ms)
+  Rendered issues/_edit.html.erb (40.4ms)
+  Rendered issues/_sidebar.html.erb (4.4ms)
+  Rendered watchers/_watchers.html.erb (6.6ms)
+  Rendered issues/show.html.erb within layouts/base (88.7ms)
+Completed 200 OK in 181.2ms (Views: 86.3ms | ActiveRecord: 52.5ms)
+Started POST "/projects/modulo-de-seguimiento/queries" for 127.0.0.1 at 2014-10-04 11:58:37 -0500
+Processing by QueriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IaRv3lWRxBVGKQmyiZuEnTm91HuyCcJAgj/wbhJZfQo=", "query"=>{"name"=>"Consulta de prueba", "visibility"=>"1", "role_ids"=>["3", "4", ""], "group_by"=>"project", "sort_criteria"=>{"0"=>["", ""], "1"=>["", ""], "2"=>["", ""]}}, "default_columns"=>"1", "c"=>["description", "tracker", "status", "priority", "subject", "assigned_to", "updated_on"], "f"=>["status_id", ""], "op"=>{"status_id"=>"o"}, "commit"=>"Guardar", "project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+Redirected to http://0.0.0.0:3000/projects/modulo-de-seguimiento/issues?query_id=1
+Completed 302 Found in 74.3ms (ActiveRecord: 51.5ms)
+Started GET "/projects/modulo-de-seguimiento/issues?query_id=1" for 127.0.0.1 at 2014-10-04 11:58:37 -0500
+Processing by IssuesController#index as HTML
+  Parameters: {"query_id"=>"1", "project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (5.5ms)
+  Rendered queries/_columns.html.erb (1.6ms)
+  Rendered issues/_list.html.erb (10.4ms)
+  Rendered issues/_sidebar.html.erb (3.1ms)
+  Rendered issues/index.html.erb within layouts/base (27.9ms)
+Completed 200 OK in 109.0ms (Views: 37.1ms | ActiveRecord: 36.8ms)
+Started GET "/issues/1" for 127.0.0.1 at 2014-10-04 11:58:50 -0500
+Processing by IssuesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Current user: admin (id=1)
+  Rendered issues/_action_menu.html.erb (3.7ms)
+  Rendered issue_relations/_form.html.erb (1.6ms)
+  Rendered issues/_relations.html.erb (2.6ms)
+  Rendered issues/_history.html.erb (3.3ms)
+  Rendered issues/_action_menu.html.erb (2.6ms)
+  Rendered issues/_form_custom_fields.html.erb (0.1ms)
+  Rendered issues/_attributes.html.erb (17.0ms)
+  Rendered issues/_form.html.erb (26.9ms)
+  Rendered attachments/_form.html.erb (1.9ms)
+  Rendered issues/_edit.html.erb (39.5ms)
+  Rendered issues/_sidebar.html.erb (5.6ms)
+  Rendered watchers/_watchers.html.erb (7.2ms)
+  Rendered issues/show.html.erb within layouts/base (87.6ms)
+Completed 200 OK in 178.3ms (Views: 82.3ms | ActiveRecord: 52.2ms)
+Started GET "/projects/modulo-de-seguimiento/activity" for 127.0.0.1 at 2014-10-04 11:58:54 -0500
+Processing by ActivitiesController#index as HTML
+  Parameters: {"id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered activities/index.html.erb within layouts/base (14.7ms)
+Completed 200 OK in 86.7ms (Views: 26.5ms | ActiveRecord: 31.8ms)
+Started GET "/projects/modulo-de-seguimiento" for 127.0.0.1 at 2014-10-04 11:58:55 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered projects/_members_box.html.erb (1.7ms)
+  Rendered projects/show.html.erb within layouts/base (7.8ms)
+Completed 200 OK in 54.6ms (Views: 16.9ms | ActiveRecord: 19.3ms)
+Started GET "/projects/modulo-de-seguimiento/activity" for 127.0.0.1 at 2014-10-04 11:59:00 -0500
+Processing by ActivitiesController#index as HTML
+  Parameters: {"id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+Completed 304 Not Modified in 54.0ms (ActiveRecord: 24.3ms)
+Started GET "/projects/modulo-de-seguimiento/issues" for 127.0.0.1 at 2014-10-04 11:59:01 -0500
+Processing by IssuesController#index as HTML
+  Parameters: {"project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (7.1ms)
+  Rendered queries/_columns.html.erb (1.6ms)
+  Rendered issues/_list.html.erb (8.0ms)
+  Rendered issues/_sidebar.html.erb (3.9ms)
+  Rendered issues/index.html.erb within layouts/base (28.1ms)
+Completed 200 OK in 115.3ms (Views: 37.6ms | ActiveRecord: 43.5ms)
+Started GET "/projects/modulo-de-seguimiento/issues" for 127.0.0.1 at 2014-10-04 11:59:11 -0500
+Processing by IssuesController#index as HTML
+  Parameters: {"project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (10.8ms)
+  Rendered queries/_columns.html.erb (1.2ms)
+  Rendered issues/_list.html.erb (6.4ms)
+  Rendered issues/_sidebar.html.erb (4.8ms)
+  Rendered issues/index.html.erb within layouts/base (31.0ms)
+Completed 200 OK in 119.3ms (Views: 39.7ms | ActiveRecord: 46.0ms)
+Started GET "/queries/1/edit" for 127.0.0.1 at 2014-10-04 11:59:13 -0500
+Processing by QueriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (26.3ms)
+  Rendered queries/_columns.html.erb (1.7ms)
+  Rendered queries/_form.html.erb (46.8ms)
+  Rendered queries/edit.html.erb within layouts/base (48.3ms)
+Completed 200 OK in 69.6ms (Views: 46.3ms | ActiveRecord: 19.6ms)
+Started GET "/projects/modulo-de-seguimiento/issues/new" for 127.0.0.1 at 2014-10-04 11:59:17 -0500
+Processing by IssuesController#new as HTML
+  Parameters: {"project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered issues/_form_custom_fields.html.erb (3.5ms)
+  Rendered issues/_attributes.html.erb (18.8ms)
+  Rendered issues/_form.html.erb (33.4ms)
+  Rendered attachments/_form.html.erb (1.8ms)
+  Rendered issues/new.html.erb within layouts/base (38.5ms)
+Completed 200 OK in 86.4ms (Views: 46.2ms | ActiveRecord: 22.8ms)
+Started GET "/projects/modulo-de-seguimiento/issues" for 127.0.0.1 at 2014-10-04 11:59:19 -0500
+Processing by IssuesController#index as HTML
+  Parameters: {"project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (7.8ms)
+  Rendered queries/_columns.html.erb (2.1ms)
+  Rendered issues/_list.html.erb (7.9ms)
+  Rendered issues/_sidebar.html.erb (3.0ms)
+  Rendered issues/index.html.erb within layouts/base (27.3ms)
+Completed 200 OK in 118.7ms (Views: 34.5ms | ActiveRecord: 49.4ms)
+Started GET "/queries/1/edit" for 127.0.0.1 at 2014-10-04 11:59:26 -0500
+Processing by QueriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (26.3ms)
+  Rendered queries/_columns.html.erb (1.8ms)
+  Rendered queries/_form.html.erb (47.5ms)
+  Rendered queries/edit.html.erb within layouts/base (48.5ms)
+Completed 200 OK in 71.8ms (Views: 48.6ms | ActiveRecord: 19.6ms)
+Started PUT "/queries/1" for 127.0.0.1 at 2014-10-04 11:59:37 -0500
+Processing by QueriesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IaRv3lWRxBVGKQmyiZuEnTm91HuyCcJAgj/wbhJZfQo=", "query"=>{"name"=>"Listado de Peticiones", "visibility"=>"1", "role_ids"=>["3", "4", ""], "group_by"=>"project", "sort_criteria"=>{"0"=>["", ""], "1"=>["", ""], "2"=>["", ""]}}, "default_columns"=>"1", "f"=>["status_id", ""], "op"=>{"status_id"=>"o"}, "c"=>["tracker", "status", "priority", "subject", "assigned_to", "updated_on"], "commit"=>"Guardar", "id"=>"1"}
+  Current user: admin (id=1)
+Redirected to http://0.0.0.0:3000/projects/modulo-de-seguimiento/issues?query_id=1
+Completed 302 Found in 63.3ms (ActiveRecord: 36.0ms)
+Started GET "/projects/modulo-de-seguimiento/issues?query_id=1" for 127.0.0.1 at 2014-10-04 11:59:37 -0500
+Processing by IssuesController#index as HTML
+  Parameters: {"query_id"=>"1", "project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (7.9ms)
+  Rendered queries/_columns.html.erb (1.6ms)
+  Rendered issues/_list.html.erb (9.0ms)
+  Rendered issues/_sidebar.html.erb (4.6ms)
+  Rendered issues/index.html.erb within layouts/base (31.1ms)
+Completed 200 OK in 116.7ms (Views: 40.7ms | ActiveRecord: 43.1ms)
+Started DELETE "/queries/1" for 127.0.0.1 at 2014-10-04 11:59:50 -0500
+Processing by QueriesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"IaRv3lWRxBVGKQmyiZuEnTm91HuyCcJAgj/wbhJZfQo=", "id"=>"1"}
+  Current user: admin (id=1)
+Redirected to http://0.0.0.0:3000/projects/modulo-de-seguimiento/issues?set_filter=1
+Completed 302 Found in 35.0ms (ActiveRecord: 30.0ms)
+Started GET "/projects/modulo-de-seguimiento/issues?set_filter=1" for 127.0.0.1 at 2014-10-04 11:59:50 -0500
+Processing by IssuesController#index as HTML
+  Parameters: {"set_filter"=>"1", "project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (8.6ms)
+  Rendered queries/_columns.html.erb (2.0ms)
+  Rendered issues/_list.html.erb (6.5ms)
+  Rendered issues/_sidebar.html.erb (2.7ms)
+  Rendered issues/index.html.erb within layouts/base (26.6ms)
+Completed 200 OK in 92.3ms (Views: 38.2ms | ActiveRecord: 31.6ms)
+Started GET "/projects/modulo-de-seguimiento/issues/new" for 127.0.0.1 at 2014-10-04 12:01:42 -0500
+Processing by IssuesController#new as HTML
+  Parameters: {"project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered issues/_form_custom_fields.html.erb (3.9ms)
+  Rendered issues/_attributes.html.erb (21.4ms)
+  Rendered issues/_form.html.erb (34.1ms)
+  Rendered attachments/_form.html.erb (2.2ms)
+  Rendered issues/new.html.erb within layouts/base (39.2ms)
+Completed 200 OK in 84.5ms (Views: 45.0ms | ActiveRecord: 22.3ms)
+Started GET "/projects/modulo-de-seguimiento/issues" for 127.0.0.1 at 2014-10-04 12:01:44 -0500
+Processing by IssuesController#index as HTML
+  Parameters: {"project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (10.0ms)
+  Rendered queries/_columns.html.erb (1.2ms)
+  Rendered issues/_list.html.erb (5.2ms)
+  Rendered issues/_sidebar.html.erb (3.9ms)
+  Rendered issues/index.html.erb within layouts/base (27.1ms)
+Completed 200 OK in 102.5ms (Views: 37.5ms | ActiveRecord: 35.8ms)
+Started GET "/projects/modulo-de-seguimiento/issues/new" for 127.0.0.1 at 2014-10-04 12:01:55 -0500
+Processing by IssuesController#new as HTML
+  Parameters: {"project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered issues/_form_custom_fields.html.erb (3.6ms)
+  Rendered issues/_attributes.html.erb (19.3ms)
+  Rendered issues/_form.html.erb (35.2ms)
+  Rendered attachments/_form.html.erb (1.8ms)
+  Rendered issues/new.html.erb within layouts/base (40.1ms)
+Completed 200 OK in 84.2ms (Views: 46.3ms | ActiveRecord: 22.9ms)
+Started GET "/projects/modulo-de-seguimiento/issues/gantt" for 127.0.0.1 at 2014-10-04 12:01:57 -0500
+Processing by GanttsController#show as HTML
+  Parameters: {"project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (19.0ms)
+  Rendered issues/_sidebar.html.erb (3.5ms)
+  Rendered gantts/show.html.erb within layouts/base (76.8ms)
+Completed 200 OK in 116.9ms (Views: 63.0ms | ActiveRecord: 38.4ms)
+Started GET "/projects/modulo-de-seguimiento/issues" for 127.0.0.1 at 2014-10-04 12:02:01 -0500
+Processing by IssuesController#index as HTML
+  Parameters: {"project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (11.1ms)
+  Rendered queries/_columns.html.erb (1.1ms)
+  Rendered issues/_list.html.erb (5.5ms)
+  Rendered issues/_sidebar.html.erb (3.1ms)
+  Rendered issues/index.html.erb within layouts/base (26.5ms)
+Completed 200 OK in 97.1ms (Views: 36.4ms | ActiveRecord: 36.1ms)
+Started GET "/projects/modulo-de-seguimiento/issues/new" for 127.0.0.1 at 2014-10-04 12:02:01 -0500
+Processing by IssuesController#new as HTML
+  Parameters: {"project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered issues/_form_custom_fields.html.erb (3.6ms)
+  Rendered issues/_attributes.html.erb (19.8ms)
+  Rendered issues/_form.html.erb (32.0ms)
+  Rendered attachments/_form.html.erb (1.8ms)
+  Rendered issues/new.html.erb within layouts/base (36.4ms)
+Completed 200 OK in 81.9ms (Views: 42.6ms | ActiveRecord: 23.0ms)
+Started GET "/projects/modulo-de-seguimiento/issues" for 127.0.0.1 at 2014-10-04 12:02:05 -0500
+Processing by IssuesController#index as HTML
+  Parameters: {"project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (7.8ms)
+  Rendered queries/_columns.html.erb (1.6ms)
+  Rendered issues/_list.html.erb (5.9ms)
+  Rendered issues/_sidebar.html.erb (2.5ms)
+  Rendered issues/index.html.erb within layouts/base (24.0ms)
+Completed 200 OK in 108.5ms (Views: 34.2ms | ActiveRecord: 42.8ms)
+Started GET "/issues/1" for 127.0.0.1 at 2014-10-04 12:02:08 -0500
+Processing by IssuesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Current user: admin (id=1)
+  Rendered issues/_action_menu.html.erb (4.1ms)
+  Rendered issue_relations/_form.html.erb (1.5ms)
+  Rendered issues/_relations.html.erb (2.5ms)
+  Rendered issues/_history.html.erb (3.2ms)
+  Rendered issues/_action_menu.html.erb (2.4ms)
+  Rendered issues/_form_custom_fields.html.erb (0.0ms)
+  Rendered issues/_attributes.html.erb (13.5ms)
+  Rendered issues/_form.html.erb (21.0ms)
+  Rendered attachments/_form.html.erb (1.8ms)
+  Rendered issues/_edit.html.erb (32.5ms)
+  Rendered issues/_sidebar.html.erb (4.3ms)
+  Rendered watchers/_watchers.html.erb (6.9ms)
+  Rendered issues/show.html.erb within layouts/base (77.8ms)
+Completed 200 OK in 167.5ms (Views: 74.2ms | ActiveRecord: 51.8ms)
+Started PUT "/projects/modulo-de-seguimiento/issues/update_form.js?id=1" for 127.0.0.1 at 2014-10-04 12:02:13 -0500
+Processing by IssuesController#update_form as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IaRv3lWRxBVGKQmyiZuEnTm91HuyCcJAgj/wbhJZfQo=", "issue"=>{"is_private"=>"0", "tracker_id"=>"2", "subject"=>"Implementar los modelos", "description"=>"Implementar los modelos para poder generar las conexiones con la base de datos.", "status_id"=>"2", "priority_id"=>"3", "assigned_to_id"=>"4", "parent_issue_id"=>"", "start_date"=>"2014-10-04", "due_date"=>"2014-10-04", "estimated_hours"=>"6", "done_ratio"=>"30", "notes"=>"", "private_notes"=>"0", "lock_version"=>"1"}, "time_entry"=>{"hours"=>"", "activity_id"=>"", "comments"=>""}, "last_journal_id"=>"1", "id"=>"1", "project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered issues/_form_custom_fields.html.erb (1.9ms)
+  Rendered issues/_attributes.html.erb (21.3ms)
+  Rendered issues/_form.html.erb (27.9ms)
+  Rendered issues/update_form.js.erb (28.6ms)
+Completed 200 OK in 83.9ms (Views: 21.6ms | ActiveRecord: 23.8ms)
+Started PUT "/issues/1" for 127.0.0.1 at 2014-10-04 12:02:17 -0500
+Processing by IssuesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IaRv3lWRxBVGKQmyiZuEnTm91HuyCcJAgj/wbhJZfQo=", "issue"=>{"is_private"=>"0", "tracker_id"=>"2", "subject"=>"Implementar los modelos", "description"=>"Implementar los modelos para poder generar las conexiones con la base de datos.", "status_id"=>"2", "priority_id"=>"3", "assigned_to_id"=>"4", "parent_issue_id"=>"", "start_date"=>"2014-10-04", "due_date"=>"2014-10-04", "estimated_hours"=>"6.0", "done_ratio"=>"30", "notes"=>"", "private_notes"=>"0", "lock_version"=>"1"}, "time_entry"=>{"hours"=>"", "activity_id"=>"", "comments"=>""}, "last_journal_id"=>"1", "commit"=>"Aceptar", "id"=>"1"}
+  Current user: admin (id=1)
+  Rendered mailer/_issue.text.erb (4.1ms)
+  Rendered mailer/issue_edit.text.erb within layouts/mailer (6.5ms)
+  Rendered mailer/_issue.html.erb (0.8ms)
+  Rendered mailer/issue_edit.html.erb within layouts/mailer (1.9ms)
+Email delivery error: getaddrinfo: Name or service not known
+Redirected to http://0.0.0.0:3000/issues/1
+Completed 302 Found in 239.3ms (ActiveRecord: 43.8ms)
+Started GET "/issues/1" for 127.0.0.1 at 2014-10-04 12:02:17 -0500
+Processing by IssuesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Current user: admin (id=1)
+  Rendered issues/_action_menu.html.erb (3.5ms)
+  Rendered issue_relations/_form.html.erb (1.4ms)
+  Rendered issues/_relations.html.erb (2.4ms)
+  Rendered issues/_history.html.erb (6.0ms)
+  Rendered issues/_action_menu.html.erb (2.3ms)
+  Rendered issues/_form_custom_fields.html.erb (0.0ms)
+  Rendered issues/_attributes.html.erb (16.4ms)
+  Rendered issues/_form.html.erb (26.6ms)
+  Rendered attachments/_form.html.erb (1.7ms)
+  Rendered issues/_edit.html.erb (38.0ms)
+  Rendered issues/_sidebar.html.erb (4.6ms)
+  Rendered watchers/_watchers.html.erb (6.9ms)
+  Rendered issues/show.html.erb within layouts/base (85.7ms)
+Completed 200 OK in 170.6ms (Views: 80.2ms | ActiveRecord: 52.1ms)
+Started GET "/projects/modulo-de-seguimiento/issues/new" for 127.0.0.1 at 2014-10-04 12:02:23 -0500
+Processing by IssuesController#new as HTML
+  Parameters: {"project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered issues/_form_custom_fields.html.erb (2.8ms)
+  Rendered issues/_attributes.html.erb (17.6ms)
+  Rendered issues/_form.html.erb (29.7ms)
+  Rendered attachments/_form.html.erb (1.7ms)
+  Rendered issues/new.html.erb within layouts/base (34.1ms)
+Completed 200 OK in 72.4ms (Views: 37.7ms | ActiveRecord: 21.1ms)
+Started POST "/projects/modulo-de-seguimiento/issues" for 127.0.0.1 at 2014-10-04 12:03:54 -0500
+Processing by IssuesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IaRv3lWRxBVGKQmyiZuEnTm91HuyCcJAgj/wbhJZfQo=", "issue"=>{"is_private"=>"0", "tracker_id"=>"1", "subject"=>"Problema con conexión a la Base de datos", "description"=>"Al intentar acceder a la base de datos se muestra un error indicando que los datos de autenticación son invalidos.", "status_id"=>"1", "priority_id"=>"5", "assigned_to_id"=>"3", "parent_issue_id"=>"", "start_date"=>"2014-10-04", "due_date"=>"2014-10-05", "estimated_hours"=>"3", "done_ratio"=>"0", "watcher_user_ids"=>["4", "3"]}, "commit"=>"Crear", "project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered mailer/_issue.text.erb (1.5ms)
+  Rendered mailer/issue_add.text.erb within layouts/mailer (1.9ms)
+  Rendered mailer/_issue.html.erb (0.6ms)
+  Rendered mailer/issue_add.html.erb within layouts/mailer (0.8ms)
+Email delivery error: getaddrinfo: Name or service not known
+Redirected to http://0.0.0.0:3000/issues/2
+Completed 302 Found in 233.5ms (ActiveRecord: 59.3ms)
+Started GET "/issues/2" for 127.0.0.1 at 2014-10-04 12:03:55 -0500
+Processing by IssuesController#show as HTML
+  Parameters: {"id"=>"2"}
+  Current user: admin (id=1)
+  Rendered issues/_action_menu.html.erb (4.1ms)
+  Rendered issue_relations/_form.html.erb (1.4ms)
+  Rendered issues/_relations.html.erb (2.4ms)
+  Rendered issues/_action_menu.html.erb (2.3ms)
+  Rendered issues/_form_custom_fields.html.erb (0.0ms)
+  Rendered issues/_attributes.html.erb (16.6ms)
+  Rendered issues/_form.html.erb (28.5ms)
+  Rendered attachments/_form.html.erb (1.8ms)
+  Rendered issues/_edit.html.erb (40.3ms)
+  Rendered issues/_sidebar.html.erb (6.7ms)
+  Rendered watchers/_watchers.html.erb (10.0ms)
+  Rendered issues/show.html.erb within layouts/base (88.8ms)
+Completed 200 OK in 174.4ms (Views: 88.0ms | ActiveRecord: 48.9ms)
+Started GET "/projects/modulo-de-seguimiento/issues?set_filter=1" for 127.0.0.1 at 2014-10-04 12:04:00 -0500
+Processing by IssuesController#index as HTML
+  Parameters: {"set_filter"=>"1", "project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (5.3ms)
+  Rendered queries/_columns.html.erb (1.2ms)
+  Rendered issues/_list.html.erb (8.3ms)
+  Rendered issues/_sidebar.html.erb (3.9ms)
+  Rendered issues/index.html.erb within layouts/base (25.6ms)
+Completed 200 OK in 117.7ms (Views: 35.3ms | ActiveRecord: 42.4ms)
+Started GET "/projects/modulo-de-seguimiento/issues/report" for 127.0.0.1 at 2014-10-04 12:04:02 -0500
+Processing by ReportsController#issue_report as HTML
+  Parameters: {"id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered reports/_simple.html.erb (6.7ms)
+  Rendered reports/_simple.html.erb (4.4ms)
+  Rendered reports/_simple.html.erb (1.9ms)
+  Rendered reports/_simple.html.erb (1.8ms)
+  Rendered reports/_simple.html.erb (0.1ms)
+  Rendered reports/_simple.html.erb (1.2ms)
+  Rendered reports/issue_report.html.erb within layouts/base (24.1ms)
+Completed 200 OK in 72.4ms (Views: 38.1ms | ActiveRecord: 23.1ms)
+Started GET "/projects/modulo-de-seguimiento/issues/new" for 127.0.0.1 at 2014-10-04 12:04:14 -0500
+Processing by IssuesController#new as HTML
+  Parameters: {"project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered issues/_form_custom_fields.html.erb (3.4ms)
+  Rendered issues/_attributes.html.erb (18.2ms)
+  Rendered issues/_form.html.erb (30.4ms)
+  Rendered attachments/_form.html.erb (1.9ms)
+  Rendered issues/new.html.erb within layouts/base (35.2ms)
+Completed 200 OK in 76.9ms (Views: 43.3ms | ActiveRecord: 20.5ms)
+Started POST "/projects/modulo-de-seguimiento/issues/update_form.js" for 127.0.0.1 at 2014-10-04 12:04:18 -0500
+Processing by IssuesController#update_form as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IaRv3lWRxBVGKQmyiZuEnTm91HuyCcJAgj/wbhJZfQo=", "issue"=>{"is_private"=>"0", "tracker_id"=>"1", "subject"=>"", "description"=>"", "status_id"=>"5", "priority_id"=>"2", "assigned_to_id"=>"", "parent_issue_id"=>"", "start_date"=>"2014-10-04", "due_date"=>"", "estimated_hours"=>"", "done_ratio"=>"0"}, "project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered issues/_form_custom_fields.html.erb (3.1ms)
+  Rendered issues/_attributes.html.erb (19.4ms)
+  Rendered issues/_form.html.erb (25.6ms)
+  Rendered issues/update_form.js.erb (26.5ms)
+Completed 200 OK in 64.7ms (Views: 20.7ms | ActiveRecord: 16.2ms)
+Started POST "/projects/modulo-de-seguimiento/issues/update_form.js" for 127.0.0.1 at 2014-10-04 12:04:21 -0500
+Processing by IssuesController#update_form as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IaRv3lWRxBVGKQmyiZuEnTm91HuyCcJAgj/wbhJZfQo=", "issue"=>{"is_private"=>"0", "tracker_id"=>"2", "subject"=>"", "description"=>"", "status_id"=>"5", "priority_id"=>"2", "assigned_to_id"=>"", "parent_issue_id"=>"", "start_date"=>"2014-10-04", "due_date"=>"", "estimated_hours"=>"", "done_ratio"=>"0"}, "project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered issues/_form_custom_fields.html.erb (2.3ms)
+  Rendered issues/_attributes.html.erb (19.4ms)
+  Rendered issues/_form.html.erb (23.3ms)
+  Rendered issues/update_form.js.erb (24.2ms)
+Completed 200 OK in 60.4ms (Views: 19.4ms | ActiveRecord: 14.2ms)
+Started POST "/projects/modulo-de-seguimiento/issues" for 127.0.0.1 at 2014-10-04 12:05:20 -0500
+Processing by IssuesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IaRv3lWRxBVGKQmyiZuEnTm91HuyCcJAgj/wbhJZfQo=", "issue"=>{"is_private"=>"0", "tracker_id"=>"2", "subject"=>"Identificar elementos de configuración", "description"=>"Se deben identificar los items de configuracion en los cuales se agruparan los productos de trabajo", "status_id"=>"5", "priority_id"=>"2", "assigned_to_id"=>"3", "parent_issue_id"=>"", "start_date"=>"2014-10-03", "due_date"=>"2014-10-03", "estimated_hours"=>"2", "done_ratio"=>"100", "watcher_user_ids"=>["4", "3"]}, "commit"=>"Crear", "project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered mailer/_issue.text.erb (1.9ms)
+  Rendered mailer/issue_add.text.erb within layouts/mailer (2.5ms)
+  Rendered mailer/_issue.html.erb (0.9ms)
+  Rendered mailer/issue_add.html.erb within layouts/mailer (1.2ms)
+Email delivery error: getaddrinfo: Name or service not known
+Redirected to http://0.0.0.0:3000/issues/3
+Completed 302 Found in 222.1ms (ActiveRecord: 45.4ms)
+Started GET "/issues/3" for 127.0.0.1 at 2014-10-04 12:05:21 -0500
+Processing by IssuesController#show as HTML
+  Parameters: {"id"=>"3"}
+  Current user: admin (id=1)
+  Rendered issues/_action_menu.html.erb (3.9ms)
+  Rendered issue_relations/_form.html.erb (1.5ms)
+  Rendered issues/_relations.html.erb (2.5ms)
+  Rendered issues/_action_menu.html.erb (2.4ms)
+  Rendered issues/_form_custom_fields.html.erb (0.0ms)
+  Rendered issues/_attributes.html.erb (15.9ms)
+  Rendered issues/_form.html.erb (26.2ms)
+  Rendered attachments/_form.html.erb (1.9ms)
+  Rendered issues/_edit.html.erb (37.9ms)
+  Rendered issues/_sidebar.html.erb (4.6ms)
+  Rendered watchers/_watchers.html.erb (18.2ms)
+  Rendered issues/show.html.erb within layouts/base (92.2ms)
+Completed 200 OK in 173.8ms (Views: 86.8ms | ActiveRecord: 49.6ms)
+Started GET "/projects/modulo-de-seguimiento/issues?set_filter=1" for 127.0.0.1 at 2014-10-04 12:05:26 -0500
+Processing by IssuesController#index as HTML
+  Parameters: {"set_filter"=>"1", "project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (5.4ms)
+  Rendered queries/_columns.html.erb (1.1ms)
+  Rendered issues/_list.html.erb (8.5ms)
+  Rendered issues/_sidebar.html.erb (3.4ms)
+  Rendered issues/index.html.erb within layouts/base (25.0ms)
+Completed 200 OK in 104.1ms (Views: 34.7ms | ActiveRecord: 38.0ms)
+Started GET "/projects/modulo-de-seguimiento/issues/report" for 127.0.0.1 at 2014-10-04 12:05:29 -0500
+Processing by ReportsController#issue_report as HTML
+  Parameters: {"id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered reports/_simple.html.erb (6.1ms)
+  Rendered reports/_simple.html.erb (4.5ms)
+  Rendered reports/_simple.html.erb (2.0ms)
+  Rendered reports/_simple.html.erb (1.8ms)
+  Rendered reports/_simple.html.erb (0.0ms)
+  Rendered reports/_simple.html.erb (0.8ms)
+  Rendered reports/issue_report.html.erb within layouts/base (19.4ms)
+Completed 200 OK in 57.1ms (Views: 27.3ms | ActiveRecord: 18.8ms)
+Started GET "/projects/modulo-de-seguimiento/issues" for 127.0.0.1 at 2014-10-04 12:06:04 -0500
+Processing by IssuesController#index as HTML
+  Parameters: {"project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (5.4ms)
+  Rendered queries/_columns.html.erb (1.1ms)
+  Rendered issues/_list.html.erb (8.0ms)
+  Rendered issues/_sidebar.html.erb (4.4ms)
+  Rendered issues/index.html.erb within layouts/base (25.8ms)
+Completed 200 OK in 105.8ms (Views: 35.9ms | ActiveRecord: 41.7ms)
+Started GET "/projects/modulo-de-seguimiento/issues/calendar" for 127.0.0.1 at 2014-10-04 12:06:06 -0500
+Processing by CalendarsController#show as HTML
+  Parameters: {"project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (6.7ms)
+  Rendered common/_calendar.html.erb (5.2ms)
+  Rendered issues/_sidebar.html.erb (4.0ms)
+  Rendered calendars/show.html.erb within layouts/base (19.4ms)
+Completed 200 OK in 87.8ms (Views: 31.3ms | ActiveRecord: 29.5ms)
+Started GET "/projects/modulo-de-seguimiento/issues/gantt" for 127.0.0.1 at 2014-10-04 12:07:04 -0500
+Processing by GanttsController#show as HTML
+  Parameters: {"project_id"=>"modulo-de-seguimiento"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (9.9ms)
+  Rendered issues/_sidebar.html.erb (4.0ms)
+  Rendered gantts/show.html.erb within layouts/base (70.8ms)
+Completed 200 OK in 112.6ms (Views: 54.5ms | ActiveRecord: 41.0ms)
+Started GET "/admin" for 127.0.0.1 at 2014-10-04 12:08:11 -0500
+Processing by AdminController#index as HTML
+  Current user: admin (id=1)
+  Rendered admin/_menu.html.erb (3.4ms)
+  Rendered admin/index.html.erb within layouts/admin (3.8ms)
+  Rendered layouts/base.html.erb (8.3ms)
+Completed 200 OK in 17.4ms (Views: 11.8ms | ActiveRecord: 2.3ms)
+Started GET "/issue_statuses" for 127.0.0.1 at 2014-10-04 12:08:14 -0500
+Processing by IssueStatusesController#index as HTML
+  Current user: admin (id=1)
+  Rendered issue_statuses/index.html.erb within layouts/admin (13.8ms)
+  Rendered admin/_menu.html.erb (2.7ms)
+  Rendered layouts/base.html.erb (7.3ms)
+Completed 200 OK in 29.9ms (Views: 22.4ms | ActiveRecord: 4.6ms)
+Started GET "/admin" for 127.0.0.1 at 2014-10-04 12:08:21 -0500
+Processing by AdminController#index as HTML
+  Current user: admin (id=1)
+  Rendered admin/_menu.html.erb (3.4ms)
+  Rendered admin/index.html.erb within layouts/admin (3.8ms)
+  Rendered layouts/base.html.erb (9.8ms)
+Completed 200 OK in 19.1ms (Views: 12.1ms | ActiveRecord: 4.0ms)
+Started GET "/custom_fields" for 127.0.0.1 at 2014-10-04 12:08:24 -0500
+Processing by CustomFieldsController#index as HTML
+  Current user: admin (id=1)
+  Rendered custom_fields/index.html.erb within layouts/admin (0.9ms)
+  Rendered admin/_menu.html.erb (11.4ms)
+  Rendered layouts/base.html.erb (8.2ms)
+Completed 200 OK in 25.4ms (Views: 20.9ms | ActiveRecord: 2.1ms)
+Started GET "/enumerations" for 127.0.0.1 at 2014-10-04 12:08:27 -0500
+Processing by EnumerationsController#index as HTML
+  Current user: admin (id=1)
+  Rendered enumerations/index.html.erb within layouts/admin (38.0ms)
+  Rendered admin/_menu.html.erb (2.9ms)
+  Rendered layouts/base.html.erb (9.5ms)
+Completed 200 OK in 56.1ms (Views: 46.0ms | ActiveRecord: 7.4ms)
+Started GET "/settings" for 127.0.0.1 at 2014-10-04 12:08:40 -0500
+Processing by SettingsController#index as HTML
+  Current user: admin (id=1)
+  Rendered settings/_general.html.erb (4.8ms)
+  Rendered settings/_display.html.erb (4.2ms)
+  Rendered settings/_authentication.html.erb (3.4ms)
+  Rendered settings/_projects.html.erb (5.5ms)
+  Rendered queries/_columns.html.erb (2.6ms)
+  Rendered settings/_issues.html.erb (5.0ms)
+  Rendered settings/_notifications.html.erb (3.0ms)
+  Rendered settings/_mail_handler.html.erb (1.3ms)
+  Rendered settings/_repositories.html.erb (8.7ms)
+  Rendered common/_tabs.html.erb (41.3ms)
+  Rendered settings/edit.html.erb within layouts/admin (41.7ms)
+  Rendered admin/_menu.html.erb (3.0ms)
+  Rendered layouts/base.html.erb (9.6ms)
+Completed 200 OK in 61.6ms (Views: 49.4ms | ActiveRecord: 7.4ms)
+Started GET "/auth_sources" for 127.0.0.1 at 2014-10-04 12:09:38 -0500
+Processing by AuthSourcesController#index as HTML
+  Current user: admin (id=1)
+  Rendered auth_sources/index.html.erb within layouts/admin (2.0ms)
+  Rendered admin/_menu.html.erb (3.0ms)
+  Rendered layouts/base.html.erb (9.7ms)
+Completed 200 OK in 22.9ms (Views: 14.5ms | ActiveRecord: 4.3ms)
+Started GET "/admin/plugins" for 127.0.0.1 at 2014-10-04 12:09:41 -0500
+Processing by AdminController#plugins as HTML
+  Current user: admin (id=1)
+  Rendered admin/plugins.html.erb within layouts/admin (1.9ms)
+  Rendered admin/_menu.html.erb (3.9ms)
+  Rendered layouts/base.html.erb (9.1ms)
+Completed 200 OK in 21.9ms (Views: 14.9ms | ActiveRecord: 3.3ms)
+Started GET "/admin/info" for 127.0.0.1 at 2014-10-04 12:09:43 -0500
+Processing by AdminController#info as HTML
+  Current user: admin (id=1)
+  Rendered admin/info.html.erb within layouts/admin (3.8ms)
+  Rendered admin/_menu.html.erb (5.4ms)
+  Rendered layouts/base.html.erb (8.7ms)
+Completed 200 OK in 499.6ms (Views: 18.6ms | ActiveRecord: 3.9ms)
+Started GET "/" for 127.0.0.1 at 2014-10-04 12:09:55 -0500
+Processing by WelcomeController#index as HTML
+  Current user: admin (id=1)
+  Rendered welcome/index.html.erb within layouts/base (4.7ms)
+Completed 200 OK in 24.4ms (Views: 11.9ms | ActiveRecord: 6.4ms)
+Started GET "/my/page" for 127.0.0.1 at 2014-10-04 12:10:00 -0500
+Processing by MyController#page as HTML
+  Current user: admin (id=1)
+  Rendered issues/_list_simple.html.erb (0.1ms)
+  Rendered my/blocks/_issuesassignedtome.html.erb (17.5ms)
+  Rendered issues/_list_simple.html.erb (11.7ms)
+  Rendered my/blocks/_issuesreportedbyme.html.erb (24.3ms)
+  Rendered my/page.html.erb within layouts/base (43.7ms)
+Completed 200 OK in 58.9ms (Views: 35.1ms | ActiveRecord: 19.5ms)
+Started GET "/projects" for 127.0.0.1 at 2014-10-04 12:10:09 -0500
+Processing by ProjectsController#index as HTML
+  Current user: admin (id=1)
+  Rendered projects/index.html.erb within layouts/base (6.7ms)
+Completed 200 OK in 23.0ms (Views: 13.6ms | ActiveRecord: 4.5ms)
+Started GET "/" for 127.0.0.1 at 2014-10-04 12:10:25 -0500
+Processing by WelcomeController#index as HTML
+  Current user: admin (id=1)
+  Rendered welcome/index.html.erb within layouts/base (5.0ms)
+Completed 200 OK in 24.7ms (Views: 12.5ms | ActiveRecord: 7.1ms)
+Started GET "/my/page" for 127.0.0.1 at 2014-10-04 12:10:27 -0500
+Processing by MyController#page as HTML
+  Current user: admin (id=1)
+  Rendered issues/_list_simple.html.erb (0.1ms)
+  Rendered my/blocks/_issuesassignedtome.html.erb (18.1ms)
+  Rendered issues/_list_simple.html.erb (11.1ms)
+  Rendered my/blocks/_issuesreportedbyme.html.erb (24.9ms)
+  Rendered my/page.html.erb within layouts/base (45.0ms)
+Completed 200 OK in 59.0ms (Views: 35.1ms | ActiveRecord: 21.1ms)
+Started GET "/projects" for 127.0.0.1 at 2014-10-04 12:10:30 -0500
+Processing by ProjectsController#index as HTML
+  Current user: admin (id=1)
+  Rendered projects/index.html.erb within layouts/base (7.6ms)
+Completed 200 OK in 25.4ms (Views: 14.8ms | ActiveRecord: 6.0ms)
+Started GET "/projects" for 127.0.0.1 at 2014-10-04 12:10:30 -0500
+Processing by ProjectsController#index as HTML
+  Current user: admin (id=1)
+  Rendered projects/index.html.erb within layouts/base (10.7ms)
+Completed 200 OK in 35.5ms (Views: 24.0ms | ActiveRecord: 6.9ms)
+Started GET "/my/page" for 127.0.0.1 at 2014-10-04 12:10:36 -0500
+Processing by MyController#page as HTML
+  Current user: admin (id=1)
+  Rendered issues/_list_simple.html.erb (0.1ms)
+  Rendered my/blocks/_issuesassignedtome.html.erb (18.4ms)
+  Rendered issues/_list_simple.html.erb (11.7ms)
+  Rendered my/blocks/_issuesreportedbyme.html.erb (25.6ms)
+  Rendered my/page.html.erb within layouts/base (45.8ms)
+Completed 200 OK in 59.8ms (Views: 35.5ms | ActiveRecord: 21.2ms)
+Started GET "/projects" for 127.0.0.1 at 2014-10-04 12:10:38 -0500
+Processing by ProjectsController#index as HTML
+  Current user: admin (id=1)
+  Rendered projects/index.html.erb within layouts/base (6.4ms)
+Completed 200 OK in 24.3ms (Views: 13.7ms | ActiveRecord: 6.1ms)
+Started GET "/my/page" for 127.0.0.1 at 2014-10-04 12:10:56 -0500
+Processing by MyController#page as HTML
+  Current user: admin (id=1)
+  Rendered issues/_list_simple.html.erb (0.2ms)
+  Rendered my/blocks/_issuesassignedtome.html.erb (18.8ms)
+  Rendered issues/_list_simple.html.erb (12.6ms)
+  Rendered my/blocks/_issuesreportedbyme.html.erb (26.7ms)
+  Rendered my/page.html.erb within layouts/base (47.4ms)
+Completed 200 OK in 73.0ms (Views: 47.5ms | ActiveRecord: 21.6ms)
+Started GET "/admin" for 127.0.0.1 at 2014-10-04 12:10:58 -0500
+Processing by AdminController#index as HTML
+  Current user: admin (id=1)
+  Rendered admin/_menu.html.erb (3.4ms)
+  Rendered admin/index.html.erb within layouts/admin (3.8ms)
+  Rendered layouts/base.html.erb (9.7ms)
+Completed 200 OK in 18.5ms (Views: 11.9ms | ActiveRecord: 3.9ms)
+Started GET "/users" for 127.0.0.1 at 2014-10-04 12:11:00 -0500
+Processing by UsersController#index as HTML
+  Current user: admin (id=1)
+  Rendered users/index.html.erb within layouts/admin (11.5ms)
+  Rendered admin/_menu.html.erb (3.4ms)
+  Rendered layouts/base.html.erb (6.6ms)
+Completed 200 OK in 29.6ms (Views: 19.9ms | ActiveRecord: 5.4ms)
+Started POST "/logout" for 127.0.0.1 at 2014-10-04 12:11:06 -0500
+Processing by AccountController#logout as HTML
+  Parameters: {"authenticity_token"=>"IaRv3lWRxBVGKQmyiZuEnTm91HuyCcJAgj/wbhJZfQo="}
+  Current user: admin (id=1)
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 16.0ms (ActiveRecord: 2.1ms)
+Started GET "/" for 127.0.0.1 at 2014-10-04 12:11:06 -0500
+Processing by WelcomeController#index as HTML
+  Current user: anonymous
+  Rendered welcome/index.html.erb within layouts/base (2.3ms)
+Completed 200 OK in 17.8ms (Views: 7.6ms | ActiveRecord: 4.6ms)
+Started GET "/login" for 127.0.0.1 at 2014-10-04 12:11:09 -0500
+Processing by AccountController#login as HTML
+  Current user: anonymous
+  Rendered account/login.html.erb within layouts/base (2.6ms)
+Completed 200 OK in 11.6ms (Views: 8.2ms | ActiveRecord: 1.4ms)
+Started POST "/login" for 127.0.0.1 at 2014-10-04 12:11:15 -0500
+Processing by AccountController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L1iP5BZsue9sJ3u5aAfH2L2GVOabP/Xqzj/Mq8QzIzs=", "back_url"=>"http://0.0.0.0:3000/", "username"=>"yiyo", "password"=>"[FILTERED]", "login"=>"Acceder »"}
+  Current user: anonymous
+Successful authentication for 'yiyo' from 127.0.0.1 at 2014-10-04 17:11:15 UTC
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 51.0ms (ActiveRecord: 46.0ms)
+Started GET "/" for 127.0.0.1 at 2014-10-04 12:11:15 -0500
+Processing by WelcomeController#index as HTML
+  Current user: yiyo (id=3)
+  Rendered welcome/index.html.erb within layouts/base (50.7ms)
+Completed 200 OK in 70.7ms (Views: 19.0ms | ActiveRecord: 46.1ms)
+Started GET "/my/page" for 127.0.0.1 at 2014-10-04 12:11:21 -0500
+Processing by MyController#page as HTML
+  Current user: yiyo (id=3)
+  Rendered issues/_list_simple.html.erb (5.0ms)
+  Rendered my/blocks/_issuesassignedtome.html.erb (27.4ms)
+  Rendered issues/_list_simple.html.erb (0.1ms)
+  Rendered my/blocks/_issuesreportedbyme.html.erb (10.8ms)
+  Rendered my/page.html.erb within layouts/base (40.4ms)
+Completed 200 OK in 54.6ms (Views: 33.1ms | ActiveRecord: 19.0ms)
+Started GET "/projects" for 127.0.0.1 at 2014-10-04 12:11:28 -0500
+Processing by ProjectsController#index as HTML
+  Current user: yiyo (id=3)
+  Rendered projects/index.html.erb within layouts/base (7.8ms)
+Completed 200 OK in 25.4ms (Views: 15.9ms | ActiveRecord: 6.0ms)
+Started GET "/my/page" for 127.0.0.1 at 2014-10-04 12:11:53 -0500
+Processing by MyController#page as HTML
+  Current user: yiyo (id=3)
+  Rendered issues/_list_simple.html.erb (4.2ms)
+  Rendered my/blocks/_issuesassignedtome.html.erb (23.3ms)
+  Rendered issues/_list_simple.html.erb (0.1ms)
+  Rendered my/blocks/_issuesreportedbyme.html.erb (11.1ms)
+  Rendered my/page.html.erb within layouts/base (36.4ms)
+Completed 200 OK in 51.3ms (Views: 29.3ms | ActiveRecord: 19.4ms)
+Started GET "/admin" for 127.0.0.1 at 2014-10-04 12:12:04 -0500
+Processing by AdminController#index as HTML
+  Current user: yiyo (id=3)
+  Rendered admin/_menu.html.erb (3.6ms)
+  Rendered admin/index.html.erb within layouts/admin (4.0ms)
+  Rendered layouts/base.html.erb (10.9ms)
+Completed 200 OK in 20.4ms (Views: 13.3ms | ActiveRecord: 4.0ms)
+Started GET "/admin" for 127.0.0.1 at 2014-10-04 12:16:50 -0500
+Processing by AdminController#index as HTML
+  Current user: yiyo (id=3)
+  Rendered admin/_menu.html.erb (4.3ms)
+  Rendered admin/index.html.erb within layouts/admin (4.7ms)
+  Rendered layouts/base.html.erb (9.6ms)
+Completed 200 OK in 20.4ms (Views: 13.0ms | ActiveRecord: 3.8ms)
+Started GET "/projects" for 127.0.0.1 at 2014-10-04 12:16:56 -0500
+Processing by ProjectsController#index as HTML
+  Current user: yiyo (id=3)
+  Rendered projects/index.html.erb within layouts/base (6.2ms)
+Completed 200 OK in 23.4ms (Views: 13.9ms | ActiveRecord: 5.0ms)
+Started GET "/projects/modulo-de-seguimiento" for 127.0.0.1 at 2014-10-04 12:16:58 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"modulo-de-seguimiento"}
+  Current user: yiyo (id=3)
+  Rendered projects/_members_box.html.erb (1.3ms)
+  Rendered projects/show.html.erb within layouts/base (8.4ms)
+Completed 200 OK in 64.4ms (Views: 24.1ms | ActiveRecord: 20.4ms)
+Started GET "/projects/modulo-de-seguimiento/settings" for 127.0.0.1 at 2014-10-04 12:16:59 -0500
+Processing by ProjectsController#settings as HTML
+  Parameters: {"id"=>"modulo-de-seguimiento"}
+  Current user: yiyo (id=3)
+  Rendered projects/_form.html.erb (12.6ms)
+  Rendered projects/_edit.html.erb (13.7ms)
+  Rendered projects/settings/_modules.html.erb (3.0ms)
+  Rendered projects/settings/_members.html.erb (20.2ms)
+  Rendered projects/settings/_versions.html.erb (4.1ms)
+  Rendered projects/settings/_issue_categories.html.erb (1.6ms)
+  Rendered projects/settings/_wiki.html.erb (1.3ms)
+  Rendered projects/settings/_repositories.html.erb (1.5ms)
+  Rendered projects/settings/_boards.html.erb (1.4ms)
+  Rendered projects/settings/_activities.html.erb (7.7ms)
+  Rendered common/_tabs.html.erb (59.0ms)
+  Rendered projects/settings.html.erb within layouts/base (59.4ms)
+Completed 200 OK in 88.3ms (Views: 59.1ms | ActiveRecord: 22.1ms)
+Started GET "/projects/modulo-de-seguimiento/repositories/new" for 127.0.0.1 at 2014-10-04 12:18:15 -0500
+Processing by RepositoriesController#new as HTML
+  Parameters: {"project_id"=>"modulo-de-seguimiento"}
+  Current user: yiyo (id=3)
+  Rendered repositories/_form.html.erb (3.1ms)
+  Rendered repositories/new.html.erb within layouts/base (5.2ms)
+Completed 200 OK in 47.8ms (Views: 18.9ms | ActiveRecord: 7.2ms)
+Started GET "/projects/modulo-de-seguimiento/repositories/new?repository_scm=Git" for 127.0.0.1 at 2014-10-04 12:18:18 -0500
+Processing by RepositoriesController#new as JS
+  Parameters: {"repository_scm"=>"Git", "project_id"=>"modulo-de-seguimiento"}
+  Current user: yiyo (id=3)
+  Rendered repositories/_form.html.erb (3.5ms)
+  Rendered repositories/new.html.erb (4.9ms)
+  Rendered repositories/new.js.erb (5.9ms)
+Completed 200 OK in 32.3ms (Views: 8.3ms | ActiveRecord: 2.7ms)
+Started POST "/projects/modulo-de-seguimiento/repositories" for 127.0.0.1 at 2014-10-04 12:28:12 -0500
+Processing by RepositoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fIDFifq1CfD7W0Rwj29SIfmEABHVGG+pgmHZoO1d3QU=", "repository_scm"=>"Git", "repository"=>{"is_default"=>"1", "identifier"=>"", "url"=>"./../../.git", "path_encoding"=>"", "extra_report_last_commit"=>"1"}, "commit"=>"Crear", "project_id"=>"modulo-de-seguimiento"}
+  Current user: yiyo (id=3)
+Redirected to http://0.0.0.0:3000/projects/modulo-de-seguimiento/settings/repositories
+Completed 302 Found in 70.9ms (ActiveRecord: 60.1ms)
+Started GET "/projects/modulo-de-seguimiento/settings/repositories" for 127.0.0.1 at 2014-10-04 12:28:12 -0500
+Processing by ProjectsController#settings as HTML
+  Parameters: {"id"=>"modulo-de-seguimiento", "tab"=>"repositories"}
+  Current user: yiyo (id=3)
+  Rendered projects/_form.html.erb (12.6ms)
+  Rendered projects/_edit.html.erb (13.7ms)
+  Rendered projects/settings/_modules.html.erb (2.8ms)
+  Rendered projects/settings/_members.html.erb (20.6ms)
+  Rendered projects/settings/_versions.html.erb (4.2ms)
+  Rendered projects/settings/_issue_categories.html.erb (1.7ms)
+  Rendered projects/settings/_wiki.html.erb (1.3ms)
+  Rendered projects/settings/_repositories.html.erb (4.6ms)
+  Rendered projects/settings/_boards.html.erb (1.7ms)
+  Rendered projects/settings/_activities.html.erb (7.9ms)
+  Rendered common/_tabs.html.erb (63.2ms)
+  Rendered projects/settings.html.erb within layouts/base (63.7ms)
+Completed 200 OK in 94.3ms (Views: 63.8ms | ActiveRecord: 22.8ms)
+Started GET "/repositories/1/edit" for 127.0.0.1 at 2014-10-04 12:28:32 -0500
+Processing by RepositoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Current user: yiyo (id=3)
+  Rendered repositories/_form.html.erb (3.2ms)
+  Rendered repositories/edit.html.erb within layouts/base (4.8ms)
+Completed 200 OK in 32.6ms (Views: 19.2ms | ActiveRecord: 8.7ms)
+Started PUT "/repositories/1" for 127.0.0.1 at 2014-10-04 12:28:46 -0500
+Processing by RepositoriesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fIDFifq1CfD7W0Rwj29SIfmEABHVGG+pgmHZoO1d3QU=", "repository"=>{"is_default"=>"1", "identifier"=>"mod_seguimiento", "path_encoding"=>"", "extra_report_last_commit"=>"1"}, "commit"=>"Guardar", "id"=>"1"}
+  Current user: yiyo (id=3)
+Redirected to http://0.0.0.0:3000/projects/modulo-de-seguimiento/settings/repositories
+Completed 302 Found in 65.4ms (ActiveRecord: 55.2ms)
+Started GET "/projects/modulo-de-seguimiento/settings/repositories" for 127.0.0.1 at 2014-10-04 12:28:46 -0500
+Processing by ProjectsController#settings as HTML
+  Parameters: {"id"=>"modulo-de-seguimiento", "tab"=>"repositories"}
+  Current user: yiyo (id=3)
+  Rendered projects/_form.html.erb (11.5ms)
+  Rendered projects/_edit.html.erb (12.6ms)
+  Rendered projects/settings/_modules.html.erb (2.9ms)
+  Rendered projects/settings/_members.html.erb (20.1ms)
+  Rendered projects/settings/_versions.html.erb (4.0ms)
+  Rendered projects/settings/_issue_categories.html.erb (1.4ms)
+  Rendered projects/settings/_wiki.html.erb (1.2ms)
+  Rendered projects/settings/_repositories.html.erb (3.9ms)
+  Rendered projects/settings/_boards.html.erb (1.5ms)
+  Rendered projects/settings/_activities.html.erb (7.3ms)
+  Rendered common/_tabs.html.erb (61.2ms)
+  Rendered projects/settings.html.erb within layouts/base (61.8ms)
+Completed 200 OK in 94.5ms (Views: 62.0ms | ActiveRecord: 23.0ms)
+Started GET "/projects/modulo-de-seguimiento/repository" for 127.0.0.1 at 2014-10-04 12:28:49 -0500
+Processing by RepositoriesController#show as HTML
+  Parameters: {"id"=>"modulo-de-seguimiento"}
+  Current user: yiyo (id=3)
+  Rendered repositories/_navigation.html.erb (15.1ms)
+  Rendered repositories/_breadcrumbs.html.erb (3.2ms)
+  Rendered repositories/_dir_list_content.html.erb (19.3ms)
+  Rendered repositories/_dir_list.html.erb (21.8ms)
+  Rendered repositories/_revision_graph.html.erb (4.2ms)
+  Rendered repositories/_revisions.html.erb (45.5ms)
+  Rendered repositories/show.html.erb within layouts/base (97.1ms)
+Completed 200 OK in 3894.1ms (Views: 99.8ms | ActiveRecord: 1155.3ms)
+Started GET "/projects/modulo-de-seguimiento/repository/diff?utf8=%E2%9C%93&rev=0663c76e6e3bdc773a2ba78c9b8098174d1931ee&rev_to=f9dd389bff3b920a8db7efdec763814a40af2c55" for 127.0.0.1 at 2014-10-04 12:30:27 -0500
+Processing by RepositoriesController#diff as HTML
+  Parameters: {"utf8"=>"✓", "rev"=>"0663c76e6e3bdc773a2ba78c9b8098174d1931ee", "rev_to"=>"f9dd389bff3b920a8db7efdec763814a40af2c55", "id"=>"modulo-de-seguimiento"}
+  Current user: yiyo (id=3)
+Read fragment views/repositories/diff/1/c19d8f06dfd0a893faa21c18aa1624c2 0.2ms
+Read fragment views/repositories/diff/1/c19d8f06dfd0a893faa21c18aa1624c2 0.1ms
+  Rendered common/_diff.html.erb (38.9ms)
+Write fragment views/repositories/diff/1/c19d8f06dfd0a893faa21c18aa1624c2 0.9ms
+  Rendered repositories/diff.html.erb within layouts/base (47.5ms)
+Completed 200 OK in 374.2ms (Views: 59.3ms | ActiveRecord: 34.2ms)
+Started GET "/projects/modulo-de-seguimiento/repository" for 127.0.0.1 at 2014-10-04 12:30:38 -0500
+Processing by RepositoriesController#show as HTML
+  Parameters: {"id"=>"modulo-de-seguimiento"}
+  Current user: yiyo (id=3)
+  Rendered repositories/_navigation.html.erb (14.2ms)
+  Rendered repositories/_breadcrumbs.html.erb (1.2ms)
+  Rendered repositories/_dir_list_content.html.erb (25.4ms)
+  Rendered repositories/_dir_list.html.erb (26.0ms)
+  Rendered repositories/_revision_graph.html.erb (3.5ms)
+  Rendered repositories/_revisions.html.erb (43.5ms)
+  Rendered repositories/show.html.erb within layouts/base (90.0ms)
+Completed 200 OK in 309.8ms (Views: 93.2ms | ActiveRecord: 23.2ms)
+Started GET "/projects/modulo-de-seguimiento/repository/revisions/f9dd389bff3b920a8db7efdec763814a40af2c55" for 127.0.0.1 at 2014-10-04 12:30:42 -0500
+Processing by RepositoriesController#revision as HTML
+  Parameters: {"id"=>"modulo-de-seguimiento", "rev"=>"f9dd389bff3b920a8db7efdec763814a40af2c55"}
+  Current user: yiyo (id=3)
+  Rendered repositories/_related_issues.html.erb (7.1ms)
+  Rendered repositories/revision.html.erb within layouts/base (42.4ms)
+Completed 200 OK in 76.0ms (Views: 47.2ms | ActiveRecord: 19.4ms)
+Started GET "/projects/modulo-de-seguimiento/repository/revisions/f9dd389bff3b920a8db7efdec763814a40af2c55/diff/" for 127.0.0.1 at 2014-10-04 12:30:49 -0500
+Processing by RepositoriesController#diff as HTML
+  Parameters: {"id"=>"modulo-de-seguimiento", "rev"=>"f9dd389bff3b920a8db7efdec763814a40af2c55"}
+  Current user: yiyo (id=3)
+Read fragment views/repositories/diff/1/95104dcc368eaee99c1c52257ddbbbc9 0.1ms
+Read fragment views/repositories/diff/1/95104dcc368eaee99c1c52257ddbbbc9 0.2ms
+  Rendered common/_diff.html.erb (0.4ms)
+Write fragment views/repositories/diff/1/95104dcc368eaee99c1c52257ddbbbc9 1.4ms
+  Rendered repositories/diff.html.erb within layouts/base (6.9ms)
+Completed 200 OK in 73.5ms (Views: 19.8ms | ActiveRecord: 8.0ms)
+Started GET "/projects/modulo-de-seguimiento/repository/revisions/f9dd389bff3b920a8db7efdec763814a40af2c55/diff?utf8=%E2%9C%93&type=sbs" for 127.0.0.1 at 2014-10-04 12:30:54 -0500
+Processing by RepositoriesController#diff as HTML
+  Parameters: {"utf8"=>"✓", "type"=>"sbs", "id"=>"modulo-de-seguimiento", "rev"=>"f9dd389bff3b920a8db7efdec763814a40af2c55"}
+  Current user: yiyo (id=3)
+Read fragment views/repositories/diff/1/1e3017174a31c2266e952284eb729611 0.2ms
+Read fragment views/repositories/diff/1/1e3017174a31c2266e952284eb729611 0.2ms
+  Rendered common/_diff.html.erb (0.3ms)
+Write fragment views/repositories/diff/1/1e3017174a31c2266e952284eb729611 0.8ms
+  Rendered repositories/diff.html.erb within layouts/base (5.1ms)
+Completed 200 OK in 124.1ms (Views: 20.8ms | ActiveRecord: 76.8ms)
+Started GET "/projects/modulo-de-seguimiento/repository/revisions/f9dd389bff3b920a8db7efdec763814a40af2c55/diff?utf8=%E2%9C%93&type=inline" for 127.0.0.1 at 2014-10-04 12:30:56 -0500
+Processing by RepositoriesController#diff as HTML
+  Parameters: {"utf8"=>"✓", "type"=>"inline", "id"=>"modulo-de-seguimiento", "rev"=>"f9dd389bff3b920a8db7efdec763814a40af2c55"}
+  Current user: yiyo (id=3)
+Read fragment views/repositories/diff/1/95104dcc368eaee99c1c52257ddbbbc9 0.4ms
+Read fragment views/repositories/diff/1/95104dcc368eaee99c1c52257ddbbbc9 0.0ms
+  Rendered repositories/diff.html.erb within layouts/base (2.9ms)
+Completed 200 OK in 64.8ms (Views: 18.2ms | ActiveRecord: 34.4ms)
+Started GET "/projects/modulo-de-seguimiento/repository" for 127.0.0.1 at 2014-10-04 12:30:58 -0500
+Processing by RepositoriesController#show as HTML
+  Parameters: {"id"=>"modulo-de-seguimiento"}
+  Current user: yiyo (id=3)
+  Rendered repositories/_navigation.html.erb (16.1ms)
+  Rendered repositories/_breadcrumbs.html.erb (0.7ms)
+  Rendered repositories/_dir_list_content.html.erb (24.4ms)
+  Rendered repositories/_dir_list.html.erb (24.8ms)
+  Rendered repositories/_revision_graph.html.erb (1.8ms)
+  Rendered repositories/_revisions.html.erb (35.4ms)
+  Rendered repositories/show.html.erb within layouts/base (82.3ms)
+Completed 200 OK in 315.3ms (Views: 93.5ms | ActiveRecord: 23.4ms)
+Started GET "/projects/modulo-de-seguimiento/repository/diff?utf8=%E2%9C%93&rev=0663c76e6e3bdc773a2ba78c9b8098174d1931ee&rev_to=f9dd389bff3b920a8db7efdec763814a40af2c55" for 127.0.0.1 at 2014-10-04 12:31:00 -0500
+Processing by RepositoriesController#diff as HTML
+  Parameters: {"utf8"=>"✓", "rev"=>"0663c76e6e3bdc773a2ba78c9b8098174d1931ee", "rev_to"=>"f9dd389bff3b920a8db7efdec763814a40af2c55", "id"=>"modulo-de-seguimiento"}
+  Current user: yiyo (id=3)
+Read fragment views/repositories/diff/1/c19d8f06dfd0a893faa21c18aa1624c2 0.4ms
+Read fragment views/repositories/diff/1/c19d8f06dfd0a893faa21c18aa1624c2 0.1ms
+  Rendered repositories/diff.html.erb within layouts/base (2.3ms)
+Completed 200 OK in 144.3ms (Views: 15.9ms | ActiveRecord: 9.3ms)
+Started GET "/projects/modulo-de-seguimiento/repository" for 127.0.0.1 at 2014-10-04 12:31:03 -0500
+Processing by RepositoriesController#show as HTML
+  Parameters: {"id"=>"modulo-de-seguimiento"}
+  Current user: yiyo (id=3)
+  Rendered repositories/_navigation.html.erb (16.7ms)
+  Rendered repositories/_breadcrumbs.html.erb (0.7ms)
+  Rendered repositories/_dir_list_content.html.erb (25.2ms)
+  Rendered repositories/_dir_list.html.erb (25.6ms)
+  Rendered repositories/_revision_graph.html.erb (3.7ms)
+  Rendered repositories/_revisions.html.erb (44.9ms)
+  Rendered repositories/show.html.erb within layouts/base (93.0ms)
+Completed 200 OK in 321.8ms (Views: 95.9ms | ActiveRecord: 26.2ms)
+Started GET "/projects/modulo-de-seguimiento/repository/diff?utf8=%E2%9C%93&rev=0663c76e6e3bdc773a2ba78c9b8098174d1931ee&rev_to=f9dd389bff3b920a8db7efdec763814a40af2c55" for 127.0.0.1 at 2014-10-04 12:31:15 -0500
+Processing by RepositoriesController#diff as HTML
+  Parameters: {"utf8"=>"✓", "rev"=>"0663c76e6e3bdc773a2ba78c9b8098174d1931ee", "rev_to"=>"f9dd389bff3b920a8db7efdec763814a40af2c55", "id"=>"modulo-de-seguimiento"}
+  Current user: yiyo (id=3)
+Read fragment views/repositories/diff/1/c19d8f06dfd0a893faa21c18aa1624c2 0.4ms
+Read fragment views/repositories/diff/1/c19d8f06dfd0a893faa21c18aa1624c2 0.1ms
+  Rendered repositories/diff.html.erb within layouts/base (1.9ms)
+Completed 200 OK in 32.9ms (Views: 17.2ms | ActiveRecord: 8.5ms)
+Started GET "/projects/modulo-de-seguimiento/repository" for 127.0.0.1 at 2014-10-04 12:31:18 -0500
+Processing by RepositoriesController#show as HTML
+  Parameters: {"id"=>"modulo-de-seguimiento"}
+  Current user: yiyo (id=3)
+  Rendered repositories/_navigation.html.erb (16.0ms)
+  Rendered repositories/_breadcrumbs.html.erb (1.3ms)
+  Rendered repositories/_dir_list_content.html.erb (22.4ms)
+  Rendered repositories/_dir_list.html.erb (23.0ms)
+  Rendered repositories/_revision_graph.html.erb (1.7ms)
+  Rendered repositories/_revisions.html.erb (31.0ms)
+  Rendered repositories/show.html.erb within layouts/base (76.2ms)
+Completed 200 OK in 302.4ms (Views: 82.5ms | ActiveRecord: 22.2ms)
+Started GET "/projects/modulo-de-seguimiento/repository/diff?utf8=%E2%9C%93&rev=0663c76e6e3bdc773a2ba78c9b8098174d1931ee&rev_to=bd6cbd6cfe1e690230c5cda0c94268e333e5d68e" for 127.0.0.1 at 2014-10-04 12:31:21 -0500
+Processing by RepositoriesController#diff as HTML
+  Parameters: {"utf8"=>"✓", "rev"=>"0663c76e6e3bdc773a2ba78c9b8098174d1931ee", "rev_to"=>"bd6cbd6cfe1e690230c5cda0c94268e333e5d68e", "id"=>"modulo-de-seguimiento"}
+  Current user: yiyo (id=3)
+Read fragment views/repositories/diff/1/8c8d3ae92c2b39606343e71d7fe4ac5a 0.1ms
+Read fragment views/repositories/diff/1/8c8d3ae92c2b39606343e71d7fe4ac5a 0.2ms
+  Rendered common/_diff.html.erb (39.4ms)
+Write fragment views/repositories/diff/1/8c8d3ae92c2b39606343e71d7fe4ac5a 0.8ms
+  Rendered repositories/diff.html.erb within layouts/base (43.9ms)
+Completed 200 OK in 527.5ms (Views: 55.9ms | ActiveRecord: 9.2ms)
+Started GET "/projects/modulo-de-seguimiento/repository" for 127.0.0.1 at 2014-10-04 12:31:23 -0500
+Processing by RepositoriesController#show as HTML
+  Parameters: {"id"=>"modulo-de-seguimiento"}
+  Current user: yiyo (id=3)
+  Rendered repositories/_navigation.html.erb (16.1ms)
+  Rendered repositories/_breadcrumbs.html.erb (1.2ms)
+  Rendered repositories/_dir_list_content.html.erb (21.1ms)
+  Rendered repositories/_dir_list.html.erb (21.7ms)
+  Rendered repositories/_revision_graph.html.erb (3.1ms)
+  Rendered repositories/_revisions.html.erb (41.9ms)
+  Rendered repositories/show.html.erb within layouts/base (86.4ms)
+Completed 200 OK in 323.8ms (Views: 89.6ms | ActiveRecord: 27.0ms)
+Started GET "/projects/modulo-de-seguimiento/repository/diff?utf8=%E2%9C%93&rev=bc1c92e8b9e9b6cf427038666a1cd3f91d371aba&rev_to=e9ab9bd18fe782d6a3f2d57e467dc00bdecefba6" for 127.0.0.1 at 2014-10-04 12:31:33 -0500
+Processing by RepositoriesController#diff as HTML
+  Parameters: {"utf8"=>"✓", "rev"=>"bc1c92e8b9e9b6cf427038666a1cd3f91d371aba", "rev_to"=>"e9ab9bd18fe782d6a3f2d57e467dc00bdecefba6", "id"=>"modulo-de-seguimiento"}
+  Current user: yiyo (id=3)
+Read fragment views/repositories/diff/1/a37fd0b9dbe04eb1bfa37f1d1e5f83dc 0.1ms
+Read fragment views/repositories/diff/1/a37fd0b9dbe04eb1bfa37f1d1e5f83dc 0.1ms
+  Rendered common/_diff.html.erb (76.9ms)
+Write fragment views/repositories/diff/1/a37fd0b9dbe04eb1bfa37f1d1e5f83dc 0.7ms
+  Rendered repositories/diff.html.erb within layouts/base (80.0ms)
+Completed 200 OK in 145.9ms (Views: 96.8ms | ActiveRecord: 9.1ms)
+Started GET "/projects/modulo-de-seguimiento/repository" for 127.0.0.1 at 2014-10-04 12:31:37 -0500
+Processing by RepositoriesController#show as HTML
+  Parameters: {"id"=>"modulo-de-seguimiento"}
+  Current user: yiyo (id=3)
+  Rendered repositories/_navigation.html.erb (18.3ms)
+  Rendered repositories/_breadcrumbs.html.erb (1.2ms)
+  Rendered repositories/_dir_list_content.html.erb (23.2ms)
+  Rendered repositories/_dir_list.html.erb (23.8ms)
+  Rendered repositories/_revision_graph.html.erb (1.6ms)
+  Rendered repositories/_revisions.html.erb (39.8ms)
+  Rendered repositories/show.html.erb within layouts/base (88.0ms)
+Completed 200 OK in 325.9ms (Views: 87.9ms | ActiveRecord: 27.7ms)
+Started GET "/projects/modulo-de-seguimiento/repository/diff?utf8=%E2%9C%93&rev=e9ab9bd18fe782d6a3f2d57e467dc00bdecefba6&rev_to=bd6cbd6cfe1e690230c5cda0c94268e333e5d68e" for 127.0.0.1 at 2014-10-04 12:31:46 -0500
+Processing by RepositoriesController#diff as HTML
+  Parameters: {"utf8"=>"✓", "rev"=>"e9ab9bd18fe782d6a3f2d57e467dc00bdecefba6", "rev_to"=>"bd6cbd6cfe1e690230c5cda0c94268e333e5d68e", "id"=>"modulo-de-seguimiento"}
+  Current user: yiyo (id=3)
+Read fragment views/repositories/diff/1/c401462935d474dbe24e576f0660d194 0.1ms
+Read fragment views/repositories/diff/1/c401462935d474dbe24e576f0660d194 0.1ms
+  Rendered common/_diff.html.erb (0.3ms)
+Write fragment views/repositories/diff/1/c401462935d474dbe24e576f0660d194 0.8ms
+  Rendered repositories/diff.html.erb within layouts/base (4.6ms)
+Completed 200 OK in 68.2ms (Views: 20.8ms | ActiveRecord: 9.2ms)
+Started GET "/projects/modulo-de-seguimiento/repository" for 127.0.0.1 at 2014-10-04 12:31:49 -0500
+Processing by RepositoriesController#show as HTML
+  Parameters: {"id"=>"modulo-de-seguimiento"}
+  Current user: yiyo (id=3)
+  Rendered repositories/_navigation.html.erb (18.7ms)
+  Rendered repositories/_breadcrumbs.html.erb (1.3ms)
+  Rendered repositories/_dir_list_content.html.erb (24.1ms)
+  Rendered repositories/_dir_list.html.erb (24.7ms)
+  Rendered repositories/_revision_graph.html.erb (1.9ms)
+  Rendered repositories/_revisions.html.erb (33.6ms)
+  Rendered repositories/show.html.erb within layouts/base (83.9ms)
+Completed 200 OK in 323.7ms (Views: 90.6ms | ActiveRecord: 23.5ms)
+Started GET "/projects/modulo-de-seguimiento/repository/diff?utf8=%E2%9C%93&rev=086fd2d74c314498a4c60572d9a222558049a83a&rev_to=29e31c3b47060a5341dddf64af592600efa95f55" for 127.0.0.1 at 2014-10-04 12:31:53 -0500
+Processing by RepositoriesController#diff as HTML
+  Parameters: {"utf8"=>"✓", "rev"=>"086fd2d74c314498a4c60572d9a222558049a83a", "rev_to"=>"29e31c3b47060a5341dddf64af592600efa95f55", "id"=>"modulo-de-seguimiento"}
+  Current user: yiyo (id=3)
+Read fragment views/repositories/diff/1/00688727feb0d6702dcac6c60f8c5e9e 0.2ms
+Read fragment views/repositories/diff/1/00688727feb0d6702dcac6c60f8c5e9e 0.2ms
+  Rendered common/_diff.html.erb (34.6ms)
+Write fragment views/repositories/diff/1/00688727feb0d6702dcac6c60f8c5e9e 0.8ms
+  Rendered repositories/diff.html.erb within layouts/base (39.4ms)
+Completed 200 OK in 924.0ms (Views: 50.8ms | ActiveRecord: 9.3ms)
+Started GET "/projects/modulo-de-seguimiento/repository" for 127.0.0.1 at 2014-10-04 12:32:02 -0500
+Processing by RepositoriesController#show as HTML
+  Parameters: {"id"=>"modulo-de-seguimiento"}
+  Current user: yiyo (id=3)
+  Rendered repositories/_navigation.html.erb (16.6ms)
+  Rendered repositories/_breadcrumbs.html.erb (1.1ms)
+  Rendered repositories/_dir_list_content.html.erb (22.3ms)
+  Rendered repositories/_dir_list.html.erb (22.9ms)
+  Rendered repositories/_revision_graph.html.erb (3.2ms)
+  Rendered repositories/_revisions.html.erb (42.1ms)
+  Rendered repositories/show.html.erb within layouts/base (87.9ms)
+Completed 200 OK in 331.6ms (Views: 91.3ms | ActiveRecord: 27.0ms)
+Started GET "/projects/modulo-de-seguimiento/repository/diff?utf8=%E2%9C%93&rev_to=e9ab9bd18fe782d6a3f2d57e467dc00bdecefba6&rev=bd6cbd6cfe1e690230c5cda0c94268e333e5d68e" for 127.0.0.1 at 2014-10-04 12:32:11 -0500
+Processing by RepositoriesController#diff as HTML
+  Parameters: {"utf8"=>"✓", "rev_to"=>"e9ab9bd18fe782d6a3f2d57e467dc00bdecefba6", "rev"=>"bd6cbd6cfe1e690230c5cda0c94268e333e5d68e", "id"=>"modulo-de-seguimiento"}
+  Current user: yiyo (id=3)
+Read fragment views/repositories/diff/1/3c043b0ec9d4857c32927f51685eef92 0.1ms
+Read fragment views/repositories/diff/1/3c043b0ec9d4857c32927f51685eef92 0.1ms
+  Rendered common/_diff.html.erb (0.3ms)
+Write fragment views/repositories/diff/1/3c043b0ec9d4857c32927f51685eef92 1.0ms
+  Rendered repositories/diff.html.erb within layouts/base (5.5ms)
+Completed 200 OK in 68.3ms (Views: 20.1ms | ActiveRecord: 7.9ms)
+Started GET "/projects/modulo-de-seguimiento/repository" for 127.0.0.1 at 2014-10-04 12:32:17 -0500
+Processing by RepositoriesController#show as HTML
+  Parameters: {"id"=>"modulo-de-seguimiento"}
+  Current user: yiyo (id=3)
+  Rendered repositories/_navigation.html.erb (17.9ms)
+  Rendered repositories/_breadcrumbs.html.erb (1.3ms)
+  Rendered repositories/_dir_list_content.html.erb (14.9ms)
+  Rendered repositories/_dir_list.html.erb (15.5ms)
+  Rendered repositories/_revision_graph.html.erb (3.5ms)
+  Rendered repositories/_revisions.html.erb (40.7ms)
+  Rendered repositories/show.html.erb within layouts/base (79.7ms)
+Completed 200 OK in 314.6ms (Views: 79.6ms | ActiveRecord: 23.4ms)
+Started GET "/projects/modulo-de-seguimiento/repository/revisions/master/show/implementacion" for 127.0.0.1 at 2014-10-04 12:33:14 -0500
+Processing by RepositoriesController#show as HTML
+  Parameters: {"id"=>"modulo-de-seguimiento", "rev"=>"master", "path"=>"implementacion"}
+  Current user: yiyo (id=3)
+  Rendered repositories/_navigation.html.erb (19.4ms)
+  Rendered repositories/_breadcrumbs.html.erb (2.0ms)
+  Rendered repositories/_dir_list_content.html.erb (38.8ms)
+  Rendered repositories/_dir_list.html.erb (39.4ms)
+  Rendered repositories/_revisions.html.erb (5.3ms)
+  Rendered repositories/show.html.erb within layouts/base (70.8ms)
+Completed 200 OK in 542.0ms (Views: 81.1ms | ActiveRecord: 15.9ms)
+Started GET "/projects/modulo-de-seguimiento/repository/revisions/master/show" for 127.0.0.1 at 2014-10-04 12:33:16 -0500
+Processing by RepositoriesController#show as HTML
+  Parameters: {"id"=>"modulo-de-seguimiento", "rev"=>"master"}
+  Current user: yiyo (id=3)
+  Rendered repositories/_navigation.html.erb (18.7ms)
+  Rendered repositories/_breadcrumbs.html.erb (1.1ms)
+  Rendered repositories/_dir_list_content.html.erb (16.7ms)
+  Rendered repositories/_dir_list.html.erb (17.3ms)
+  Rendered repositories/_revision_graph.html.erb (3.1ms)
+  Rendered repositories/_revisions.html.erb (41.2ms)
+  Rendered repositories/show.html.erb within layouts/base (83.3ms)
+Completed 200 OK in 334.7ms (Views: 85.7ms | ActiveRecord: 27.0ms)
+Started GET "/projects/modulo-de-seguimiento/repository/revisions/master/diff?utf8=%E2%9C%93&rev=0663c76e6e3bdc773a2ba78c9b8098174d1931ee&rev_to=f9dd389bff3b920a8db7efdec763814a40af2c55" for 127.0.0.1 at 2014-10-04 12:33:22 -0500
+Processing by RepositoriesController#diff as HTML
+  Parameters: {"utf8"=>"✓", "rev"=>"master", "rev_to"=>"f9dd389bff3b920a8db7efdec763814a40af2c55", "id"=>"modulo-de-seguimiento"}
+  Current user: yiyo (id=3)
+Read fragment views/repositories/diff/1/1838a3a4f750a8eee38befc51361d257 0.1ms
+Read fragment views/repositories/diff/1/1838a3a4f750a8eee38befc51361d257 0.1ms
+  Rendered common/_diff.html.erb (40.5ms)
+Write fragment views/repositories/diff/1/1838a3a4f750a8eee38befc51361d257 0.9ms
+  Rendered repositories/diff.html.erb within layouts/base (44.6ms)
+Completed 200 OK in 345.9ms (Views: 54.6ms | ActiveRecord: 14.6ms)
+Started GET "/projects/modulo-de-seguimiento/repository" for 127.0.0.1 at 2014-10-04 12:33:35 -0500
+Processing by RepositoriesController#show as HTML
+  Parameters: {"id"=>"modulo-de-seguimiento"}
+  Current user: yiyo (id=3)
+  Rendered repositories/_navigation.html.erb (15.4ms)
+  Rendered repositories/_breadcrumbs.html.erb (0.6ms)
+  Rendered repositories/_dir_list_content.html.erb (23.5ms)
+  Rendered repositories/_dir_list.html.erb (23.9ms)
+  Rendered repositories/_revision_graph.html.erb (3.8ms)
+  Rendered repositories/_revisions.html.erb (44.4ms)
+  Rendered repositories/show.html.erb within layouts/base (88.7ms)
+Completed 200 OK in 314.8ms (Views: 90.3ms | ActiveRecord: 27.1ms)
+Started GET "/projects/modulo-de-seguimiento/repository/diff?utf8=%E2%9C%93&rev=0663c76e6e3bdc773a2ba78c9b8098174d1931ee&rev_to=f9dd389bff3b920a8db7efdec763814a40af2c55" for 127.0.0.1 at 2014-10-04 12:33:38 -0500
+Processing by RepositoriesController#diff as HTML
+  Parameters: {"utf8"=>"✓", "rev"=>"0663c76e6e3bdc773a2ba78c9b8098174d1931ee", "rev_to"=>"f9dd389bff3b920a8db7efdec763814a40af2c55", "id"=>"modulo-de-seguimiento"}
+  Current user: yiyo (id=3)
+Read fragment views/repositories/diff/1/c19d8f06dfd0a893faa21c18aa1624c2 0.4ms
+Read fragment views/repositories/diff/1/c19d8f06dfd0a893faa21c18aa1624c2 0.1ms
+  Rendered repositories/diff.html.erb within layouts/base (2.6ms)
+Completed 200 OK in 38.6ms (Views: 18.2ms | ActiveRecord: 10.0ms)
+Started GET "/projects/modulo-de-seguimiento/repository/revisions/0663c76e6e3bdc773a2ba78c9b8098174d1931ee/diff?utf8=%E2%9C%93&rev_to=f9dd389bff3b920a8db7efdec763814a40af2c55&type=sbs" for 127.0.0.1 at 2014-10-04 12:33:40 -0500
+Processing by RepositoriesController#diff as HTML
+  Parameters: {"utf8"=>"✓", "rev_to"=>"f9dd389bff3b920a8db7efdec763814a40af2c55", "type"=>"sbs", "id"=>"modulo-de-seguimiento", "rev"=>"0663c76e6e3bdc773a2ba78c9b8098174d1931ee"}
+  Current user: yiyo (id=3)
+Read fragment views/repositories/diff/1/af06120a86dedd6d46ec98f1e92ad586 0.1ms
+Read fragment views/repositories/diff/1/af06120a86dedd6d46ec98f1e92ad586 0.1ms
+  Rendered common/_diff.html.erb (47.4ms)
+Write fragment views/repositories/diff/1/af06120a86dedd6d46ec98f1e92ad586 0.9ms
+  Rendered repositories/diff.html.erb within layouts/base (52.8ms)
+Completed 200 OK in 369.4ms (Views: 66.7ms | ActiveRecord: 37.4ms)
+Started GET "/projects/modulo-de-seguimiento/repository/revisions/0663c76e6e3bdc773a2ba78c9b8098174d1931ee/diff?utf8=%E2%9C%93&rev_to=f9dd389bff3b920a8db7efdec763814a40af2c55&type=inline" for 127.0.0.1 at 2014-10-04 12:33:42 -0500
+Processing by RepositoriesController#diff as HTML
+  Parameters: {"utf8"=>"✓", "rev_to"=>"f9dd389bff3b920a8db7efdec763814a40af2c55", "type"=>"inline", "id"=>"modulo-de-seguimiento", "rev"=>"0663c76e6e3bdc773a2ba78c9b8098174d1931ee"}
+  Current user: yiyo (id=3)
+Read fragment views/repositories/diff/1/c19d8f06dfd0a893faa21c18aa1624c2 0.5ms
+Read fragment views/repositories/diff/1/c19d8f06dfd0a893faa21c18aa1624c2 0.1ms
+  Rendered repositories/diff.html.erb within layouts/base (2.6ms)
+Completed 200 OK in 65.1ms (Views: 18.3ms | ActiveRecord: 33.9ms)
+Started GET "/projects/modulo-de-seguimiento/repository" for 127.0.0.1 at 2014-10-04 12:33:44 -0500
+Processing by RepositoriesController#show as HTML
+  Parameters: {"id"=>"modulo-de-seguimiento"}
+  Current user: yiyo (id=3)
+  Rendered repositories/_navigation.html.erb (12.9ms)
+  Rendered repositories/_breadcrumbs.html.erb (0.6ms)
+  Rendered repositories/_dir_list_content.html.erb (23.1ms)
+  Rendered repositories/_dir_list.html.erb (23.4ms)
+  Rendered repositories/_revision_graph.html.erb (4.5ms)
+  Rendered repositories/_revisions.html.erb (43.6ms)
+  Rendered repositories/show.html.erb within layouts/base (84.9ms)
+Completed 200 OK in 408.3ms (Views: 88.8ms | ActiveRecord: 24.0ms)
+Started GET "/projects/modulo-de-seguimiento/repository/statistics" for 127.0.0.1 at 2014-10-04 12:33:52 -0500
+Processing by RepositoriesController#stats as HTML
+  Parameters: {"id"=>"modulo-de-seguimiento"}
+  Current user: yiyo (id=3)
+  Rendered repositories/stats.html.erb within layouts/base (4.0ms)
+Completed 200 OK in 55.5ms (Views: 23.7ms | ActiveRecord: 8.2ms)
+Started GET "/projects/modulo-de-seguimiento/repository/graph?graph=commits_per_month" for 127.0.0.1 at 2014-10-04 12:33:52 -0500
+Processing by RepositoriesController#graph as HTML
+  Parameters: {"graph"=>"commits_per_month", "id"=>"modulo-de-seguimiento"}
+  Current user: yiyo (id=3)
+  Rendered text template (0.0ms)
+Sent data   (1.0ms)
+Completed 200 OK in 44.6ms (Views: 1.0ms | ActiveRecord: 5.9ms)
+Started GET "/projects/modulo-de-seguimiento/repository/graph?graph=commits_per_author" for 127.0.0.1 at 2014-10-04 12:33:52 -0500
+Processing by RepositoriesController#graph as HTML
+  Parameters: {"graph"=>"commits_per_author", "id"=>"modulo-de-seguimiento"}
+  Current user: yiyo (id=3)
+  Rendered text template (0.0ms)
+Sent data   (0.4ms)
+Completed 200 OK in 28.7ms (Views: 0.4ms | ActiveRecord: 2.7ms)
+Started GET "/projects/modulo-de-seguimiento/settings" for 127.0.0.1 at 2014-10-04 12:35:52 -0500
+Processing by ProjectsController#settings as HTML
+  Parameters: {"id"=>"modulo-de-seguimiento"}
+  Current user: yiyo (id=3)
+  Rendered projects/_form.html.erb (12.3ms)
+  Rendered projects/_edit.html.erb (13.6ms)
+  Rendered projects/settings/_modules.html.erb (2.9ms)
+  Rendered projects/settings/_members.html.erb (18.5ms)
+  Rendered projects/settings/_versions.html.erb (4.1ms)
+  Rendered projects/settings/_issue_categories.html.erb (1.5ms)
+  Rendered projects/settings/_wiki.html.erb (1.2ms)
+  Rendered projects/settings/_repositories.html.erb (3.8ms)
+  Rendered projects/settings/_boards.html.erb (1.4ms)
+  Rendered projects/settings/_activities.html.erb (7.4ms)
+  Rendered common/_tabs.html.erb (58.4ms)
+  Rendered projects/settings.html.erb within layouts/base (58.9ms)
+Completed 200 OK in 86.0ms (Views: 59.3ms | ActiveRecord: 21.3ms)
+Started GET "/my/page" for 127.0.0.1 at 2014-10-04 12:35:55 -0500
+Processing by MyController#page as HTML
+  Current user: yiyo (id=3)
+  Rendered issues/_list_simple.html.erb (5.3ms)
+  Rendered my/blocks/_issuesassignedtome.html.erb (24.8ms)
+  Rendered issues/_list_simple.html.erb (0.1ms)
+  Rendered my/blocks/_issuesreportedbyme.html.erb (9.9ms)
+  Rendered my/page.html.erb within layouts/base (36.9ms)
+Completed 200 OK in 53.2ms (Views: 30.1ms | ActiveRecord: 18.8ms)
+Started GET "/projects" for 127.0.0.1 at 2014-10-04 12:36:00 -0500
+Processing by ProjectsController#index as HTML
+  Current user: yiyo (id=3)
+  Rendered projects/index.html.erb within layouts/base (5.9ms)
+Completed 200 OK in 19.9ms (Views: 13.1ms | ActiveRecord: 4.0ms)
+Started GET "/" for 127.0.0.1 at 2014-10-04 12:36:02 -0500
+Processing by WelcomeController#index as HTML
+  Current user: yiyo (id=3)
+  Rendered welcome/index.html.erb within layouts/base (4.7ms)
+Completed 200 OK in 25.2ms (Views: 12.4ms | ActiveRecord: 6.7ms)
