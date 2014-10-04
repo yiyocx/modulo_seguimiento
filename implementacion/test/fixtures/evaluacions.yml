@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  porc_sugerido_condonacion: 1
+  concepto: MyString
+  evaluador: MyString
+  informe: MyString
+
+two:
+  porc_sugerido_condonacion: 1
+  concepto: MyString
+  evaluador: MyString
+  informe: MyString

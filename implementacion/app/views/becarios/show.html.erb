@@ -1,0 +1,35 @@
+<div class="page-header">
+  <%= link_to becarios_path, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Atrás
+  <% end %>
+  <%= link_to edit_becario_path(@becario), :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Editar
+  <% end %>
+  <h1>Ver becario</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Condonacion beneficiarios:</dt>
+  <dd><%= @becario.condonacion_beneficiarios %></dd>
+
+  <dt>Cumple requisitos:</dt>
+  <dd><%= @becario.cumple_requisitos %></dd>
+
+  <dt>Datos beneficiario:</dt>
+  <dd><%= @becario.datos_beneficiario %></dd>
+
+  <dt>Info beneficiario:</dt>
+  <dd><%= @becario.info_beneficiario %></dd>
+
+  <dt>Info programa doctoral:</dt>
+  <dd><%= @becario.info_programa_doctoral %></dd>
+
+  <dt>Info tesis:</dt>
+  <dd><%= @becario.info_tesis %></dd>
+
+  <dt>Registro pasantia:</dt>
+  <dd><%= @becario.registro_pasantia %></dd>
+
+</dl>

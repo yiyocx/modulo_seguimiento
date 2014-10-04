@@ -1,0 +1,23 @@
+<div class="page-header">
+  <%= link_to visita_tecnicas_path, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Atrás
+  <% end %>
+  <%= link_to edit_visita_tecnica_path(@visita_tecnica), :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Editar
+  <% end %>
+  <h1>Ver visita_tecnica</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Observacion:</dt>
+  <dd><%= @visita_tecnica.observacion %></dd>
+
+  <dt>Porc cumplimiento:</dt>
+  <dd><%= @visita_tecnica.porc_cumplimiento %></dd>
+
+  <dt>Tipo proyeccion:</dt>
+  <dd><%= @visita_tecnica.tipo_proyeccion %></dd>
+
+</dl>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  estado: 1
+  fecha_solicitud: 2014-10-04
+  valor: 1.5
+  girado: 1.5
+  fecha_giro: 2014-10-04
+  condiciones: MyText
+  proyecto_id: 
+
+two:
+  estado: 1
+  fecha_solicitud: 2014-10-04
+  valor: 1.5
+  girado: 1.5
+  fecha_giro: 2014-10-04
+  condiciones: MyText
+  proyecto_id: 

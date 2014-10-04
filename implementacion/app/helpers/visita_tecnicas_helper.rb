@@ -1,0 +1,2 @@
+module VisitaTecnicasHelper
+end

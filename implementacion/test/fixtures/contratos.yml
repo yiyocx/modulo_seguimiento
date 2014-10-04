@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  num_convenio: 1
+  tipo_convenio: 1
+  valor_total: 1.5
+  num_contrato: 1
+  fecha_inicio: 2014-10-04
+  fecha_suscripcion: 2014-10-04
+  fecha_legalizacion: 2014-10-04
+  fecha_finalizacion: 2014-10-04
+  objeto: MyString
+  plazo: 1
+  area_responsable: MyString
+  supervisor: MyString
+
+two:
+  num_convenio: 1
+  tipo_convenio: 1
+  valor_total: 1.5
+  num_contrato: 1
+  fecha_inicio: 2014-10-04
+  fecha_suscripcion: 2014-10-04
+  fecha_legalizacion: 2014-10-04
+  fecha_finalizacion: 2014-10-04
+  objeto: MyString
+  plazo: 1
+  area_responsable: MyString
+  supervisor: MyString

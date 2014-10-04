@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  observacion: MyText
+  porc_cumplimiento: 1.5
+  tipo_proyeccion: 1
+
+two:
+  observacion: MyText
+  porc_cumplimiento: 1.5
+  tipo_proyeccion: 1

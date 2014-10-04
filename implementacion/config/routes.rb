@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  resources :becarios
+
+  resources :evaluacions
+
+  resources :desembolsos
+
+  resources :proyectos
+
+  resources :visita_tecnicas
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

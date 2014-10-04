@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  area_conocimiento: MyString
+  fecha_inicial: 2014-10-04
+  fecha_final: 2014-10-04
+
+two:
+  area_conocimiento: MyString
+  fecha_inicial: 2014-10-04
+  fecha_final: 2014-10-04

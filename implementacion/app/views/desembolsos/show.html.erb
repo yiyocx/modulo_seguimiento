@@ -1,0 +1,35 @@
+<div class="page-header">
+  <%= link_to desembolsos_path, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Atrás
+  <% end %>
+  <%= link_to edit_desembolso_path(@desembolso), :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Editar
+  <% end %>
+  <h1>Ver desembolso</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Estado:</dt>
+  <dd><%= @desembolso.estado %></dd>
+
+  <dt>Fecha solicitud:</dt>
+  <dd><%= @desembolso.fecha_solicitud %></dd>
+
+  <dt>Valor:</dt>
+  <dd><%= @desembolso.valor %></dd>
+
+  <dt>Girado:</dt>
+  <dd><%= @desembolso.girado %></dd>
+
+  <dt>Fecha giro:</dt>
+  <dd><%= @desembolso.fecha_giro %></dd>
+
+  <dt>Condiciones:</dt>
+  <dd><%= @desembolso.condiciones %></dd>
+
+  <dt>Proyecto:</dt>
+  <dd><%= @desembolso.proyecto %></dd>
+
+</dl>

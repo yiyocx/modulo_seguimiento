@@ -1,0 +1,41 @@
+<div class="page-header">
+  <%= link_to new_becario_path, :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    Nuevo Becario
+  <% end %>
+  <h1>Lista de becarios</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Condonacion beneficiarios</th>
+            <th>Cumple requisitos</th>
+            <th>Datos beneficiario</th>
+            <th>Info beneficiario</th>
+            <th>Info programa doctoral</th>
+            <th>Info tesis</th>
+            <th>Registro pasantia</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @becarios) do |becario| %>
+            <td><%= becario.condonacion_beneficiarios %></td>
+            <td><%= becario.cumple_requisitos %></td>
+            <td><%= becario.datos_beneficiario %></td>
+            <td><%= becario.info_beneficiario %></td>
+            <td><%= becario.info_programa_doctoral %></td>
+            <td><%= becario.info_tesis %></td>
+            <td><%= becario.registro_pasantia %></td>
+            <td><%= link_to 'Ver', becario %></td>
+        <td><%= link_to 'Editar', edit_becario_path(becario) %></td>
+        <td><%= link_to 'Eliminar', becario, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

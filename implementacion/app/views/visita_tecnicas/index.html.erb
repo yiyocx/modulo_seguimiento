@@ -1,0 +1,33 @@
+<div class="page-header">
+  <%= link_to new_visita_tecnica_path, :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    Nueva Visita tecnica
+  <% end %>
+  <h1>Lista de visita_tecnicas</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Observacion</th>
+            <th>Porc cumplimiento</th>
+            <th>Tipo proyeccion</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @visita_tecnicas) do |visita_tecnica| %>
+            <td><%= visita_tecnica.observacion %></td>
+            <td><%= visita_tecnica.porc_cumplimiento %></td>
+            <td><%= visita_tecnica.tipo_proyeccion %></td>
+            <td><%= link_to 'Show', visita_tecnica %></td>
+        <td><%= link_to 'Edit', edit_visita_tecnica_path(visita_tecnica) %></td>
+        <td><%= link_to 'Destroy', visita_tecnica, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

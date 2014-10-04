@@ -1,0 +1,41 @@
+<div class="page-header">
+  <%= link_to new_desembolso_path, :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    Nuevo Desembolso
+  <% end %>
+  <h1>Lista de desembolsos</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Estado</th>
+            <th>Fecha solicitud</th>
+            <th>Valor</th>
+            <th>Girado</th>
+            <th>Fecha giro</th>
+            <th>Condiciones</th>
+            <th>Proyecto</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @desembolsos) do |desembolso| %>
+            <td><%= desembolso.estado %></td>
+            <td><%= desembolso.fecha_solicitud %></td>
+            <td><%= desembolso.valor %></td>
+            <td><%= desembolso.girado %></td>
+            <td><%= desembolso.fecha_giro %></td>
+            <td><%= desembolso.condiciones %></td>
+            <td><%= desembolso.proyecto %></td>
+            <td><%= link_to 'Ver', desembolso %></td>
+        <td><%= link_to 'Editar', edit_desembolso_path(desembolso) %></td>
+        <td><%= link_to 'Eliminar', desembolso, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

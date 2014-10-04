@@ -1,0 +1,29 @@
+<div class="page-header">
+  <%= link_to proyectos_path, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Atrás
+  <% end %>
+  <%= link_to edit_proyecto_path(@proyecto), :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Editar
+  <% end %>
+  <h1>Ver proyecto</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Duracion:</dt>
+  <dd><%= @proyecto.duracion %></dd>
+
+  <dt>Estado:</dt>
+  <dd><%= @proyecto.estado %></dd>
+
+  <dt>Linea tematica:</dt>
+  <dd><%= @proyecto.linea_tematica %></dd>
+
+  <dt>Lugar ejecucion:</dt>
+  <dd><%= @proyecto.lugar_ejecucion %></dd>
+
+  <dt>Titulo:</dt>
+  <dd><%= @proyecto.titulo %></dd>
+
+</dl>

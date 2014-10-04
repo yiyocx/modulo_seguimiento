@@ -1,0 +1,26 @@
+<div class="page-header">
+  <%= link_to evaluacions_path, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Atrás
+  <% end %>
+  <%= link_to edit_evaluacion_path(@evaluacion), :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Editar
+  <% end %>
+  <h1>Ver evaluacion</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Porc sugerido condonacion:</dt>
+  <dd><%= @evaluacion.porc_sugerido_condonacion %></dd>
+
+  <dt>Concepto:</dt>
+  <dd><%= @evaluacion.concepto %></dd>
+
+  <dt>Evaluador:</dt>
+  <dd><%= @evaluacion.evaluador %></dd>
+
+  <dt>Informe:</dt>
+  <dd><%= @evaluacion.informe %></dd>
+
+</dl>
