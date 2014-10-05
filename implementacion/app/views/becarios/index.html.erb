@@ -12,7 +12,19 @@
       <tr>
             <th>Condonacion beneficiarios</th>
             <th>Cumple requisitos</th>
-            <th>Datos beneficiario</th>
+            <th>DATOS DEL BENEFICIARIO</th>
+            <th>Numero DI</th>
+            <th>Nombre</th>
+            <th>Apellido 1</th>
+            <th>Apellido 2</th>
+            <th>Fecha Nacimiento</th>
+            <th>Departamento Nacimiento</th>
+            <th>Género</th>
+            <th>Email</th>
+            <th>Telefono</th>
+            <th>Direccion Residencial</th>
+            <th>Ciudad</th>
+            <th>Direccion Profesional</th>
             <th>Info beneficiario</th>
             <th>Info programa doctoral</th>
             <th>Info tesis</th>
@@ -27,7 +39,19 @@
       <%= content_tag_for(:tr, @becarios) do |becario| %>
             <td><%= becario.condonacion_beneficiarios %></td>
             <td><%= becario.cumple_requisitos %></td>
-            <td><%= becario.datos_beneficiario %></td>
+            <td></td>
+            <td><%= becario.numero_DI %></td>
+            <td><%= becario.nombre %></td>
+            <td><%= becario.apellido1 %></td>
+            <td><%= becario.apellido2 %></td>
+            <td><%= becario.fecha_nacimiento %></td>
+            <td><%= becario.departamento_nacimiento %></td>
+            <td><%= becario.genero %></td>
+            <td><%= becario.email %></td>
+            <td><%= becario.telefono %></td>
+            <td><%= becario.direccion_residencial %></td>
+            <td><%= becario.ciudad %></td>
+            <td><%= becario.direccion_profesional %></td>
             <td><%= becario.info_beneficiario %></td>
             <td><%= becario.info_programa_doctoral %></td>
             <td><%= becario.info_tesis %></td>

@@ -6,6 +6,7 @@ class CreateProyectos < ActiveRecord::Migration
       t.integer :linea_tematica
       t.string :lugar_ejecucion
       t.string :titulo
+      t.belongs_to :contrato, index: true
 
       t.timestamps
     end

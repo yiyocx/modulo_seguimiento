@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141004232120) do
+ActiveRecord::Schema.define(version: 20141005020811) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,14 +27,28 @@ ActiveRecord::Schema.define(version: 20141004232120) do
   create_table "becarios", force: true do |t|
     t.string   "condonacion_beneficiarios"
     t.boolean  "cumple_requisitos"
-    t.string   "datos_beneficiario"
+    t.string   "numero_DI"
+    t.string   "nombre"
+    t.string   "apellido1"
+    t.string   "apellido2"
+    t.date     "fecha_nacimiento"
+    t.integer  "departamento_nacimiento"
+    t.integer  "genero"
+    t.string   "email"
+    t.string   "telefono"
+    t.string   "direccion_residencial"
+    t.string   "ciudad"
+    t.string   "direccion_profesional"
     t.string   "info_beneficiario"
     t.string   "info_programa_doctoral"
     t.string   "info_tesis"
     t.string   "registro_pasantia"
+    t.integer  "contrato_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "becarios", ["contrato_id"], name: "index_becarios_on_contrato_id", using: :btree
 
   create_table "contratos", force: true do |t|
     t.integer  "num_convenio"
@@ -92,6 +106,16 @@ ActiveRecord::Schema.define(version: 20141004232120) do
     t.datetime "updated_at"
   end
 
+  create_table "informes", force: true do |t|
+    t.text     "descripcion"
+    t.boolean  "es_final"
+    t.date     "fecha"
+    t.integer  "tipo"
+    t.integer  "proyecto_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "notificacions", force: true do |t|
     t.string   "mensaje"
     t.datetime "created_at"
@@ -104,9 +128,12 @@ ActiveRecord::Schema.define(version: 20141004232120) do
     t.integer  "linea_tematica"
     t.string   "lugar_ejecucion"
     t.string   "titulo"
+    t.integer  "contrato_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "proyectos", ["contrato_id"], name: "index_proyectos_on_contrato_id", using: :btree
 
   create_table "visita_tecnicas", force: true do |t|
     t.text     "observacion"

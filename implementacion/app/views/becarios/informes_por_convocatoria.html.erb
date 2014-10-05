@@ -1,0 +1,23 @@
+<h1>Informes Ingresados</h1>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Descripcion</th>
+            <th>Es final</th>
+            <th>Fecha</th>
+            <th>Tipo</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @informes_convocatoria) do |informe| %>
+            <td><%= informe.descripcion %></td>
+            <td><%= informe.es_final %></td>
+            <td><%= informe.fecha %></td>
+            <td><%= informe.tipo %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

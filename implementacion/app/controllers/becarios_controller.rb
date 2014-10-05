@@ -1,5 +1,5 @@
 class BecariosController < ApplicationController
-  before_action :set_becario, only: [:show, :edit, :update, :destroy]
+  before_action :set_becario, only: [:show, :edit, :update, :destroy, :informes_anuales_condonacion, :informes_por_convocatoria]
 
   # GET /becarios
   # GET /becarios.json
@@ -61,6 +61,13 @@ class BecariosController < ApplicationController
     end
   end
 
+  def informes_anuales_condonacion
+  end
+
+  def informes_por_convocatoria
+    @informes_convocatoria = Informe.where(proyecto_id: params[:conv_seleccionada])
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_becario
@@ -69,6 +76,6 @@ class BecariosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def becario_params
-      params.require(:becario).permit(:condonacion_beneficiarios, :cumple_requisitos, :datos_beneficiario, :info_beneficiario, :info_programa_doctoral, :info_tesis, :registro_pasantia)
+      params.require(:becario).permit(:condonacion_beneficiarios, :cumple_requisitos, :numero_DI, :nombre, :apellido1, :apellido2, :fecha_nacimiento, :departamento_nacimiento, :genero, :email, :telefono, :direccion_residencial, :ciudad, :direccion_profesional, :info_beneficiario, :info_programa_doctoral, :info_tesis, :registro_pasantia)
     end
 end

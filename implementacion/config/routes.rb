@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   resources :informes
 
-  resources :becarios
+  resources :becarios do
+    get :informes_anuales_condonacion, :on => :member
+    get :informes_por_convocatoria, :on => :member
+  end
+
 
   resources :evaluacions
 

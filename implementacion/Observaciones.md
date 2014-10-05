@@ -60,3 +60,10 @@ Modelos:
 
 12. notificacion: model  
    `bin/rails g model notificacion mensaje:string`
+
+
+Dudas
+-----
+
+1. Tipo de datos de archivo (cargar y descargar pdf)
+2. Desplejar la aplicación en internet

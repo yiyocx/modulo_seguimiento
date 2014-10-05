@@ -25,9 +25,75 @@
     </div>
   </div>
   <div class="form-group">
-    <%= f.label :datos_beneficiario, :class => "col-sm-2 control-label" %>
+    <%= f.label :numero_DI, :class => "col-sm-2 control-label" %>
     <div class="col-sm-10">
-      <%= f.text_field :datos_beneficiario, :class => "form-control" %>
+      <%= f.text_field :numero_DI, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :nombre, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :nombre, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :apellido1, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :apellido1, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :apellido2, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :apellido2, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :fecha_nacimiento, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.date_select :fecha_nacimiento, {:start_year => Date.current.year-60, :end_year => 2014}, :class => "form-control chosen-select" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :departamento_nacimiento, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :departamento_nacimiento, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :genero, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :genero, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :email, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :email, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :telefono, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :telefono, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :direccion_residencial, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :direccion_residencial, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :ciudad, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :ciudad, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :direccion_profesional, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :direccion_profesional, :class => "form-control" %>
     </div>
   </div>
   <div class="form-group">

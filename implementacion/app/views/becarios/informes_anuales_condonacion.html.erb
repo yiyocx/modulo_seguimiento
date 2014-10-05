@@ -1,0 +1,14 @@
+<h1>Convocatorias</h1>
+<h6>Lista de convocatorias de formación en que participa el becario:</h6>
+    
+  
+<div class="form-group">
+  <%= collection_select("select_convocatoria", :conv_seleccionada, Proyecto.where(contrato_id: @becario.contrato_id), :id, :titulo, {}, {:class => 'form-control'}) %>
+</div>
+<div class="form-group">
+  <%= link_to informes_por_convocatoria_becario_path(@becario), :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Ver informes ingresados
+  <% end %>
+</div>
+

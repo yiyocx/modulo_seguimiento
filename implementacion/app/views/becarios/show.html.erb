@@ -17,8 +17,41 @@
   <dt>Cumple requisitos:</dt>
   <dd><%= @becario.cumple_requisitos %></dd>
 
-  <dt>Datos beneficiario:</dt>
-  <dd><%= @becario.datos_beneficiario %></dd>
+  <dt>Numero DI:</dt>
+  <dd><%= @becario.numero_DI %></dd>
+
+  <dt>Nombre:</dt>
+  <dd><%= @becario.nombre %></dd>
+
+  <dt>Apellido 1:</dt>
+  <dd><%= @becario.apellido1 %></dd>
+
+  <dt>Apellido 2:</dt>
+  <dd><%= @becario.apellido2 %></dd>
+
+  <dt>Fecha Nacimiento:</dt>
+  <dd><%= @becario.fecha_nacimiento %></dd>
+
+  <dt>Departamento Nacimiento:</dt>
+  <dd><%= @becario.departamento_nacimiento %></dd>
+
+  <dt>Género:</dt>
+  <dd><%= @becario.genero %></dd>
+
+  <dt>Email:</dt>
+  <dd><%= @becario.email %></dd>
+
+  <dt>Teléfono:</dt>
+  <dd><%= @becario.telefono %></dd>
+
+  <dt>Direccion Residencial:</dt>
+  <dd><%= @becario.direccion_residencial %></dd>
+
+  <dt>Ciudad:</dt>
+  <dd><%= @becario.ciudad %></dd>
+
+  <dt>Direccion Profesional:</dt>
+  <dd><%= @becario.direccion_profesional %></dd>  
 
   <dt>Info beneficiario:</dt>
   <dd><%= @becario.info_beneficiario %></dd>
@@ -33,3 +66,8 @@
   <dd><%= @becario.registro_pasantia %></dd>
 
 </dl>
+
+<%= link_to informes_anuales_condonacion_becario_path(@becario), :class => 'btn btn-primary' do %>
+  <span class="glyphicon glyphicon-pencil"></span>
+  Seguimiento a Becarios - Informes anuales para condonación
+<% end %>

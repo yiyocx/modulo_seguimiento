@@ -5,6 +5,7 @@ class CreateInformes < ActiveRecord::Migration
       t.boolean :es_final
       t.date :fecha
       t.integer :tipo
+      t.integer :proyecto_id
 
       t.timestamps
     end
