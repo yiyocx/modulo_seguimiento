@@ -1,0 +1,26 @@
+<div class="page-header">
+  <%= link_to informes_path, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Atrás
+  <% end %>
+  <%= link_to edit_informe_path(@informe), :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Editar
+  <% end %>
+  <h1>Ver informe</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Descripcion:</dt>
+  <dd><%= @informe.descripcion %></dd>
+
+  <dt>Es final:</dt>
+  <dd><%= @informe.es_final %></dd>
+
+  <dt>Fecha:</dt>
+  <dd><%= @informe.fecha %></dd>
+
+  <dt>Tipo:</dt>
+  <dd><%= @informe.tipo %></dd>
+
+</dl>

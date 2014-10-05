@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :informes
+
   resources :becarios
 
   resources :evaluacions
