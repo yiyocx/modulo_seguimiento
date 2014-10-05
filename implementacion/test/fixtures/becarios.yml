@@ -25,6 +25,10 @@
 #  created_at                :datetime
 #  updated_at                :datetime
 #
+# Indexes
+#
+#  index_becarios_on_contrato_id  (contrato_id)
+#
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 

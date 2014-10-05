@@ -25,6 +25,10 @@
 #  created_at                :datetime
 #  updated_at                :datetime
 #
+# Indexes
+#
+#  index_becarios_on_contrato_id  (contrato_id)
+#
 
 class Becario < ActiveRecord::Base
   belongs_to :contrato

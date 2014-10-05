@@ -13,6 +13,10 @@
 #  created_at      :datetime
 #  updated_at      :datetime
 #
+# Indexes
+#
+#  index_desembolsos_on_proyecto_id  (proyecto_id)
+#
 
 require 'test_helper'
 

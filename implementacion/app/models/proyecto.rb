@@ -12,6 +12,10 @@
 #  created_at      :datetime
 #  updated_at      :datetime
 #
+# Indexes
+#
+#  index_proyectos_on_contrato_id  (contrato_id)
+#
 
 class Proyecto < ActiveRecord::Base
   belongs_to :contrato

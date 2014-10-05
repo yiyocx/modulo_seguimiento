@@ -46,6 +46,8 @@ group :development do
 
   # Gema que añade comentarios automáticamente sobre el código
   gem 'annotate'
+
+  gem 'quiet_assets'
 end
 
 # Use ActiveModel has_secure_password

@@ -23,4 +23,6 @@
   <dt>Tipo:</dt>
   <dd><%= @informe.tipo %></dd>
 
+  <%= link_to "Download", @informe.document.url(:original, false), target: '_blank' %>
+
 </dl>

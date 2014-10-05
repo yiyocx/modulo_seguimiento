@@ -69,6 +69,6 @@ class InformesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def informe_params
-      params.require(:informe).permit(:descripcion, :es_final, :fecha, :tipo)
+      params.require(:informe).permit(:descripcion, :es_final, :fecha, :tipo, :document)
     end
 end
