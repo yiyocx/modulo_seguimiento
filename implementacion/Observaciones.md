@@ -65,5 +65,7 @@ Modelos:
 Dudas
 -----
 
-1. Tipo de datos de archivo (cargar y descargar pdf)
-2. Desplejar la aplicación en internet
+1. Instalar y configurar el devise
+2. Autorizacion basada en roles
+3. Tipo de datos archivo (cargar y descargar pdf)
+4. Desplejar la aplicación en internet

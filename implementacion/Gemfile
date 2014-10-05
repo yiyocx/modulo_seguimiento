@@ -29,6 +29,9 @@ gem 'spring',        group: :development
 # bootstrap-generators
 gem 'bootstrap-generators', '~> 3.1.1'
 
+# Gema para trabajar con archivos
+gem "paperclip", "~> 4.2"
+
 # Gemas para ser usadas solo en el ambiente de desarrollo
 group :development do
 
