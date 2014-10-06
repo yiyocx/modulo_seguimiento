@@ -11,7 +11,32 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
-//= require turbolinks
 //= require bootstrap
+//= require chosen-jquery
 //= require_tree .
+//= require turbolinks  
+
+$(function() {
+  return $('.chosen-select').chosen({
+    allow_single_deselect: true,
+    no_results_text: 'No results matched',
+    width: '200px'
+  });
+});
+
+$(function(){
+  $('#basicModal').on('shown.bs.modal', function (e) {
+  });
+});
+
+$(function(){
+  $("#proyectos_conv_seleccionada").change(function(){
+    var value = this.value;
+    
+    $("#proyectos_becario_seleccionado").append(
+      
+    );
+  });
+});

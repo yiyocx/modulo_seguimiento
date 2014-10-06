@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141005163652) do
+ActiveRecord::Schema.define(version: 20141006145409) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -135,6 +135,9 @@ ActiveRecord::Schema.define(version: 20141005163652) do
     t.integer  "contrato_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "num_convocatoria"
+    t.string   "nombre_convocatoria"
+    t.integer  "tipo"
   end
 
   add_index "proyectos", ["contrato_id"], name: "index_proyectos_on_contrato_id", using: :btree
@@ -156,6 +159,16 @@ ActiveRecord::Schema.define(version: 20141005163652) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "usuario_colciencia", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "usuario_cols", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "visita_tecnicas", force: true do |t|
     t.text     "observacion"

@@ -1,0 +1,20 @@
+<%= form_for(@usuario_col, :html => { :class => "form-horizontal" }) do |f| %>
+  <% if @usuario_col.errors.any? %>
+    <div class="alert alert-danger alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <h4><%= pluralize(@usuario_col.errors.count, "error") %> impidió que el/la usuario_col se guardara:</h4>
+
+      <ul>
+      <% @usuario_col.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit :class => "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>

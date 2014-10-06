@@ -1,0 +1,13 @@
+<div class="page-header">
+  <%= link_to usuario_cols_path, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Atrás
+  <% end %>
+  <%= link_to @usuario_col, :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-info-sign"></span>
+    Ver
+  <% end %>
+  <h1>Editar usuario_col</h1>
+</div>
+
+<%= render 'form' %>

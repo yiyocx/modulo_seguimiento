@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :usuario_cols
+
   devise_for :users
   resources :informes
 
@@ -12,11 +14,18 @@ Rails.application.routes.draw do
 
   resources :desembolsos
 
-  resources :proyectos
+  resources :proyectos do
+    collection do
+      get :asignar_evaluador
+      get :definir_evaluador
+    end
+  end
 
   resources :visita_tecnicas
 
   root 'becarios#index'
+
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
