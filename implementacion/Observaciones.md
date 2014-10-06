@@ -67,5 +67,6 @@ Dudas
 
 1. Instalar y configurar el devise
 2. Autorizacion basada en roles
-3. Tipo de datos archivo (cargar y descargar pdf)
-4. Desplejar la aplicación en internet
+3. Actualizar los campos de la tabla en informes_por_convocatoria.html con un solo botón
+4. Llenar las opciones del select de proyectos_becario_seleccionado de acuerdo a la convocatoria que se elija
+5. Desplejar la aplicación en internet

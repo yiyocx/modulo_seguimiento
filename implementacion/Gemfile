@@ -47,8 +47,16 @@ group :development do
   # Gema que añade comentarios automáticamente sobre el código
   gem 'annotate'
 
+  # Gema para callar los logs de assets
   gem 'quiet_assets'
 end
+
+gem 'devise'
+
+gem 'jquery-turbolinks'
+
+# Chosen
+gem 'chosen-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
