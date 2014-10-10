@@ -51,7 +51,11 @@ group :development do
   gem 'quiet_assets'
 end
 
+# Gema para gestionar la autenticación de usuarios
 gem 'devise'
+
+# Gema para gestionar la autorización por roles
+gem 'pundit'
 
 gem 'jquery-turbolinks'
 

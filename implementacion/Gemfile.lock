@@ -112,6 +112,8 @@ GEM
       cocaine (~> 0.5.3)
       mime-types
     pg (0.17.1)
+    pundit (0.3.0)
+      activesupport (>= 3.0.0)
     quiet_assets (1.0.3)
       railties (>= 3.1, < 5.0)
     rack (1.5.2)
@@ -202,6 +204,7 @@ DEPENDENCIES
   jquery-turbolinks
   paperclip (~> 4.2)
   pg
+  pundit
   quiet_assets
   rails (= 4.1.6)
   rails_admin

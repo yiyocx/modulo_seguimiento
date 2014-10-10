@@ -15,6 +15,7 @@
 #  last_sign_in_ip        :string(255)
 #  created_at             :datetime
 #  updated_at             :datetime
+#  role                   :integer
 #
 # Indexes
 #
@@ -27,4 +28,12 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  enum role: {"Becario" => 0, "admin" => 1}
+  after_initialize :set_default_role, :if => :new_record?
+  
+  def set_default_role
+    self.role ||= :user
+  end
+
 end
