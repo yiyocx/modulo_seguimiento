@@ -16,9 +16,12 @@
 #  created_at             :datetime
 #  updated_at             :datetime
 #  role                   :integer
+#  nombre                 :string(255)
+#  becario_id             :integer
 #
 # Indexes
 #
+#  index_users_on_becario_id            (becario_id)
 #  index_users_on_email                 (email) UNIQUE
 #  index_users_on_reset_password_token  (reset_password_token) UNIQUE
 #

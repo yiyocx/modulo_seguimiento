@@ -1,0 +1,118 @@
+<div class="page-header">
+  <%= link_to users_path, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Atrás
+  <% end %>
+  <h1>Nuevo Becario</h1>
+</div>
+<%= form_for(@user, url: url_for( :controller => :users, :action => :crear_usuario_becario ), :html => {:class => "form-horizontal" }) do |f| %>
+  <% if @user.errors.any? %>
+    <div class="alert alert-danger alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <h4><%= pluralize(@user.errors.count, "error") %> impidió que el/la user se guardara:</h4>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  Campos para el becario:
+  <%= f.fields_for :becario, Becario.new(user: @user) do |fields_becario|%>
+
+
+    <div class="form-group">
+      <%= f.label :condonacion_beneficiarios, :class => "col-sm-2 control-label" %>
+      <div class="col-sm-10">
+        <%= fields_becario.text_field :condonacion_beneficiarios, :class => "form-control" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :cumple_requisitos, :class => "col-sm-2 control-label" %>
+      <div class="col-sm-10">
+        <%= fields_becario.check_box :cumple_requisitos, :class => "form-control" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :numero_DI, :class => "col-sm-2 control-label" %>
+      <div class="col-sm-10">
+        <%= fields_becario.text_field :numero_DI, :class => "form-control" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :nombre, :class => "col-sm-2 control-label" %>
+      <div class="col-sm-10">
+        <%= fields_becario.text_field :nombre, :class => "form-control" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :apellido1, :class => "col-sm-2 control-label" %>
+      <div class="col-sm-10">
+        <%= fields_becario.text_field :apellido1, :class => "form-control" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :apellido2, :class => "col-sm-2 control-label" %>
+      <div class="col-sm-10">
+        <%= fields_becario.text_field :apellido2, :class => "form-control" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :fecha_nacimiento, :class => "col-sm-2 control-label" %>
+      <div class="col-sm-10">
+        <%= fields_becario.date_select :fecha_nacimiento, {:start_year => Date.current.year-60, :end_year => 2014}, :class => "form-control chosen-select" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :departamento_nacimiento, :class => "col-sm-2 control-label" %>
+      <div class="col-sm-10">
+        <%= fields_becario.text_field :departamento_nacimiento, :class => "form-control" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :genero, :class => "col-sm-2 control-label" %>
+      <div class="col-sm-10">
+        <%= fields_becario.text_field :genero, :class => "form-control" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :email, :class => "col-sm-2 control-label" %>
+      <div class="col-sm-10">
+        <%= fields_becario.text_field :email, :class => "form-control" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :telefono, :class => "col-sm-2 control-label" %>
+      <div class="col-sm-10">
+        <%= fields_becario.text_field :telefono, :class => "form-control" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :direccion_residencial, :class => "col-sm-2 control-label" %>
+      <div class="col-sm-10">
+        <%= fields_becario.text_field :direccion_residencial, :class => "form-control" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :ciudad, :class => "col-sm-2 control-label" %>
+      <div class="col-sm-10">
+        <%= fields_becario.text_field :ciudad, :class => "form-control" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :direccion_profesional, :class => "col-sm-2 control-label" %>
+      <div class="col-sm-10">
+        <%= fields_becario.text_field :direccion_profesional, :class => "form-control" %>
+      </div>
+    </div>
+
+  <% end %>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit :class => "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>

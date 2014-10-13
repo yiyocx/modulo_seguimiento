@@ -70,3 +70,17 @@ Dudas
 3. Actualizar los campos de la tabla en informes_por_convocatoria.html con un solo botón
 4. Llenar las opciones del select de proyectos_becario_seleccionado de acuerdo a la convocatoria que se elija
 5. Desplejar la aplicación en internet
+
+Correos
+-------
+
+1. Principal de la aplicación:   
+* `modulo.seguimiento@gmail.com`
+2. Becarios:  
+* `becario1.modulo.seguimiento@gmail.com`   
+3. Usuarios colciencias:   
+* `usuario1col.modulo.seguimiento@gmail.com`
+4. Evaluadores:  
+* `evaluador1.modulo.seguimiento@gmail.com`
+5. Todas las password son `123fenix`
+

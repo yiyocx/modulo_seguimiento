@@ -1,7 +1,7 @@
 <h1>Convocatorias</h1>
 <h6>Lista de convocatorias de formación en que participa el becario:</h6>
     
-<%= form_for :informes, url: informes_por_convocatoria_becario_path(@becario), method: :get, :html => { :class => "form-group" } do |f| %>
+<%= form_for :informes, url: informes_por_convocatoria_informes_path(@becario), method: :get, :html => { :class => "form-group" } do |f| %>
 
   <div class="form-group">
     <%= select_tag :conv_seleccionada, options_for_select(Proyecto.where(contrato_id: @becario.contrato_id).map { |p| [p.titulo, p.id] } ), :class => "form-control" %>
