@@ -61,6 +61,10 @@ class InformesController < ApplicationController
     end
   end
 
+  def informes_por_convocatoria
+    @informes_convocatoria = Informe.where(proyecto_id: params[:conv_seleccionada])
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_informe

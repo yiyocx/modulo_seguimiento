@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141006145409) do
+ActiveRecord::Schema.define(version: 20141013060851) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,9 +46,11 @@ ActiveRecord::Schema.define(version: 20141006145409) do
     t.integer  "contrato_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   add_index "becarios", ["contrato_id"], name: "index_becarios_on_contrato_id", using: :btree
+  add_index "becarios", ["user_id"], name: "index_becarios_on_user_id", using: :btree
 
   create_table "contratos", force: true do |t|
     t.integer  "num_convenio"
@@ -155,8 +157,12 @@ ActiveRecord::Schema.define(version: 20141006145409) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "role"
+    t.string   "nombre"
+    t.integer  "becario_id"
   end
 
+  add_index "users", ["becario_id"], name: "index_users_on_becario_id", using: :btree
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 

@@ -15,9 +15,13 @@
 #  last_sign_in_ip        :string(255)
 #  created_at             :datetime
 #  updated_at             :datetime
+#  role                   :integer
+#  nombre                 :string(255)
+#  becario_id             :integer
 #
 # Indexes
 #
+#  index_users_on_becario_id            (becario_id)
 #  index_users_on_email                 (email) UNIQUE
 #  index_users_on_reset_password_token  (reset_password_token) UNIQUE
 #
@@ -27,4 +31,10 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  enum role: {admin: 1, becario: 2, colciencias: 3, evaluador: 4}
+
+  has_one :becario
+  accepts_nested_attributes_for :becario
+  
 end

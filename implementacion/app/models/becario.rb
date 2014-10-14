@@ -24,12 +24,15 @@
 #  contrato_id               :integer
 #  created_at                :datetime
 #  updated_at                :datetime
+#  user_id                   :integer
 #
 # Indexes
 #
 #  index_becarios_on_contrato_id  (contrato_id)
+#  index_becarios_on_user_id      (user_id)
 #
 
 class Becario < ActiveRecord::Base
+  belongs_to :user
   belongs_to :contrato
 end

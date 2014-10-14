@@ -1,10 +1,13 @@
 class BecariosController < ApplicationController
-  before_action :set_becario, only: [:show, :edit, :update, :destroy, :informes_anuales_condonacion, :informes_por_convocatoria]
+  before_action :set_becario, only: [:show, :edit, :update, :destroy, :informes_anuales_condonacion]
+
+  # after_action :verify_authorized
 
   # GET /becarios
   # GET /becarios.json
   def index
     @becarios = Becario.all
+    # authorize @becarios
   end
 
   # GET /becarios/1
@@ -15,16 +18,19 @@ class BecariosController < ApplicationController
   # GET /becarios/new
   def new
     @becario = Becario.new
+    # authorize @becario
   end
 
   # GET /becarios/1/edit
   def edit
+    # authorize @becario
   end
 
   # POST /becarios
   # POST /becarios.json
   def create
     @becario = Becario.new(becario_params)
+    # authorize @becario
 
     respond_to do |format|
       if @becario.save
@@ -40,6 +46,7 @@ class BecariosController < ApplicationController
   # PATCH/PUT /becarios/1
   # PATCH/PUT /becarios/1.json
   def update
+    # authorize @becario
     respond_to do |format|
       if @becario.update(becario_params)
         format.html { redirect_to @becario, notice: 'Becario was successfully updated.' }
@@ -55,23 +62,20 @@ class BecariosController < ApplicationController
   # DELETE /becarios/1.json
   def destroy
     @becario.destroy
+    # authorize @becario
     respond_to do |format|
       format.html { redirect_to becarios_url, notice: 'Becario was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
-  def informes_anuales_condonacion
-  end
 
-  def informes_por_convocatoria
-    @informes_convocatoria = Informe.where(proyecto_id: params[:conv_seleccionada])
-  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_becario
       @becario = Becario.find(params[:id])
+      # authorize @becario
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
