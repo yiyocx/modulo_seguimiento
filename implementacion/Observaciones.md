@@ -28,11 +28,11 @@ Modelos:
 
 4. proyecto: scaffold  
   `bin/rails g scaffold proyecto duracion:integer estado:string linea_tematica:integer lugar_ejecucion:string titulo:string`  
-  Faltan los campos:   
+  Faltan los campos:
     * justificacionEstado[]
     * CDR (Certificado de Disponibilidad de Recursos)
 
-5. desembolso: scaffold   
+5. desembolso: scaffold
   `bin/rails g scaffold desembolso estado:integer fecha_solicitud:date valor:float girado:float fecha_giro:date condiciones:text proyecto:belongs_to`
 
 6. contrato: model  
@@ -50,12 +50,12 @@ Modelos:
   `bin/rails g model evaluador area_conocimiento:string fecha_inicial:date fecha_final:date`  
 
 9. evaluacion: scaffold
-  `bin/rails g scaffold evaluacion porc_sugerido_condonacion:integer concepto:string evaluador:string informe:string` 
+  `bin/rails g scaffold evaluacion porc_sugerido_condonacion:integer concepto:string evaluador:string informe:string`
 
 10. becario: scaffold  
   `bin/rails g scaffold becario condonacion_beneficiarios:string cumple_requisitos:boolean datos_beneficiario:string info_beneficiario:string info_programa_doctoral:string info_tesis:string registro_pasantia:string`  
 
-11. seguimiento_academico_financiero: scaffold   
+11. seguimiento_academico_financiero: scaffold
   `bin/rails g scaffold seguimiento_academico_financiero fecha:date meses_sostenimiento:integer numero_matriculas_aprobadas:integer observacion_academica:string promedio_academico:float recursos_aprobados:string semestre:integer soporte_academico:string valor_matricula:float valor_sostenimiento:float`
 
 12. notificacion: model  
@@ -69,18 +69,17 @@ Dudas
 2. Autorizacion basada en roles
 3. Actualizar los campos de la tabla en informes_por_convocatoria.html con un solo botón
 4. Llenar las opciones del select de proyectos_becario_seleccionado de acuerdo a la convocatoria que se elija
-5. Desplejar la aplicación en internet
+5. Desplegar la aplicación en internet
 
 Correos
 -------
 
-1. Principal de la aplicación:   
+1. Principal de la aplicación:
 * `modulo.seguimiento@gmail.com`
 2. Becarios:  
-* `becario1.modulo.seguimiento@gmail.com`   
-3. Usuarios colciencias:   
+* `becario1.modulo.seguimiento@gmail.com`
+3. Usuarios colciencias:
 * `usuario1col.modulo.seguimiento@gmail.com`
 4. Evaluadores:  
 * `evaluador1.modulo.seguimiento@gmail.com`
 5. Todas las password son `123fenix`
-
