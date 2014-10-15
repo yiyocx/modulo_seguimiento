@@ -75,12 +75,12 @@ Correos
 -------
 
 1. Principal de la aplicación:   
-* `modulo.seguimiento@gmail.com`
+  * `modulo.seguimiento@gmail.com`
 2. Becarios:  
-* `becario1.modulo.seguimiento@gmail.com`   
+  * `becario1.modulo.seguimiento@gmail.com`   
 3. Usuarios colciencias:   
-* `usuario1col.modulo.seguimiento@gmail.com`
+  * `usuario1col.modulo.seguimiento@gmail.com`
 4. Evaluadores:  
-* `evaluador1.modulo.seguimiento@gmail.com`
+  * `evaluador1.modulo.seguimiento@gmail.com`
 5. Todas las password son `123fenix`
 
