@@ -8,4 +8,10 @@ class ApplicationController < ActionController::Base
 
   include Pundit
 
+  def after_sign_in_path_for(resource)
+    if resource.role.eql? "becario"
+      becario_path(resource.becario)
+    end
+  end
+
 end

@@ -11,12 +11,13 @@ Rails.application.routes.draw do
       post :crear_usuario_colciencias
       post :crear_usuario_evaluador
     end
+
+    get :show_becario, :on => :member
   end
 
 
   resources :informes do
     collection do
-      get :informes_por_convocatoria
     end
   end
 
@@ -33,6 +34,14 @@ Rails.application.routes.draw do
     collection do
       get :asignar_evaluador
       get :definir_evaluador
+    end
+    
+    member do
+      get :informes_por_convocatoria
+    end
+
+    member do
+      get :becarios_informe_final
     end
   end
 

@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:show, :edit, :update, :destroy, :show_becario]
   # GET /users
   # GET /users.json
   def index
@@ -9,6 +9,9 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+  end
+
+  def show_becario
   end
 
   # GET /users/new
@@ -79,7 +82,7 @@ class UsersController < ApplicationController
     @user.role = 2
     @user.nombre = @user.becario.nombre
     @generated_password = Devise.friendly_token.first(8)
-    @user.encrypted_password =  @generated_password;
+    @user.encrypted_password =  @generated_password
     @user.email = @user.becario.email
     @user.send_reset_password_instructions
 
@@ -98,7 +101,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     @user.role = 3
     @generated_password = Devise.friendly_token.first(8)
-    @user.encrypted_password =  @generated_password;
+    @user.encrypted_password =  @generated_password
     @user.send_reset_password_instructions
 
     respond_to do |format|
@@ -116,7 +119,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     @user.role = 4
     @generated_password = Devise.friendly_token.first(8)
-    @user.encrypted_password =  @generated_password;
+    @user.encrypted_password =  @generated_password
     @user.send_reset_password_instructions
 
     respond_to do |format|

@@ -1,0 +1,58 @@
+<div class="page-header">
+  <%= link_to users_path, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Atrás
+  <% end %>
+  <%= link_to edit_user_path(@user), :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Editar
+  <% end %>
+  <h1>Ver Becario</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Nombre:</dt>
+  <dd><%= @user.becario.nombre %></dd>
+  
+  <dt>Email:</dt>
+  <dd><%= @user.becario.email %></dd>
+
+  <dt>Condonacion beneficiarios:</dt>
+  <dd><%= @user.becario.condonacion_beneficiarios %></dd>
+
+  <dt>Cumple requisitos:</dt>
+  <dd><%= @user.becario.cumple_requisitos %></dd>
+
+  <dt>Numero DI:</dt>
+  <dd><%= @user.becario.numero_DI %></dd>
+
+  <dt>Apellido 1:</dt>
+  <dd><%= @user.becario.apellido1 %></dd>
+
+  <dt>Apellido 2:</dt>
+  <dd><%= @user.becario.apellido2 %></dd>
+
+  <dt>Fecha Nacimiento:</dt>
+  <dd><%= @user.becario.fecha_nacimiento %></dd>
+
+  <dt>Departamento Nacimiento:</dt>
+  <dd><%= @user.becario.departamento_nacimiento %></dd>
+
+  <dt>Género:</dt>
+  <dd><%= @user.becario.genero %></dd>
+
+
+  <dt>Teléfono:</dt>
+  <dd><%= @user.becario.telefono %></dd>
+
+  <dt>Direccion Residencial:</dt>
+  <dd><%= @user.becario.direccion_residencial %></dd>
+
+  <dt>Ciudad:</dt>
+  <dd><%= @user.becario.ciudad %></dd>
+
+  <dt>Direccion Profesional:</dt>
+  <dd><%= @user.becario.direccion_profesional %></dd> 
+
+
+</dl>

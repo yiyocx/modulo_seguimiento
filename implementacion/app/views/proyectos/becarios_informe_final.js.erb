@@ -1,0 +1,2 @@
+var $select = $('#proyectos_becario_seleccionado');
+$select.html(' <%= j @becarios.map {|b| "<option value='#{b.id}'>#{b.nombre}</option>"}.join.html_safe %> ');

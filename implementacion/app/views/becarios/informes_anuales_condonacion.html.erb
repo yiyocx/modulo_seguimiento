@@ -1,13 +1,26 @@
 <h1>Convocatorias</h1>
 <h6>Lista de convocatorias de formación en que participa el becario:</h6>
     
-<%= form_for :informes, url: informes_por_convocatoria_informes_path(@becario), method: :get, :html => { :class => "form-group" } do |f| %>
+<%= form_for :informes, :html => { :class => "form-group" } do |f| %>
 
-  <div class="form-group">
-    <%= select_tag :conv_seleccionada, options_for_select(Proyecto.where(contrato_id: @becario.contrato_id).map { |p| [p.titulo, p.id] } ), :class => "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.submit 'Informes', {:class => 'btn btn-primary'} do %>
-    <% end %>
-  </div>
+  <div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>No. Convocatoria</th>
+        <th>Nombre de Convocatoria</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @convocatorias) do |proyecto| %>
+        <td><%= proyecto.num_convocatoria %></td>
+        <td><%= proyecto.nombre_convocatoria %></td>
+        <td><%= link_to 'Ver informes', informes_por_convocatoria_proyecto_path(proyecto) %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
 <% end %>

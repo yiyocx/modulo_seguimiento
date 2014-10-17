@@ -24,15 +24,27 @@
       <tr>
             <th>Nombre</th>
             <th></th>
-        <th></th>
-        <th></th>
+            <th></th>
+            <th></th>
       </tr>
     </thead>
 
     <tbody>
       <%= content_tag_for(:tr, @users) do |user| %>
             <td><%= user.nombre %></td>
-            <td><%= link_to 'Ver', user %></td>
+            <!-- <td><%= link_to 'Ver', user %></td> -->
+            <td>
+              <% if user.role.eql? "becario" %>
+                <%= link_to show_becario_user_path(user) do %>
+                  <span class="glyphicon"></span>
+                  Ver Becario
+                <% end %>
+              <% elsif user.role.eql? "colciencias" %>
+                <%= link_to 'Ver Usuaio Colciencias', user %>
+              <% elsif user.role.eql? "evaluador" %>
+                <%= link_to 'Ver Evaluador', user %>
+              <% end %>
+            </td>
         <td><%= link_to 'Editar', edit_user_path(user) %></td>
         <td><%= link_to 'Eliminar', user, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
       <% end %>

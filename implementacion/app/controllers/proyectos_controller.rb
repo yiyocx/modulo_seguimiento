@@ -1,5 +1,5 @@
 class ProyectosController < ApplicationController
-  before_action :set_proyecto, only: [:show, :edit, :update, :destroy]
+  before_action :set_proyecto, only: [:show, :edit, :update, :destroy, :becarios_informe_final, :informes_por_convocatoria]
 
   # GET /proyectos
   # GET /proyectos.json
@@ -59,6 +59,14 @@ class ProyectosController < ApplicationController
       format.html { redirect_to proyectos_url, notice: 'Proyecto was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def becarios_informe_final
+    @becarios = Becario.where(contrato: @proyecto.contrato)
+  end
+
+  def informes_por_convocatoria
+    @informes_convocatoria = Informe.where(proyecto_id: @proyecto.id)
   end
 
   private
