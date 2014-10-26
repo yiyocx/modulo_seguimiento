@@ -68,8 +68,7 @@ Dudas
 1. Instalar y configurar el devise
 2. Autorizacion basada en roles
 3. Actualizar los campos de la tabla en informes_por_convocatoria.html con un solo botón
-4. Llenar las opciones del select de proyectos_becario_seleccionado de acuerdo a la convocatoria que se elija
-5. Desplegar la aplicación en internet
+4. Cuadrar consulta en informes_por_convocatoria.
 
 Correos
 -------
@@ -83,3 +82,10 @@ Correos
 4. Evaluadores:  
   * `evaluador1.modulo.seguimiento@gmail.com`
 5. Todas las password son `123fenix`
+
+TODO's
+---------
+
+1. Organizar el código de proyectos.js.
+2. Asociar evaluador con informe final.
+

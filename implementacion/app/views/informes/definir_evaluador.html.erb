@@ -1,0 +1,53 @@
+<div class="modal fade" id="basicModal" tabindex="-10" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+          <h4 class="modal-title" id="myModalLabel">Definir Evaluador</h4>
+          </div>
+          <div class="moda1l-body">
+              <h3> Evaluadores disponibles </h3>
+              <h5> Seleccione un evaluador para el informe final: </h5>
+
+              
+              <%= form_for(@informe, :html => { :class => "form-horizontal" }) do |f| %>
+                <table class="table table-striped table-bordered table-hover datatable"> 
+                  <thead>
+                    <th>Cedula</th>
+                    <th>Nombres</th>
+                    <th>Asociar</th>
+                    <th>Comentario</th>
+                  </thead>
+                  <tbody>
+                    <%= content_tag_for(:tr, @empleados) do |empleado| %>
+                      <td><%= empleado.cedula %></td>
+                      <td><%= empleado.primer_nombre %></td>
+                      <%= f.fields_for :empleado_eventos, empleado.empleado_evento(@evento) do |empleado_eventos_form| %>
+                        <td>
+                          <%= empleado_eventos_form.radio_button(:asistio, true) %>
+                          <%= empleado_eventos_form.label(:asistio_true, "Asistió") %>
+
+                          <%= empleado_eventos_form.radio_button(:asistio, false) %>
+                          <%= empleado_eventos_form.label(:asistio_false, "No asistió") %>
+
+                          <%= empleado_eventos_form.hidden_field(:empleado_id) %>
+                        </td>
+                        <td>
+                          <%= empleado_eventos_form.text_field(:comentario) %>
+                        </td>       
+                      <% end %>
+                    <% end %>
+                  </tbody>
+                </table>
+                <%= f.submit 'Registrar Asistencia', :class => 'btn btn-primary'%>
+              <% end %>
+
+              
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-primary">Guardar</button>
+          </div>
+      </div>
+  </div>
+</div>

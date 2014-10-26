@@ -1,5 +1,5 @@
 class ProyectosController < ApplicationController
-  before_action :set_proyecto, only: [:show, :edit, :update, :destroy, :becarios_informe_final, :informes_por_convocatoria]
+  before_action :set_proyecto, only: [:show, :edit, :update, :destroy, :becarios_informe_final, :informes_por_convocatoria, :actualizar_informes]
 
   # GET /proyectos
   # GET /proyectos.json
@@ -62,11 +62,27 @@ class ProyectosController < ApplicationController
   end
 
   def becarios_informe_final
-    @becarios = Becario.where(contrato: @proyecto.contrato)
+    @becarios = Becario.find_by_sql(["SELECT b.* FROM becarios b WHERE b.contrato_id = ? and (SELECT COUNT(*) FROM informes inf WHERE inf.becario_id = b.id and inf.es_final = true) > 0", @proyecto.contrato_id])
   end
 
   def informes_por_convocatoria
-    @informes_convocatoria = Informe.where(proyecto_id: @proyecto.id)
+    @informes_convocatoria = Informe.where(proyecto_id: @proyecto.id).order(:id)
+  end
+
+  def actualizar_informes
+    resultado = ''
+    params[:informes_convocatoria][:informes].each do |(key, value)|
+      resultado += "Key: #{key}, Value: #{value}"
+
+      informe = Informe.find key
+      informe.update(value)
+    end
+
+    redirect_to informes_por_convocatoria_proyecto_path(@proyecto)
+  end
+
+  def listar_evaluadores
+    @evaluadores = User.where(role: 4)
   end
 
   private

@@ -17,12 +17,17 @@ Rails.application.routes.draw do
 
 
   resources :informes do
-    collection do
+    member do
+      get :definir_evaluador
     end
-  end
+  end 
 
   resources :becarios do
-    get :informes_anuales_condonacion, :on => :member
+    member do
+      get :informe_final
+      get :informes_anuales_condonacion
+      get :descargar_informe_final
+    end
   end
 
 
@@ -32,16 +37,13 @@ Rails.application.routes.draw do
 
   resources :proyectos do
     collection do
-      get :asignar_evaluador
-      get :definir_evaluador
+      get :listar_evaluadores
     end
     
     member do
-      get :informes_por_convocatoria
-    end
-
-    member do
       get :becarios_informe_final
+      get :informes_por_convocatoria
+      patch :actualizar_informes
     end
   end
 

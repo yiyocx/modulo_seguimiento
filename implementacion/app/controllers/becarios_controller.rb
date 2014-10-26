@@ -1,5 +1,5 @@
 class BecariosController < ApplicationController
-  before_action :set_becario, only: [:show, :edit, :update, :destroy, :informes_anuales_condonacion]
+  before_action :set_becario, only: [:show, :edit, :update, :destroy, :informes_anuales_condonacion, :informe_final, :descargar_informe_final]
 
   # after_action :verify_authorized
 
@@ -72,6 +72,16 @@ class BecariosController < ApplicationController
   def informes_anuales_condonacion
     @convocatorias = Proyecto.where(contrato_id: @becario.contrato_id)
   end 
+
+  def informe_final 
+    @informe = Informe.find_by(becario_id: @becario.id, es_final: true)
+    redirect_to informe_path(@informe)
+  end
+
+  def descargar_informe_final
+    @informe = Informe.find_by(becario_id: @becario.id, es_final: true)
+    redirect_to @informe.document.url(:original, false), target: '_blank'
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.

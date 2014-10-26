@@ -61,6 +61,10 @@ class InformesController < ApplicationController
     end
   end
 
+  def definir_evaluador
+    @informe = Informe.find_by(becario_id: @becario.id, es_final: true)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_informe

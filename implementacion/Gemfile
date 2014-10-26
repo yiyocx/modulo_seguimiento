@@ -32,6 +32,9 @@ gem 'bootstrap-generators', '~> 3.1.1'
 # Gema para trabajar con archivos
 gem "paperclip", "~> 4.2"
 
+# Datatables
+gem 'jquery-datatables-rails', '~> 2.2.3'
+
 # Gemas para ser usadas solo en el ambiente de desarrollo
 group :development do
 
@@ -61,6 +64,9 @@ gem 'jquery-turbolinks'
 
 # Chosen
 gem 'chosen-rails'
+
+# Reform
+gem 'reform'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

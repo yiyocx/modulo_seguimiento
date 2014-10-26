@@ -1,4 +1,4 @@
-require File.expand_path('../boot', __FILE__)
+ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
@@ -21,5 +21,7 @@ module ModuloSeguimiento
     config.i18n.default_locale = :es
     config.time_zone = 'Bogota'
     config.active_record.default_timezone = :local
+
+    config.autoload_paths += %W(#{config.root}/forms)
   end
 end

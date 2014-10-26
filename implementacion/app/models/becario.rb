@@ -35,4 +35,5 @@
 class Becario < ActiveRecord::Base
   belongs_to :user
   belongs_to :contrato
+  has_many :informes
 end
