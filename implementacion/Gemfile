@@ -35,6 +35,9 @@ gem "paperclip", "~> 4.2"
 # Datatables
 gem 'jquery-datatables-rails', '~> 2.2.3'
 
+# Gema para inspeccion de codigo (alternativa a Sonar)
+gem 'simplecov', require: false, group: :test
+
 # Gemas para ser usadas solo en el ambiente de desarrollo
 group :development do
 
