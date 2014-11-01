@@ -38,6 +38,12 @@ gem 'jquery-datatables-rails', '~> 2.2.3'
 # Gema para inspeccion de codigo (alternativa a Sonar)
 gem 'simplecov', require: false, group: :test
 
+# Gema para inspeccion de codigo (alternativa a Sonar)
+gem 'rubocop', require: false
+
+# Gema necesaria para que Rubocop se integre con Jenkins
+gem 'rubocop-checkstyle_formatter', require: false
+
 # Gemas para ser usadas solo en el ambiente de desarrollo
 group :development do
 
