@@ -63,6 +63,11 @@ group :development do
   gem 'quiet_assets'
 end
 
+# Gemas para ser usadas solo en el ambiente de pruebas (test)
+group :test do
+  gem 'ci_reporter'
+end
+
 # Gema para gestionar la autenticación de usuarios
 gem 'devise'
 
