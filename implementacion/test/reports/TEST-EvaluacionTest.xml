@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="EvaluacionTest" tests="3" time="0.026595556" failures="0" errors="0" skipped="0" assertions="5" timestamp="2014-11-03T11:03:09-05:00">
+  <testcase name="test_Ingreso_de_una_nueva_evaluacion" time="0.246867412" assertions="1">
+  </testcase>
+  <testcase name="test_Los_datos_de_prueba_estan_registrados" time="0.003742444" assertions="2">
+  </testcase>
+  <testcase name="test_la_evaluacion_del_50%_pertenece_a_un_evaluador_con_area_de_conocimiento_en_meserismo" time="0.022192134" assertions="2">
+  </testcase>
+</testsuite>

@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy, :show_becario]
+  before_action :set_user, only: [:show, :edit, :update, :destroy, :show_becario, :listar_informes_evaluador]
   # GET /users
   # GET /users.json
   def index
@@ -131,6 +131,10 @@ class UsersController < ApplicationController
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end 
+  end
+
+  def listar_informes_evaluador
+    @informes_evaluador = Informe.where(user_id: @user.id)
   end
 
   private

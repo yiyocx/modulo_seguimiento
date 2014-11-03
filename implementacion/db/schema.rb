@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141020001953) do
+ActiveRecord::Schema.define(version: 20141103004413) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -94,10 +94,10 @@ ActiveRecord::Schema.define(version: 20141020001953) do
   create_table "evaluacions", force: true do |t|
     t.integer  "porc_sugerido_condonacion"
     t.string   "concepto"
-    t.string   "evaluador"
-    t.string   "informe"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "evaluador_id"
+    t.integer  "informe_id"
   end
 
   create_table "evaluadors", force: true do |t|
@@ -121,11 +121,10 @@ ActiveRecord::Schema.define(version: 20141020001953) do
     t.integer  "document_file_size"
     t.datetime "document_updated_at"
     t.integer  "becario_id"
-    t.integer  "evaluador_id"
+    t.integer  "user_id"
   end
 
   add_index "informes", ["becario_id"], name: "index_informes_on_becario_id", using: :btree
-  add_index "informes", ["evaluador_id"], name: "index_informes_on_evaluador_id", using: :btree
 
   create_table "notificacions", force: true do |t|
     t.string   "mensaje"

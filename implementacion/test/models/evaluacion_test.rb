@@ -5,16 +5,37 @@
 #  id                        :integer          not null, primary key
 #  porc_sugerido_condonacion :integer
 #  concepto                  :string(255)
-#  evaluador                 :string(255)
-#  informe                   :string(255)
 #  created_at                :datetime
 #  updated_at                :datetime
+#  evaluador_id              :integer
+#  informe_id                :integer
 #
 
 require 'test_helper'
+require 'byebug'
 
+# Prueba unitaria para evaluacions
 class EvaluacionTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test 'Los datos de prueba estan registrados' do
+    evaluacion = Evaluacion.find_by(concepto: 'el concepto del de 70')
+
+    assert_not_nil evaluacion, 'La evaluacion no está registrada'
+
+    assert_equal(evaluacion.id, evaluacions(:evaluacion_setenta).id)
+  end
+
+  test 'Ingreso de una nueva evaluacion' do
+    creado = Evaluacion.create(concepto: 'con nuevo concepto')
+    recuperado = Evaluacion.find_by(concepto: 'con nuevo concepto')
+
+    assert creado.id == recuperado.id, 'Deben ser el mismo registro'
+  end
+
+  test 'la evaluacion del 50% pertenece a un evaluador con area de conocimiento
+   en meserismo' do
+    evaluador = evaluacions(:evaluacion_cincuenta).evaluador
+
+    assert_match(/meserismo/, evaluador.area_conocimiento,
+                 'no corresponde al area_conocimiento')
+  end
 end

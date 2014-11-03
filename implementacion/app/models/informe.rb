@@ -15,12 +15,11 @@
 #  document_file_size    :integer
 #  document_updated_at   :datetime
 #  becario_id            :integer
-#  evaluador_id          :integer
+#  user_id               :integer
 #
 # Indexes
 #
-#  index_informes_on_becario_id    (becario_id)
-#  index_informes_on_evaluador_id  (evaluador_id)
+#  index_informes_on_becario_id  (becario_id)
 #
 
 class Informe < ActiveRecord::Base
@@ -29,5 +28,5 @@ class Informe < ActiveRecord::Base
   validates_attachment :document, content_type: { content_type: "application/pdf" }
   
   belongs_to :becario
-  belongs_to :evaluador
+  belongs_to :user
 end

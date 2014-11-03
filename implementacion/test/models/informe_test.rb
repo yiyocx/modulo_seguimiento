@@ -15,12 +15,11 @@
 #  document_file_size    :integer
 #  document_updated_at   :datetime
 #  becario_id            :integer
-#  evaluador_id          :integer
+#  user_id               :integer
 #
 # Indexes
 #
-#  index_informes_on_becario_id    (becario_id)
-#  index_informes_on_evaluador_id  (evaluador_id)
+#  index_informes_on_becario_id  (becario_id)
 #
 
 require 'test_helper'

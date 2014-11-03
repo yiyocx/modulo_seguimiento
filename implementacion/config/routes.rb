@@ -12,7 +12,11 @@ Rails.application.routes.draw do
       post :crear_usuario_evaluador
     end
 
-    get :show_becario, :on => :member
+    member do
+      get :show_becario
+      get :listar_informes_evaluador
+    end
+
   end
 
 

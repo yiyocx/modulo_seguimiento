@@ -5,22 +5,19 @@
 #  id                        :integer          not null, primary key
 #  porc_sugerido_condonacion :integer
 #  concepto                  :string(255)
-#  evaluador                 :string(255)
-#  informe                   :string(255)
 #  created_at                :datetime
 #  updated_at                :datetime
+#  evaluador_id              :integer
+#  informe_id                :integer
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  porc_sugerido_condonacion: 1
-  concepto: MyString
-  evaluador: MyString
-  informe: MyString
+evaluacion_cincuenta:
+  porc_sugerido_condonacion: 50
+  concepto: concepto de evaluacion
+  evaluador: ney 
 
-two:
-  porc_sugerido_condonacion: 1
-  concepto: MyString
-  evaluador: MyString
-  informe: MyString
+evaluacion_setenta:
+  porc_sugerido_condonacion: 70
+  concepto: el concepto del de 70

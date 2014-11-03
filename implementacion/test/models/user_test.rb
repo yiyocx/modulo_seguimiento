@@ -29,7 +29,7 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  # test "the truth" do
+  # test "mi_prueba" do
   #   assert true
   # end
 end

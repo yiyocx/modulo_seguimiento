@@ -21,3 +21,25 @@
   <dd><%= @user.becario %></dd>
 
 </dl>
+
+
+<h2>Opciones Usuario Colciencias:</h2>
+
+<h3>Seguimiento a Becarios</h3>
+<div class="btn-group">
+  <%= link_to listar_evaluadores_proyectos_path, :class => 'btn btn-default' do %>
+  Asignar Evaluador para informe de condonación
+  <% end %>
+  <button type="button" class="btn btn-default">Opc2</button>
+  <button type="button" class="btn btn-default">Opc3</button>
+</div>
+
+<h2>Opciones Evaluador:</h2>
+
+<h3>Mis Evaluaciones</h3>
+<div class="btn-group">
+  <%= link_to listar_informes_evaluador_user_path, :class => 'btn btn-default' do %> Informes Asignados para Evaluación
+  <% end %>
+  <button type="button" class="btn btn-default">Opc2</button>
+  <button type="button" class="btn btn-default">Opc3</button>
+</div>

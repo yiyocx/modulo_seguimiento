@@ -34,20 +34,20 @@
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  condonacion_beneficiarios: MyString
-  cumple_requisitos: false
-  datos_beneficiario: MyString
-  info_beneficiario: MyString
-  info_programa_doctoral: MyString
-  info_tesis: MyString
-  registro_pasantia: MyString
+# one:
+#   condonacion_beneficiarios: MyString
+#   cumple_requisitos: false
+#   datos_beneficiario: MyString
+#   info_beneficiario: MyString
+#   info_programa_doctoral: MyString
+#   info_tesis: MyString
+#   registro_pasantia: MyString
 
-two:
-  condonacion_beneficiarios: MyString
-  cumple_requisitos: false
-  datos_beneficiario: MyString
-  info_beneficiario: MyString
-  info_programa_doctoral: MyString
-  info_tesis: MyString
-  registro_pasantia: MyString
+# two:
+#   condonacion_beneficiarios: MyString
+#   cumple_requisitos: false
+#   datos_beneficiario: MyString
+#   info_beneficiario: MyString
+#   info_programa_doctoral: MyString
+#   info_tesis: MyString
+#   registro_pasantia: MyString

@@ -58,10 +58,14 @@ group :development do
 
   # Gema para callar los logs de assets
   gem 'quiet_assets'
+
+  # Para depuracion
+  gem 'byebug'
 end
 
 group :test do
-  # Gema para correr pruebas unitarias
+  # Gema para reportar XML de las pruebas
+  gem 'ci_reporter_minitest'
 end
 
 # Gema para gestionar la autenticación de usuarios
