@@ -62,7 +62,6 @@ end
 
 group :test do
   # Gema para correr pruebas unitarias
-  gem 'ci_reporter_minitest'
 end
 
 # Gema para gestionar la autenticación de usuarios
