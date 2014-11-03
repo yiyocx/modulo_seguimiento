@@ -36,9 +36,6 @@ gem "paperclip", "~> 4.2"
 gem 'jquery-datatables-rails', '~> 2.2.3'
 
 # Gema para inspeccion de codigo (alternativa a Sonar)
-gem 'simplecov', require: false, group: :test
-
-# Gema para inspeccion de codigo (alternativa a Sonar)
 gem 'rubocop', require: false
 
 # Gema necesaria para que Rubocop se integre con Jenkins
@@ -48,7 +45,7 @@ gem 'rubocop-checkstyle_formatter', require: false
 group :development do
 
   # Gema para ver descripciones mas claras de los errores en el navegador
-  gem "better_errors"
+  gem 'better_errors'
 
   # Gema que agrega una consola REPL para hacer debug sobre el codigo 
   gem "binding_of_caller"
@@ -61,6 +58,11 @@ group :development do
 
   # Gema para callar los logs de assets
   gem 'quiet_assets'
+end
+
+group :test do
+  # Gema para correr pruebas unitarias
+  gem 'ci_reporter_minitest'
 end
 
 # Gema para gestionar la autenticación de usuarios
@@ -88,4 +90,3 @@ gem 'reform'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
