@@ -27,9 +27,13 @@
 #
 
 require 'test_helper'
+require 'test/unit'
+
+require 'ci/reporter/rake/test_unit_loader'  
+gem 'test-unit'
 
 class UserTest < ActiveSupport::TestCase
-  # test "the truth" do
+  # test "mi_prueba" do
   #   assert true
   # end
 end
