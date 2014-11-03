@@ -67,7 +67,8 @@ end
 group :test do
   #gem 'ci_reporter'
   #gem 'ci_reporter_test_unit'
-  gem 'ci_reporter_rspec'
+  gem 'shoulda'
+  #gem 'ci_reporter_rspec'
 end
 
 # Gema para gestionar la autenticación de usuarios

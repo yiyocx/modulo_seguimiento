@@ -13,6 +13,7 @@
 require 'test_helper'
 
 class EvaluadorTest < ActiveSupport::TestCase
+  should validate_presence_of(:nombre)
   # test "the truth" do
   #   assert true
   # end

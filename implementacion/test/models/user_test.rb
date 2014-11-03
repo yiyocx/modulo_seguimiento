@@ -27,10 +27,10 @@
 #
 
 require 'test_helper'
-require 'test/unit'
+#require 'test/unit'
 
-require 'ci/reporter/rake/test_unit_loader'  
-gem 'test-unit'
+#require 'ci/reporter/rake/test_unit_loader'  
+#gem 'test-unit'
 
 class UserTest < ActiveSupport::TestCase
   # test "mi_prueba" do
