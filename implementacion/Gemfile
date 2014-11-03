@@ -67,7 +67,8 @@ end
 group :test do
   #gem 'ci_reporter'
   #gem 'ci_reporter_test_unit'
-  gem 'shoulda'
+  #gem 'shoulda'
+  gem 'ci_reporter_minitest'
   gem "codeclimate-test-reporter"
   #gem 'ci_reporter_rspec'
 end
