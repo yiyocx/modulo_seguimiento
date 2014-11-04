@@ -36,7 +36,7 @@ gem "paperclip", "~> 4.2"
 gem 'jquery-datatables-rails', '~> 2.2.3'
 
 # Gema para inspeccion de codigo (alternativa a Sonar)
-gem 'rubocop', require: false
+gem 'rubocop', '0.23.0', require: false
 
 # Gema necesaria para que Rubocop se integre con Jenkins
 gem 'rubocop-checkstyle_formatter', require: false
