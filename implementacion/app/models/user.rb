@@ -32,9 +32,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  enum role: {admin: 1, becario: 2, colciencias: 3, evaluador: 4}
+  enum role: { admin: 1, becario: 2, colciencias: 3, evaluador: 4 }
 
   has_one :becario
   accepts_nested_attributes_for :becario
-  
 end

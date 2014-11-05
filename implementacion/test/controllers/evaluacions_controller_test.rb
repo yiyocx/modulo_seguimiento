@@ -2,7 +2,7 @@ require 'test_helper'
 
 class EvaluacionsControllerTest < ActionController::TestCase
   setup do
-    @evaluacion = evaluacions(:one)
+    @evaluacion = evaluacions(:evaluacion_cincuenta)
   end
 
   test "should get index" do

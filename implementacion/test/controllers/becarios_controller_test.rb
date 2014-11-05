@@ -2,7 +2,7 @@ require 'test_helper'
 
 class BecariosControllerTest < ActionController::TestCase
   setup do
-    @becario = becarios(:one)
+    @becario = becarios(:becario_uno)
   end
 
   test "should get index" do
@@ -18,7 +18,7 @@ class BecariosControllerTest < ActionController::TestCase
 
   test "should create becario" do
     assert_difference('Becario.count') do
-      post :create, becario: { condonacion_beneficiarios: @becario.condonacion_beneficiarios, cumple_requisitos: @becario.cumple_requisitos, datos_beneficiario: @becario.datos_beneficiario, info_beneficiario: @becario.info_beneficiario, info_programa_doctoral: @becario.info_programa_doctoral, info_tesis: @becario.info_tesis, registro_pasantia: @becario.registro_pasantia }
+      post :create, becario: { condonacion_beneficiarios: @becario.condonacion_beneficiarios, cumple_requisitos: @becario.cumple_requisitos, info_beneficiario: @becario.info_beneficiario, info_programa_doctoral: @becario.info_programa_doctoral, info_tesis: @becario.info_tesis, registro_pasantia: @becario.registro_pasantia }
     end
 
     assert_redirected_to becario_path(assigns(:becario))
@@ -35,7 +35,7 @@ class BecariosControllerTest < ActionController::TestCase
   end
 
   test "should update becario" do
-    patch :update, id: @becario, becario: { condonacion_beneficiarios: @becario.condonacion_beneficiarios, cumple_requisitos: @becario.cumple_requisitos, datos_beneficiario: @becario.datos_beneficiario, info_beneficiario: @becario.info_beneficiario, info_programa_doctoral: @becario.info_programa_doctoral, info_tesis: @becario.info_tesis, registro_pasantia: @becario.registro_pasantia }
+    patch :update, id: @becario, becario: { condonacion_beneficiarios: @becario.condonacion_beneficiarios, cumple_requisitos: @becario.cumple_requisitos, info_beneficiario: @becario.info_beneficiario, info_programa_doctoral: @becario.info_programa_doctoral, info_tesis: @becario.info_tesis, registro_pasantia: @becario.registro_pasantia }
     assert_redirected_to becario_path(assigns(:becario))
   end
 

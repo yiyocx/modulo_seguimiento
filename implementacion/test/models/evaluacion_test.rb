@@ -14,7 +14,7 @@
 require 'test_helper'
 require 'byebug'
 
-# Prueba unitaria para evaluacions
+# Prueba unitaria para evaluaciones
 class EvaluacionTest < ActiveSupport::TestCase
   test 'Los datos de prueba estan registrados' do
     evaluacion = Evaluacion.find_by(concepto: 'el concepto del de 70')

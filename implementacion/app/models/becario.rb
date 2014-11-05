@@ -32,6 +32,7 @@
 #  index_becarios_on_user_id      (user_id)
 #
 
+# Clase que representa a un becario
 class Becario < ActiveRecord::Base
   belongs_to :user
   belongs_to :contrato

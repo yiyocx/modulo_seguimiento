@@ -3,6 +3,7 @@ require 'test_helper'
 class InformesControllerTest < ActionController::TestCase
   setup do
     @informe = informes(:one)
+    sign_in('test', 'test')
   end
 
   test "should get index" do

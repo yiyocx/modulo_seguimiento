@@ -34,8 +34,20 @@
 
 require 'test_helper'
 
+# Prueba unitaria para evaluaciones
 class BecarioTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test 'Ingreso de un nuevo becario' do
+    creado = Becario.create(nombre: 'Edward', apellido1: 'Cuaspa')
+    recuperado = Becario.find_by(nombre: 'Edward', apellido1: 'Cuaspa')
+
+    assert creado.id == recuperado.id, 'Deben ser el mismo registro'
+  end
+
+  test 'Los datos de prueba estan registrados' do
+    becario = Becario.find_by(apellido1: 'Molina')
+
+    assert_not_nil becario, 'El becario no está registrado'
+
+    assert_equal(becario.id, becarios(:becario_uno).id)
+  end
 end

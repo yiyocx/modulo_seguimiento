@@ -23,5 +23,5 @@
 class Proyecto < ActiveRecord::Base
   belongs_to :contrato
 
-  enum tipo: {"Formación" => 0}
+  enum tipo: { 'Formación' => 0 }
 end

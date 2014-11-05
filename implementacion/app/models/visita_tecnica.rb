@@ -10,6 +10,7 @@
 #  updated_at        :datetime
 #
 
+# Clase que representa una visita tecnica
 class VisitaTecnica < ActiveRecord::Base
   belongs_to :proyecto
 end

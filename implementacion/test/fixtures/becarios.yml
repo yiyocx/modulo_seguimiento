@@ -34,20 +34,22 @@
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-# one:
-#   condonacion_beneficiarios: MyString
-#   cumple_requisitos: false
-#   datos_beneficiario: MyString
-#   info_beneficiario: MyString
-#   info_programa_doctoral: MyString
-#   info_tesis: MyString
-#   registro_pasantia: MyString
+becario_uno:
+  condonacion_beneficiarios: Condonacion beneficiarios 1
+  cumple_requisitos: false
+  nombre: Jaime
+  apellido1: Molina
+  info_beneficiario: Soy info
+  info_programa_doctoral: Capacitancia Avanzada
+  info_tesis: Proceso de los electrones en el espacio
+  registro_pasantia: UNAD
 
-# two:
-#   condonacion_beneficiarios: MyString
-#   cumple_requisitos: false
-#   datos_beneficiario: MyString
-#   info_beneficiario: MyString
-#   info_programa_doctoral: MyString
-#   info_tesis: MyString
-#   registro_pasantia: MyString
+becario_dos:
+  condonacion_beneficiarios: Condonaciona beneficiarios 2
+  cumple_requisitos: true
+  nombre: Felipe 
+  apellido1: Muñoz
+  info_beneficiario: Mas informacion
+  info_programa_doctoral: Medicina nuclear
+  info_tesis: Radiacion atomica contra la gripa
+  registro_pasantia: Uniandes

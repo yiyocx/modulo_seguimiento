@@ -10,6 +10,7 @@
 #  updated_at       :datetime
 #
 
+# clase que representa una dificultad
 class Dificultad < ActiveRecord::Base
   belongs_to :visita_tecnica
 end
