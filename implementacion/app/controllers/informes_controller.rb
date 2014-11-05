@@ -1,3 +1,4 @@
+# Controlador de la clase Informes
 class InformesController < ApplicationController
   before_action :set_informe, only: [:show, :edit, :update, :destroy]
 
@@ -66,13 +67,16 @@ class InformesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_informe
-      @informe = Informe.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def informe_params
-      params.require(:informe).permit(:descripcion, :es_final, :fecha, :tipo, :document)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_informe
+    @informe = Informe.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet,
+  # only allow the white list through.
+  def informe_params
+    params.require(:informe).permit(:descripcion,
+                                    :es_final, :fecha, :tipo, :document)
+  end
 end

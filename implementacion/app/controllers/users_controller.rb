@@ -1,5 +1,7 @@
+# Controlador de la clase User
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy, :show_becario, :listar_informes_evaluador]
+  before_action :set_user, only: [:show, :edit, :update, :destroy,
+                                  :show_becario, :listar_informes_evaluador]
   # GET /users
   # GET /users.json
   def index
@@ -18,7 +20,6 @@ class UsersController < ApplicationController
   def new
     @user = User.new
   end
-
 
   # GET /users/1/edit
   def edit
@@ -63,7 +64,6 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
-  
 
   def nuevo_becario
     @user = User.new
@@ -130,7 +130,7 @@ class UsersController < ApplicationController
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
-    end 
+    end
   end
 
   def listar_informes_evaluador
@@ -138,13 +138,24 @@ class UsersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_user
-      @user = User.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def user_params
-      params.require(:user).permit(:nombre, :becario_id, :email, { becario_attributes: [:condonacion_beneficiarios, :cumple_requisitos, :numero_DI, :nombre, :apellido1, :apellido2, :fecha_nacimiento, :departamento_nacimiento, :genero, :email, :telefono, :direccion_residencial, :ciudad, :direccion_profesional] })
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_user
+    @user = User.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet,
+  # only allow the white list through.
+  def user_params
+    params.require(:user).permit(:nombre, :becario_id, :email,
+                                 becario_attributes:
+                                 [:condonacion_beneficiarios,
+                                  :cumple_requisitos,
+                                  :numero_DI, :nombre,
+                                  :apellido1, :apellido2, :fecha_nacimiento,
+                                  :departamento_nacimiento,
+                                  :genero, :email, :telefono,
+                                  :direccion_residencial, :ciudad,
+                                  :direccion_profesional])
+  end
 end

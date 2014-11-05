@@ -20,6 +20,7 @@
 #  index_proyectos_on_contrato_id  (contrato_id)
 #
 
+# Clase que representa un proyecto
 class Proyecto < ActiveRecord::Base
   belongs_to :contrato
 

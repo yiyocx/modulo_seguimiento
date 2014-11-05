@@ -18,6 +18,7 @@
 #  index_desembolsos_on_proyecto_id  (proyecto_id)
 #
 
+# Clase que representa un desembolso
 class Desembolso < ActiveRecord::Base
   belongs_to :proyecto
   belongs_to :becario

@@ -1,3 +1,4 @@
+# Controlador de la clase Desembolsos
 class DesembolsosController < ApplicationController
   before_action :set_desembolso, only: [:show, :edit, :update, :destroy]
 
@@ -62,13 +63,17 @@ class DesembolsosController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_desembolso
-      @desembolso = Desembolso.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def desembolso_params
-      params.require(:desembolso).permit(:estado, :fecha_solicitud, :valor, :girado, :fecha_giro, :condiciones, :proyecto_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_desembolso
+    @desembolso = Desembolso.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet,
+  # only allow the white list through.
+  def desembolso_params
+    params.require(:desembolso).permit(:estado, :fecha_solicitud,
+                                       :valor, :girado, :fecha_giro,
+                                       :condiciones, :proyecto_id)
+  end
 end

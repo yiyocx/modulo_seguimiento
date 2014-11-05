@@ -1,5 +1,9 @@
+# Controlador para la clase proyectos
 class ProyectosController < ApplicationController
-  before_action :set_proyecto, only: [:show, :edit, :update, :destroy, :becarios_informe_final, :informes_por_convocatoria, :actualizar_informes]
+  before_action :set_proyecto, only: [:show, :edit, :update, :destroy,
+                                      :becarios_informe_final,
+                                      :informes_por_convocatoria,
+                                      :actualizar_informes]
 
   # GET /proyectos
   # GET /proyectos.json
@@ -62,7 +66,10 @@ class ProyectosController < ApplicationController
   end
 
   def becarios_informe_final
-    @becarios = Becario.find_by_sql(["SELECT b.* FROM becarios b WHERE b.contrato_id = ? and (SELECT COUNT(*) FROM informes inf WHERE inf.becario_id = b.id and inf.es_final = true) > 0", @proyecto.contrato_id])
+    @becarios = Becario.find_by_sql(['SELECT b.* FROM becarios b
+      WHERE b.contrato_id = ? and (SELECT COUNT(*) FROM informes inf
+        WHERE inf.becario_id = b.id and inf.es_final = true) > 0',
+                                     @proyecto.contrato_id])
   end
 
   def informes_por_convocatoria
@@ -86,13 +93,17 @@ class ProyectosController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_proyecto
-      @proyecto = Proyecto.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def proyecto_params
-      params.require(:proyecto).permit(:duracion, :estado, :linea_tematica, :lugar_ejecucion, :titulo, :contrato_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_proyecto
+    @proyecto = Proyecto.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet,
+  # only allow the white list through.
+  def proyecto_params
+    params.require(:proyecto).permit(:duracion, :estado,
+                                     :linea_tematica, :lugar_ejecucion,
+                                     :titulo, :contrato_id)
+  end
 end

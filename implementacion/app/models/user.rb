@@ -26,6 +26,7 @@
 #  index_users_on_reset_password_token  (reset_password_token) UNIQUE
 #
 
+# Clase que representa a un usuario
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

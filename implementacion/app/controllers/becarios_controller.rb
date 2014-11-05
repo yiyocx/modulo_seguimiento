@@ -1,5 +1,8 @@
+# Controlador de la clase becario
 class BecariosController < ApplicationController
-  before_action :set_becario, only: [:show, :edit, :update, :destroy, :informes_anuales_condonacion, :informe_final, :descargar_informe_final]
+  before_action :set_becario, only: [:show, :edit, :update, :destroy,
+                                     :informes_anuales_condonacion,
+                                     :informe_final, :descargar_informe_final]
 
   # after_action :verify_authorized
 
@@ -71,9 +74,9 @@ class BecariosController < ApplicationController
 
   def informes_anuales_condonacion
     @convocatorias = Proyecto.where(contrato_id: @becario.contrato_id)
-  end 
+  end
 
-  def informe_final 
+  def informe_final
     @informe = Informe.find_by(becario_id: @becario.id, es_final: true)
     redirect_to informe_path(@informe)
   end
@@ -84,14 +87,24 @@ class BecariosController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_becario
-      @becario = Becario.find(params[:id])
-      # authorize @becario
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def becario_params
-      params.require(:becario).permit(:condonacion_beneficiarios, :cumple_requisitos, :numero_DI, :nombre, :apellido1, :apellido2, :fecha_nacimiento, :departamento_nacimiento, :genero, :email, :telefono, :direccion_residencial, :ciudad, :direccion_profesional, :info_beneficiario, :info_programa_doctoral, :info_tesis, :registro_pasantia)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_becario
+    @becario = Becario.find(params[:id])
+    # authorize @becario
+  end
+
+  # Never trust parameters from the scary internet,
+  # only allow the white list through.
+  def becario_params
+    params.require(:becario).permit(:condonacion_beneficiarios,
+                                    :cumple_requisitos, :numero_DI,
+                                    :nombre, :apellido1, :apellido2,
+                                    :fecha_nacimiento, :departamento_nacimiento,
+                                    :genero, :email, :telefono,
+                                    :direccion_residencial, :ciudad,
+                                    :direccion_profesional, :info_beneficiario,
+                                    :info_programa_doctoral, :info_tesis,
+                                    :registro_pasantia)
+  end
 end

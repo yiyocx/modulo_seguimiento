@@ -1,3 +1,4 @@
+# Controlador de la clase Evaluacions
 class EvaluacionsController < ApplicationController
   before_action :set_evaluacion, only: [:show, :edit, :update, :destroy]
 
@@ -62,13 +63,16 @@ class EvaluacionsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_evaluacion
-      @evaluacion = Evaluacion.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def evaluacion_params
-      params.require(:evaluacion).permit(:porc_sugerido_condonacion, :concepto, :evaluador, :informe)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_evaluacion
+    @evaluacion = Evaluacion.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet,
+  # only allow the white list through.
+  def evaluacion_params
+    params.require(:evaluacion).permit(:porc_sugerido_condonacion,
+                                       :concepto, :evaluador, :informe)
+  end
 end

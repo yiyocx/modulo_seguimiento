@@ -1,6 +1,7 @@
+# Policy para el modelo Becario
 class BecarioPolicy < ApplicationPolicy
   def index?
-    true 
+    true
   end
 
   def create?
@@ -13,5 +14,5 @@ class BecarioPolicy < ApplicationPolicy
 
   def show?
     true
-  end 
+  end
 end

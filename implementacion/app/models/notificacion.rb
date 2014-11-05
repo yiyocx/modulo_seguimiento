@@ -8,6 +8,7 @@
 #  updated_at :datetime
 #
 
+# Clase que representa una notificacion
 class Notificacion < ActiveRecord::Base
   belongs_to :evaluacion
 end

@@ -1,3 +1,4 @@
+# Controlador para la calse VisitaTecnica
 class VisitaTecnicasController < ApplicationController
   before_action :set_visita_tecnica, only: [:show, :edit, :update, :destroy]
 
@@ -62,13 +63,16 @@ class VisitaTecnicasController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_visita_tecnica
-      @visita_tecnica = VisitaTecnica.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def visita_tecnica_params
-      params.require(:visita_tecnica).permit(:observacion, :porc_cumplimiento, :tipo_proyeccion)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_visita_tecnica
+    @visita_tecnica = VisitaTecnica.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet,
+  # only allow the white list through.
+  def visita_tecnica_params
+    params.require(:visita_tecnica).permit(:observacion,
+                                           :porc_cumplimiento, :tipo_proyeccion)
+  end
 end

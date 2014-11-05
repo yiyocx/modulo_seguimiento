@@ -1,3 +1,4 @@
+# Controlador para la clase UsuarioCols
 class UsuarioColsController < ApplicationController
   before_action :set_usuario_col, only: [:show, :edit, :update, :destroy]
 
@@ -62,13 +63,15 @@ class UsuarioColsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_usuario_col
-      @usuario_col = UsuarioCol.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def usuario_col_params
-      params[:usuario_col]
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_usuario_col
+    @usuario_col = UsuarioCol.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet,
+  # only allow the white list through.
+  def usuario_col_params
+    params[:usuario_col]
+  end
 end
