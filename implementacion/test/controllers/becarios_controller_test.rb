@@ -2,7 +2,7 @@ require 'test_helper'
 
 class BecariosControllerTest < ActionController::TestCase
   setup do
-    @becario = becarios(:becario_uno)
+    @becario = becarios(:one)
   end
 
   test "should get index" do

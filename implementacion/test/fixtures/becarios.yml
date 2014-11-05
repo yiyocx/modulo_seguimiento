@@ -34,7 +34,8 @@
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-becario_uno:
+one:
+  id: 1
   condonacion_beneficiarios: Condonacion beneficiarios 1
   cumple_requisitos: false
   nombre: Jaime
@@ -44,8 +45,10 @@ becario_uno:
   info_tesis: Proceso de los electrones en el espacio
   registro_pasantia: UNAD
   contrato_id: 1
+  user_id: 3
 
-becario_dos:
+two:
+  id: 2
   condonacion_beneficiarios: Condonaciona beneficiarios 2
   cumple_requisitos: true
   nombre: Felipe 
@@ -55,3 +58,4 @@ becario_dos:
   info_tesis: Radiacion atomica contra la gripa
   registro_pasantia: Uniandes
   contrato_id: 1
+  user_id: 3

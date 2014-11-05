@@ -48,6 +48,6 @@ class BecarioTest < ActiveSupport::TestCase
 
     assert_not_nil becario, 'El becario no está registrado'
 
-    assert_equal(becario.id, becarios(:becario_uno).id)
+    assert_equal(becario.id, becarios(:one).id)
   end
 end

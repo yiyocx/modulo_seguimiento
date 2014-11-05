@@ -22,6 +22,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 1
   num_convenio: 1
   tipo_convenio: 1
   valor_total: 1.5
@@ -36,8 +37,9 @@ one:
   supervisor: MyString
 
 two:
+  id: 2
   num_convenio: 1
-  tipo_convenio: 1
+  tipo_convenio: 2
   valor_total: 1.5
   num_contrato: 1
   fecha_inicio: 2014-10-04

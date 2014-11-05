@@ -23,6 +23,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 1
   duracion: 1
   estado: MyString
   linea_tematica: 1
@@ -31,8 +32,10 @@ one:
   num_convocatoria: 1231
   nombre_convocatoria: Convocatoria Innova
   contrato_id: 1
+  tipo: 0
 
 two:
+  id: 2
   duracion: 1
   estado: MyString
   linea_tematica: 1
@@ -41,3 +44,4 @@ two:
   num_convocatoria: 322
   nombre_convocatoria: Convocatoria Systemplus
   contrato_id: 1
+  tipo: 0
