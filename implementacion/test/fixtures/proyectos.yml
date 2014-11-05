@@ -28,7 +28,7 @@ one:
   estado: MyString
   linea_tematica: 1
   lugar_ejecucion: MyString
-  titulo: MyString
+  titulo: Convocatoria Innova
   num_convocatoria: 1231
   nombre_convocatoria: Convocatoria Innova
   contrato_id: 1
@@ -40,7 +40,7 @@ two:
   estado: MyString
   linea_tematica: 1
   lugar_ejecucion: MyString
-  titulo: MyString
+  titulo: Convocatoria Systemplus
   num_convocatoria: 322
   nombre_convocatoria: Convocatoria Systemplus
   contrato_id: 1

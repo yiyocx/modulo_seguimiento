@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="InformesControllerTest" tests="7" time="0.112597511" failures="0" errors="4" skipped="0" assertions="8" timestamp="2014-11-05T16:59:37-05:00">
-  <testcase name="test_should_create_informe" time="0.020196485" assertions="3">
+<testsuite name="ProyectosControllerTest" tests="7" time="0.12739599" failures="0" errors="4" skipped="0" assertions="8" timestamp="2014-11-05T16:59:38-05:00">
+  <testcase name="test_should_create_proyecto" time="0.021932656" assertions="3">
   </testcase>
-  <testcase name="test_should_destroy_informe" time="0.007423153" assertions="3">
+  <testcase name="test_should_destroy_proyecto" time="0.006965197" assertions="3">
   </testcase>
-  <testcase name="test_should_get_edit" time="0.027802178" assertions="0">
+  <testcase name="test_should_get_edit" time="0.028297974" assertions="0">
     <error type="ActionView::Template::Error" message="ActionView::Template::Error: couldn't find file 'jquery.ui.core'...">
 ActionView::Template::Error: couldn't find file 'jquery.ui.core'
   (in /home/yiyo/dev/modulo_seguimiento/implementacion/app/assets/stylesheets/application.css:16)
     app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___4473830424599349827_70130814648260'
-    test/controllers/informes_controller_test.rb:34:in `block in &lt;class:InformesControllerTest&gt;' (ActionView::Template::Error)
+    test/controllers/proyectos_controller_test.rb:33:in `block in &lt;class:ProyectosControllerTest&gt;' (ActionView::Template::Error)
 /home/yiyo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sprockets-2.11.0/lib/sprockets/context.rb:106    </error>
   </testcase>
-  <testcase name="test_should_get_index" time="0.018491719" assertions="0">
+  <testcase name="test_should_get_index" time="0.018638564" assertions="0">
     <error type="ActionView::Template::Error" message="ActionView::Template::Error: couldn't find file 'jquery.ui.core'...">
 ActionView::Template::Error: couldn't find file 'jquery.ui.core'
   (in /home/yiyo/dev/modulo_seguimiento/implementacion/app/assets/stylesheets/application.css:16)
     app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___4473830424599349827_70130814648260'
-    test/controllers/informes_controller_test.rb:10:in `block in &lt;class:InformesControllerTest&gt;' (ActionView::Template::Error)
+    test/controllers/proyectos_controller_test.rb:9:in `block in &lt;class:ProyectosControllerTest&gt;' (ActionView::Template::Error)
 /home/yiyo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sprockets-2.11.0/lib/sprockets/context.rb:106    </error>
   </testcase>
-  <testcase name="test_should_get_new" time="0.018857077" assertions="0">
+  <testcase name="test_should_get_new" time="0.016154702" assertions="0">
     <error type="ActionView::Template::Error" message="ActionView::Template::Error: couldn't find file 'jquery.ui.core'...">
 ActionView::Template::Error: couldn't find file 'jquery.ui.core'
   (in /home/yiyo/dev/modulo_seguimiento/implementacion/app/assets/stylesheets/application.css:16)
     app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___4473830424599349827_70130814648260'
-    test/controllers/informes_controller_test.rb:16:in `block in &lt;class:InformesControllerTest&gt;' (ActionView::Template::Error)
+    test/controllers/proyectos_controller_test.rb:15:in `block in &lt;class:ProyectosControllerTest&gt;' (ActionView::Template::Error)
 /home/yiyo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sprockets-2.11.0/lib/sprockets/context.rb:106    </error>
   </testcase>
-  <testcase name="test_should_show_informe" time="0.018532873" assertions="0">
+  <testcase name="test_should_show_proyecto" time="0.017791258" assertions="0">
     <error type="ActionView::Template::Error" message="ActionView::Template::Error: couldn't find file 'jquery.ui.core'...">
 ActionView::Template::Error: couldn't find file 'jquery.ui.core'
   (in /home/yiyo/dev/modulo_seguimiento/implementacion/app/assets/stylesheets/application.css:16)
     app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___4473830424599349827_70130814648260'
-    test/controllers/informes_controller_test.rb:29:in `block in &lt;class:InformesControllerTest&gt;' (ActionView::Template::Error)
+    test/controllers/proyectos_controller_test.rb:28:in `block in &lt;class:ProyectosControllerTest&gt;' (ActionView::Template::Error)
 /home/yiyo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sprockets-2.11.0/lib/sprockets/context.rb:106    </error>
   </testcase>
-  <testcase name="test_should_update_informe" time="0.00568552" assertions="2">
+  <testcase name="test_should_update_proyecto" time="0.005128876" assertions="2">
   </testcase>
 </testsuite>

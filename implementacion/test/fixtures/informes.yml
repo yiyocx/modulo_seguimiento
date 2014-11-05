@@ -34,7 +34,7 @@ one:
 
 two:
   descripcion: Segundo informe
-  es_final: false
+  es_final: true
   fecha: 2014-11-01
   tipo: 1
   proyecto_id: 1
