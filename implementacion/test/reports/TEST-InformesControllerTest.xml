@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="InformesControllerTest" tests="7" time="0.080196628" failures="4" errors="3" skipped="0" assertions="4" timestamp="2014-11-05T01:15:27-05:00">
+  <testcase name="test_should_create_informe" time="0.250926965" assertions="0">
+    <error type="ActionController::InvalidAuthenticityToken" message="ActionController::InvalidAuthenticityToken: ActionController::InvalidAuthenticityToken...">
+ActionController::InvalidAuthenticityToken: ActionController::InvalidAuthenticityToken
+    test/controllers/informes_controller_test.rb:22:in `block (2 levels) in &lt;class:InformesControllerTest&gt;'
+    test/controllers/informes_controller_test.rb:21:in `block in &lt;class:InformesControllerTest&gt;' (ActionController::InvalidAuthenticityToken)
+/home/yiyo/dev/modulo_seguimiento/implementacion/test/controllers/informes_controller_test.rb:21    </error>
+  </testcase>
+  <testcase name="test_should_destroy_informe" time="0.005739263" assertions="0">
+    <error type="ActionController::InvalidAuthenticityToken" message="ActionController::InvalidAuthenticityToken: ActionController::InvalidAuthenticityToken...">
+ActionController::InvalidAuthenticityToken: ActionController::InvalidAuthenticityToken
+    test/controllers/informes_controller_test.rb:45:in `block (2 levels) in &lt;class:InformesControllerTest&gt;'
+    test/controllers/informes_controller_test.rb:44:in `block in &lt;class:InformesControllerTest&gt;' (ActionController::InvalidAuthenticityToken)
+/home/yiyo/dev/modulo_seguimiento/implementacion/test/controllers/informes_controller_test.rb:44    </error>
+  </testcase>
+  <testcase name="test_should_get_edit" time="0.032619077" assertions="1">
+    <failure type="Minitest::Assertion" message="Expected response to be a &lt;success&gt;, but was &lt;302&gt;">
+Expected response to be a &lt;success&gt;, but was &lt;302&gt; (Minitest::Assertion)
+/home/yiyo/dev/modulo_seguimiento/implementacion/test/controllers/informes_controller_test.rb:35    </failure>
+  </testcase>
+  <testcase name="test_should_get_index" time="0.004233501" assertions="1">
+    <failure type="Minitest::Assertion" message="Expected response to be a &lt;success&gt;, but was &lt;302&gt;">
+Expected response to be a &lt;success&gt;, but was &lt;302&gt; (Minitest::Assertion)
+/home/yiyo/dev/modulo_seguimiento/implementacion/test/controllers/informes_controller_test.rb:11    </failure>
+  </testcase>
+  <testcase name="test_should_get_new" time="0.003476734" assertions="1">
+    <failure type="Minitest::Assertion" message="Expected response to be a &lt;success&gt;, but was &lt;302&gt;">
+Expected response to be a &lt;success&gt;, but was &lt;302&gt; (Minitest::Assertion)
+/home/yiyo/dev/modulo_seguimiento/implementacion/test/controllers/informes_controller_test.rb:17    </failure>
+  </testcase>
+  <testcase name="test_should_show_informe" time="0.004162461" assertions="1">
+    <failure type="Minitest::Assertion" message="Expected response to be a &lt;success&gt;, but was &lt;302&gt;">
+Expected response to be a &lt;success&gt;, but was &lt;302&gt; (Minitest::Assertion)
+/home/yiyo/dev/modulo_seguimiento/implementacion/test/controllers/informes_controller_test.rb:30    </failure>
+  </testcase>
+  <testcase name="test_should_update_informe" time="0.005182334" assertions="0">
+    <error type="ActionController::InvalidAuthenticityToken" message="ActionController::InvalidAuthenticityToken: ActionController::InvalidAuthenticityToken...">
+ActionController::InvalidAuthenticityToken: ActionController::InvalidAuthenticityToken
+    test/controllers/informes_controller_test.rb:39:in `block in &lt;class:InformesControllerTest&gt;' (ActionController::InvalidAuthenticityToken)
+/home/yiyo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_controller/metal/request_forgery_protection.rb:176    </error>
+  </testcase>
+</testsuite>
