@@ -22,5 +22,3 @@ export/*
 public/assets/*
 public/system/*
 
-# Para no subir los reportes de los test al repositorio
-/test/reports/*
