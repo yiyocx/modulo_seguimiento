@@ -43,6 +43,7 @@ becario_uno:
   info_programa_doctoral: Capacitancia Avanzada
   info_tesis: Proceso de los electrones en el espacio
   registro_pasantia: UNAD
+  contrato_id: 1
 
 becario_dos:
   condonacion_beneficiarios: Condonaciona beneficiarios 2
@@ -53,3 +54,4 @@ becario_dos:
   info_programa_doctoral: Medicina nuclear
   info_tesis: Radiacion atomica contra la gripa
   registro_pasantia: Uniandes
+  contrato_id: 1
