@@ -66,6 +66,7 @@ end
 group :test do
   # Gema para reportar XML de las pruebas
   gem 'ci_reporter_minitest'
+  gem 'simplecov', require: false
 end
 
 # Gema para gestionar la autenticación de usuarios
