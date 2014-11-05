@@ -24,6 +24,7 @@ class InformesController < ApplicationController
 
   # POST /informes
   # POST /informes.json
+  # rubocop:disable Style/LineLength
   def create
     @informe = Informe.new(informe_params)
 
@@ -61,6 +62,7 @@ class InformesController < ApplicationController
       format.json { head :no_content }
     end
   end
+  # rubocop:enable Style/LineLength
 
   def definir_evaluador
     @informe = Informe.find_by(becario_id: @becario.id, es_final: true)

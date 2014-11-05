@@ -24,6 +24,7 @@ class EvaluacionsController < ApplicationController
 
   # POST /evaluacions
   # POST /evaluacions.json
+  # rubocop:disable Style/LineLength
   def create
     @evaluacion = Evaluacion.new(evaluacion_params)
 
@@ -61,6 +62,7 @@ class EvaluacionsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  # rubocop:enable Style/LineLength
 
   private
 

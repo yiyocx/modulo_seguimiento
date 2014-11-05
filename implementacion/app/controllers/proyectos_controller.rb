@@ -27,6 +27,7 @@ class ProyectosController < ApplicationController
 
   # POST /proyectos
   # POST /proyectos.json
+  # rubocop:disable Style/LineLength
   def create
     @proyecto = Proyecto.new(proyecto_params)
 
@@ -64,6 +65,7 @@ class ProyectosController < ApplicationController
       format.json { head :no_content }
     end
   end
+  # rubocop:enable Style/LineLength
 
   def becarios_informe_final
     @becarios = Becario.find_by_sql(['SELECT b.* FROM becarios b

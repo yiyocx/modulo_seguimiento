@@ -24,6 +24,7 @@ class VisitaTecnicasController < ApplicationController
 
   # POST /visita_tecnicas
   # POST /visita_tecnicas.json
+  # rubocop:disable Style/LineLength
   def create
     @visita_tecnica = VisitaTecnica.new(visita_tecnica_params)
 
@@ -61,6 +62,7 @@ class VisitaTecnicasController < ApplicationController
       format.json { head :no_content }
     end
   end
+  # rubocop:enable Style/LineLength
 
   private
 

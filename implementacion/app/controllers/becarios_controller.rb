@@ -31,6 +31,7 @@ class BecariosController < ApplicationController
 
   # POST /becarios
   # POST /becarios.json
+  # rubocop:disable Style/LineLength
   def create
     @becario = Becario.new(becario_params)
     # authorize @becario
@@ -71,6 +72,7 @@ class BecariosController < ApplicationController
       format.json { head :no_content }
     end
   end
+  # rubocop:enable Style/LineLength
 
   def informes_anuales_condonacion
     @convocatorias = Proyecto.where(contrato_id: @becario.contrato_id)

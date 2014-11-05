@@ -27,6 +27,7 @@ class UsersController < ApplicationController
 
   # POST /users
   # POST /users.json
+  # rubocop:disable Style/LineLength
   def create
     @user = User.new(user_params)
 
@@ -64,6 +65,7 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+  # rubocop:enable Style/LineLength
 
   def nuevo_becario
     @user = User.new
@@ -77,6 +79,7 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  # rubocop:disable Style/LineLength
   def crear_usuario_becario
     @user = User.new(user_params)
     @user.role = 2
@@ -132,6 +135,7 @@ class UsersController < ApplicationController
       end
     end
   end
+  # rubocop:enable Style/LineLength
 
   def listar_informes_evaluador
     @informes_evaluador = Informe.where(user_id: @user.id)

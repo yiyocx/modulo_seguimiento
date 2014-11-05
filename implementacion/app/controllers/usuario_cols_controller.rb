@@ -24,6 +24,7 @@ class UsuarioColsController < ApplicationController
 
   # POST /usuario_cols
   # POST /usuario_cols.json
+  # rubocop:disable Style/LineLength
   def create
     @usuario_col = UsuarioCol.new(usuario_col_params)
 
@@ -61,6 +62,7 @@ class UsuarioColsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  # rubocop:enable Style/LineLength
 
   private
 

@@ -24,6 +24,7 @@ class DesembolsosController < ApplicationController
 
   # POST /desembolsos
   # POST /desembolsos.json
+  # rubocop:disable Style/LineLength
   def create
     @desembolso = Desembolso.new(desembolso_params)
 
@@ -61,6 +62,7 @@ class DesembolsosController < ApplicationController
       format.json { head :no_content }
     end
   end
+  # rubocop:enable Style/LineLength
 
   private
 
