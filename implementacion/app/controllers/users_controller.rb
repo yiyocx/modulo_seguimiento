@@ -1,5 +1,7 @@
 # Controlador de la clase User
+# rubocop:disable Style/ClassLength
 class UsersController < ApplicationController
+  # rubocop:enable Style/ClassLength
   before_action :set_user, only: [:show, :edit, :update, :destroy,
                                   :show_becario, :listar_informes_evaluador]
   # GET /users
