@@ -9,10 +9,10 @@ class ApplicationController < ActionController::Base
   include Pundit
 
   def after_sign_in_path_for(resource)
-    # rubocop:disable Style/GuardClause
-    if resource.role.eql?'becario'
+    # rubocop:disable Style/IfUnlessModifier, Style/GuardClause
+    if resource.role.eql? 'becario'
       becario_path(resource.becario)
     end
-    # rubocop:enable Style/GuardClause
+    # rubocop:enable Style/IfUnlessModifier, Style/GuardClause
   end
 end
