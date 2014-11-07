@@ -1,0 +1,30 @@
+<div class="page-header">
+  <%= link_to evaluadors_path, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Atrás
+  <% end %>
+  <%= link_to edit_evaluador_path(@evaluador), :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Editar
+  <% end %>
+  <h1>Ver Evaluador</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Área de Conocimiento:</dt>
+  <dd><%= @evaluador.area_conocimiento %></dd>
+
+  <dt>Fecha Inicial:</dt>
+  <dd><%= @evaluador.fecha_inicial %></dd>
+
+  <dt>Fecha Final:</dt>
+  <dd><%= @evaluador.fecha_final %></dd>
+</dl>
+
+<h3>Mis Evaluaciones</h3>
+<div class="btn-group">
+  <%= link_to listar_informes_evaluador_evaluador_path, :class => 'btn btn-default' do %> Informes Asignados para Evaluación
+  <% end %>
+  <button type="button" class="btn btn-default">Opc2</button>
+  <button type="button" class="btn btn-default">Opc3</button>
+</div>

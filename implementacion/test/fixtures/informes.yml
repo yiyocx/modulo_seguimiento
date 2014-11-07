@@ -15,7 +15,6 @@
 #  document_file_size    :integer
 #  document_updated_at   :datetime
 #  becario_id            :integer
-#  user_id               :integer
 #  evaluador_id          :integer
 #
 # Indexes

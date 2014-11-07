@@ -139,10 +139,6 @@ class UsersController < ApplicationController
   end
   # rubocop:enable Style/LineLength
 
-  def listar_informes_evaluador
-    @informes_evaluador = Informe.where(user_id: @user.id)
-  end
-
   private
 
   # Use callbacks to share common setup or constraints between actions.

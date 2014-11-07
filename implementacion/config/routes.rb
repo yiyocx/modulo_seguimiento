@@ -14,7 +14,6 @@ Rails.application.routes.draw do
 
     member do
       get :show_becario
-      get :listar_informes_evaluador
     end
 
   end
@@ -52,6 +51,12 @@ Rails.application.routes.draw do
   end
 
   resources :visita_tecnicas
+
+  resources :evaluadors do
+    member do
+     get :listar_informes_evaluador
+    end
+  end
 
   root 'becarios#index'
 
