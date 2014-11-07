@@ -16,10 +16,12 @@
 #  document_updated_at   :datetime
 #  becario_id            :integer
 #  user_id               :integer
+#  evaluador_id          :integer
 #
 # Indexes
 #
-#  index_informes_on_becario_id  (becario_id)
+#  index_informes_on_becario_id    (becario_id)
+#  index_informes_on_evaluador_id  (evaluador_id)
 #
 
 # Clase que representa un informe
@@ -31,4 +33,5 @@ class Informe < ActiveRecord::Base
 
   belongs_to :becario
   belongs_to :user
+  belongs_to :evaluador
 end
