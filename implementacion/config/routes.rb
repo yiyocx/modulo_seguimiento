@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   resources :informes do
     member do
       get :definir_evaluador
+      get :evaluar_informe
     end
   end 
 

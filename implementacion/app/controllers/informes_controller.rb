@@ -1,6 +1,6 @@
 # Controlador de la clase Informes
 class InformesController < ApplicationController
-  before_action :set_informe, only: [:show, :edit, :update, :destroy]
+  before_action :set_informe, only: [:show, :edit, :update, :destroy, :evaluar_informe]
 
   # GET /informes
   # GET /informes.json
@@ -66,6 +66,9 @@ class InformesController < ApplicationController
 
   def definir_evaluador
     @informe = Informe.find_by(becario_id: @becario.id, es_final: true)
+  end
+
+  def evaluar_informe
   end
 
   private
