@@ -79,6 +79,10 @@ class InformesController < ApplicationController
   # only allow the white list through.
   def informe_params
     params.require(:informe).permit(:descripcion,
-                                    :es_final, :fecha, :tipo, :document)
+                                    :es_final, :fecha, :tipo, :document,
+                                    evaluacion_attributes:
+                                    [:porc_sugerido_condonacion,
+                                     :concepto
+                                    ])
   end
 end
