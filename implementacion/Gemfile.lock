@@ -253,6 +253,7 @@ DEPENDENCIES
   jquery-datatables-rails (~> 2.2.3)
   jquery-rails
   jquery-turbolinks
+  jquery-ui-rails
   paperclip (~> 4.2)
   pg
   pundit
