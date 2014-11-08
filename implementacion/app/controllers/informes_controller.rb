@@ -1,6 +1,7 @@
 # Controlador de la clase Informes
 class InformesController < ApplicationController
-  before_action :set_informe, only: [:show, :edit, :update, :destroy, :evaluar_informe]
+  before_action :set_informe, only: [:show, :edit, :update,
+                                     :destroy, :evaluar_informe]
 
   # GET /informes
   # GET /informes.json
