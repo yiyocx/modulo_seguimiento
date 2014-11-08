@@ -13,11 +13,18 @@
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-evaluacion_cincuenta:
+one:
+  id: 1
   porc_sugerido_condonacion: 50
   concepto: concepto de evaluacion
-  evaluador: ney 
+  evaluador_id: one
+  informe_id: 1
+  porc_sugerido_condonacion: 11
 
-evaluacion_setenta:
+two:
+  id: 2
   porc_sugerido_condonacion: 70
   concepto: el concepto del de 70
+  evaluador_id: one
+  informe_id: 1
+  porc_sugerido_condonacion: 5

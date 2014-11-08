@@ -21,7 +21,7 @@ class EvaluacionTest < ActiveSupport::TestCase
 
     assert_not_nil evaluacion, 'La evaluacion no está registrada'
 
-    assert_equal(evaluacion.id, evaluacions(:evaluacion_setenta).id)
+    assert_equal(evaluacion.id, evaluacions(:two).id)
   end
 
   test 'Ingreso de una nueva evaluacion' do
@@ -29,13 +29,5 @@ class EvaluacionTest < ActiveSupport::TestCase
     recuperado = Evaluacion.find_by(concepto: 'con nuevo concepto')
 
     assert creado.id == recuperado.id, 'Deben ser el mismo registro'
-  end
-
-  test 'la evaluacion del 50% pertenece a un evaluador con area de conocimiento
-   en meserismo' do
-    evaluador = evaluacions(:evaluacion_cincuenta).evaluador
-
-    assert_match(/meserismo/, evaluador.area_conocimiento,
-                 'no corresponde al area_conocimiento')
   end
 end

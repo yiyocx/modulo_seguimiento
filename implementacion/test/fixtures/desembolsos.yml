@@ -27,7 +27,7 @@ one:
   girado: 1.5
   fecha_giro: 2014-10-04
   condiciones: MyText
-  proyecto_id: 
+  proyecto_id: one
 
 two:
   estado: 1
@@ -36,4 +36,4 @@ two:
   girado: 1.5
   fecha_giro: 2014-10-04
   condiciones: MyText
-  proyecto_id: 
+  proyecto_id: one

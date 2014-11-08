@@ -33,16 +33,19 @@
 # below each fixture, per the syntax in the comments below
 #
 one: 
+  id: 1
   nombre: Felipe Colciencias
   email: pipe@colciencias.com
   role: 3
 
 two:
+  id: 2
   nombre: Jaime Evaluador
   email: jaime@evaluador.com
   role: 4
 
 three:
+  id: 3
   nombre: Pepe Becario
   email: pepe@becario.com
   role: 2

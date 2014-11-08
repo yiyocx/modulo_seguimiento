@@ -12,12 +12,14 @@
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-ney:
+one:
+  id: 1
   area_conocimiento: El area de el meserismo
   fecha_inicial: 2014-10-04
   fecha_final: 2014-10-04
 
 two:
+  id: 2
   area_conocimiento: MyString
   fecha_inicial: 2014-10-04
   fecha_final: 2014-10-04
