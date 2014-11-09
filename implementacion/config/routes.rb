@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :propuestas
+
   resources :propuesta
 
   resources :usuario_cols

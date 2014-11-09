@@ -1,0 +1,26 @@
+<div class="page-header">
+  <%= link_to propuestas_path, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Atrás
+  <% end %>
+  <%= link_to edit_propuesta_path(@propuesta), :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Editar
+  <% end %>
+  <h1>Ver propuesta</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Numero:</dt>
+  <dd><%= @propuesta.numero %></dd>
+
+  <dt>Nombre:</dt>
+  <dd><%= @propuesta.nombre %></dd>
+
+  <dt>Estado:</dt>
+  <dd><%= @propuesta.estado %></dd>
+
+  <dt>Proyecto:</dt>
+  <dd><%= @propuesta.proyecto %></dd>
+
+</dl>
