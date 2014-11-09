@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141107172434) do
+ActiveRecord::Schema.define(version: 20141109182109) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -134,6 +134,28 @@ ActiveRecord::Schema.define(version: 20141107172434) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "propuesta", force: true do |t|
+    t.integer  "numero"
+    t.string   "nombre"
+    t.boolean  "estado"
+    t.integer  "proyecto_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "propuesta", ["proyecto_id"], name: "index_propuesta_on_proyecto_id", using: :btree
+
+  create_table "propuestas", force: true do |t|
+    t.integer  "numero"
+    t.string   "nombre"
+    t.string   "estado"
+    t.integer  "proyecto_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "propuestas", ["proyecto_id"], name: "index_propuestas_on_proyecto_id", using: :btree
 
   create_table "proyectos", force: true do |t|
     t.integer  "duracion"
