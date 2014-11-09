@@ -1,0 +1,35 @@
+<div class="page-header">
+  <%= link_to new_propuestum_path, :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    Nuevo Propuestum
+  <% end %>
+  <h1>Lista de propuesta</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Numero</th>
+            <th>Nombre</th>
+            <th>Estado</th>
+            <th>Proyecto</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @propuesta) do |propuestum| %>
+            <td><%= propuestum.numero %></td>
+            <td><%= propuestum.nombre %></td>
+            <td><%= propuestum.estado %></td>
+            <td><%= propuestum.proyecto %></td>
+            <td><%= link_to 'Ver', propuestum %></td>
+        <td><%= link_to 'Editar', edit_propuestum_path(propuestum) %></td>
+        <td><%= link_to 'Eliminar', propuestum, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

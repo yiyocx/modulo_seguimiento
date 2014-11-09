@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :propuesta
+
   resources :usuario_cols
 
   devise_for :users
