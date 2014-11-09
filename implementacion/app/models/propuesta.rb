@@ -15,6 +15,7 @@
 #  index_propuestas_on_proyecto_id  (proyecto_id)
 #
 
+# Clase que representa una propuesta
 class Propuesta < ActiveRecord::Base
   belongs_to :proyecto
 end
