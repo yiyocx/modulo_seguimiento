@@ -1,2 +1,45 @@
-<!-- <h6><%= @informe.evaluador %></h6> -->
-<%= link_to "Ver Información del Becario", becario_path(@informe.becario)%>
+<h2>Evaluar Informe de Condonación</h2>
+
+<%= form_for(@informe, url: procesar_evaluacion_informe_path, :html => { :class => "form-horizontal" }) do |f| %>
+
+  <br>
+  <h4>Detalles del Informe:</h4>
+  <div class="form-group">
+    <%= f.label :becario, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= link_to "Ver Información del Becario", becario_path(@informe.becario)%>
+    </div>
+  </div>  
+
+  <div class="form-group">
+    <%= f.label :informe_de_evaluacion_de_condonacion , :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.file_field :document, :class => "form-control" %>
+    </div>
+  </div>  
+
+  <br>
+  <h4>Evaluación:</h4> 
+  <%= f.fields_for :evaluacion do |evaluacion_fields| %>
+    <div class="form-group">
+      <%= evaluacion_fields.label :concepto, :class => "col-sm-2 control-label" %>
+      <div class="col-sm-10">
+        <%= evaluacion_fields.text_field :concepto, :class => "form-control" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+    <%= evaluacion_fields.label :porcentaje_sugerido_condonacion, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= evaluacion_fields.number_field :porc_sugerido_condonacion, :class => "form-control" %>
+    </div>
+  </div>
+  <% end %>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit :class => "btn btn-primary" %>
+    </div>
+  </div>
+
+<% end %>

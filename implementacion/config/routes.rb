@@ -23,6 +23,7 @@ Rails.application.routes.draw do
     member do
       get :definir_evaluador
       get :evaluar_informe
+      patch :procesar_evaluacion
     end
   end 
 

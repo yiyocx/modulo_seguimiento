@@ -1,7 +1,7 @@
 # Controlador de la clase Informes
 class InformesController < ApplicationController
   before_action :set_informe, only: [:show, :edit, :update,
-                                     :destroy, :evaluar_informe]
+                                     :destroy, :evaluar_informe, :procesar_evaluacion]
 
   # GET /informes
   # GET /informes.json
@@ -70,6 +70,12 @@ class InformesController < ApplicationController
   end
 
   def evaluar_informe
+  end
+
+  def procesar_evaluacion
+    Evaluacion.find_by(informe_id: @informe.id).present? || Evaluacion.new(informe: @informe)
+    @informe.update(informe_params)
+    redirect_to listar_informes_evaluador_evaluador_path, notice: 'Evaluacion procesada con éxito'
   end
 
   private
