@@ -21,8 +21,8 @@ class EvaluacionsControllerTest < ActionController::TestCase
     assert_difference('Evaluacion.count') do
       post :create,
            evaluacion: { concepto: @evaluacion.concepto,
-                         evaluador: @evaluacion.evaluador,
-                         informe: @evaluacion.informe,
+                         evaluador_id: @evaluacion.evaluador,
+                         informe_id: @evaluacion.informe,
                          porc_sugerido_condonacion:
                          @evaluacion.porc_sugerido_condonacion }
     end
@@ -44,8 +44,8 @@ class EvaluacionsControllerTest < ActionController::TestCase
     patch :update, id: @evaluacion,
                    evaluacion: {
                      concepto: @evaluacion.concepto,
-                     evaluador: @evaluacion.evaluador,
-                     informe: @evaluacion.informe,
+                     evaluador_id: @evaluacion.evaluador,
+                     informe_id: @evaluacion.informe,
                      porc_sugerido_condonacion:
                      @evaluacion.porc_sugerido_condonacion }
     assert_redirected_to evaluacion_path(assigns(:evaluacion))
