@@ -1,3 +1,4 @@
+# Controlador de la clase Propuestas
 class PropuestasController < ApplicationController
   before_action :set_propuesta, only: [:show, :edit, :update, :destroy]
 
@@ -23,6 +24,7 @@ class PropuestasController < ApplicationController
 
   # POST /propuestas
   # POST /propuestas.json
+  # rubocop:disable Style/LineLength
   def create
     @propuesta = Propuesta.new(propuesta_params)
 
@@ -60,15 +62,18 @@ class PropuestasController < ApplicationController
       format.json { head :no_content }
     end
   end
+  # rubocop:enable Style/LineLength
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_propuesta
-      @propuesta = Propuesta.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def propuesta_params
-      params.require(:propuesta).permit(:numero, :nombre, :estado, :proyecto_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_propuesta
+    @propuesta = Propuesta.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet,
+  # only allow the white list through.
+  def propuesta_params
+    params.require(:propuesta).permit(:numero, :nombre, :estado, :proyecto_id)
+  end
 end
