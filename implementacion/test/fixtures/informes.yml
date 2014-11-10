@@ -36,6 +36,8 @@ one:
   tipo: 1
   proyecto_id: 1
   becario_id: 1
+  evaluador_id: 2
+  numero: 13742
 
 two:
   id: 2
@@ -45,3 +47,5 @@ two:
   tipo: 1
   proyecto_id: 1
   becario_id: 1
+  evaluador_id: 1
+  numero: 94227

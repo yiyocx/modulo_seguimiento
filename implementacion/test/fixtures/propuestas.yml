@@ -21,12 +21,14 @@
 
 one:
   numero: 1
-  nombre: MyString
-  estado: false
-  proyecto_id: 
+  nombre: Propuesta 1
+  estado: seguimiento
+  proyecto_id: 1
+  evaluacion_id: 1
 
 two:
-  numero: 1
-  nombre: MyString
-  estado: false
-  proyecto_id: 
+  numero: 2
+  nombre: Propuesta 2
+  estado: seguimiento
+  proyecto_id: 2
+  evaluacion_id: 2
