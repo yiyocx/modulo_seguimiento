@@ -30,7 +30,7 @@
 class Informe < ActiveRecord::Base
   # rubocop:disable Documentation
   has_attached_file :document, styles: { thumbnail: '60x60#' }
-  enum tipo: { 'Técnico' => 1, 'Financiero' => 2 }
+  enum tipo: { 'Técnico/Financiero' => 1, 'Avance/Final' => 2 }
   validates_attachment :document, content_type:
   { content_type: 'application/pdf' }
 
