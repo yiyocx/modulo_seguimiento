@@ -38,9 +38,18 @@ one:
   id: 1
   condonacion_beneficiarios: Condonacion beneficiarios 1
   cumple_requisitos: false
+  numero_DI: 1094284200
   nombre: Jaime
   apellido1: Molina
-  info_beneficiario: Soy info
+  apellido2: Camargo
+  fecha_nacimiento: 1990-10-18
+  departamento_nacimiento: Risaralda
+  genero: Hombre
+  telefono: 3112887489
+  direccion_residencial: Urb/ Corrales Bloque 3 Apto 102
+  ciudad: Pereira
+  direccion_profesional: Ingeneo
+  info_beneficiario: Tengo informacion
   info_programa_doctoral: Capacitancia Avanzada
   info_tesis: Proceso de los electrones en el espacio
   registro_pasantia: UNAD
@@ -51,8 +60,17 @@ two:
   id: 2
   condonacion_beneficiarios: Condonaciona beneficiarios 2
   cumple_requisitos: true
+  numero_DI: 38290322
   nombre: Felipe 
   apellido1: Muñoz
+  apellido2: Rodriguez
+  fecha_nacimiento: 1988-07-15
+  departamento_nacimiento: Quindio
+  genero: Hombre
+  telefono: 3138230442
+  direccion_residencial: Villa Leon Bloque A Apto 303
+  ciudad: Pereira
+  direccion_profesional: Integrupo
   info_beneficiario: Mas informacion
   info_programa_doctoral: Medicina nuclear
   info_tesis: Radiacion atomica contra la gripa
