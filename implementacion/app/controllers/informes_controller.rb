@@ -78,6 +78,9 @@ class InformesController < ApplicationController
     redirect_to listar_informes_evaluador_evaluador_path, notice: 'Evaluacion procesada con éxito'
   end
 
+  def asignar_evaluador
+  end
+
   private
 
   # Use callbacks to share common setup or constraints between actions.

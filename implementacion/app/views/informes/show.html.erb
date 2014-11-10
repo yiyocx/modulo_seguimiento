@@ -26,4 +26,9 @@
   <dt>Archivo de informe</dt>
   <dd><%= link_to "Descargar", @informe.document.url(:original, false), target: '_blank' %></dd>
 
+  <% if !@informe.evaluador.nil? %>
+    <dt>Evaluador</dt>
+    <dd><%= @informe.evaluador.nombre %></dd>
+  <% end %>
+
 </dl>

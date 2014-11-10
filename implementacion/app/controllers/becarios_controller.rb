@@ -2,7 +2,8 @@
 class BecariosController < ApplicationController
   before_action :set_becario, only: [:show, :edit, :update, :destroy,
                                      :informes_anuales_condonacion,
-                                     :informe_final, :descargar_informe_final]
+                                     :informe_final, :descargar_informe_final,
+                                     :asignar_evaluador_informe_final]
 
   # after_action :verify_authorized
 
@@ -86,6 +87,11 @@ class BecariosController < ApplicationController
   def descargar_informe_final
     @informe = Informe.find_by(becario_id: @becario.id, es_final: true)
     redirect_to @informe.document.url(:original, false), target: '_blank'
+  end
+
+  def asignar_evaluador_informe_final
+    @informe = Informe.find_by(becario_id: @becario.id, es_final: true)
+    redirect_to informe_path(@informe)
   end
 
   private

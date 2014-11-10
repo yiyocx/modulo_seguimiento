@@ -36,6 +36,7 @@ Rails.application.routes.draw do
       get :informe_final
       get :informes_anuales_condonacion
       get :descargar_informe_final
+      patch :asignar_evaluador_informe_final
     end
   end
 

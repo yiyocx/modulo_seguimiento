@@ -18,11 +18,13 @@
 #  role                   :integer
 #  nombre                 :string(255)
 #  becario_id             :integer
+#  evaluador_id           :integer
 #
 # Indexes
 #
 #  index_users_on_becario_id            (becario_id)
 #  index_users_on_email                 (email) UNIQUE
+#  index_users_on_evaluador_id          (evaluador_id)
 #  index_users_on_reset_password_token  (reset_password_token) UNIQUE
 #
 
@@ -36,5 +38,7 @@ class User < ActiveRecord::Base
   enum role: { admin: 1, becario: 2, colciencias: 3, evaluador: 4 }
 
   has_one :becario
+  has_one :evaluador
   accepts_nested_attributes_for :becario
+  accepts_nested_attributes_for :evaluador
 end

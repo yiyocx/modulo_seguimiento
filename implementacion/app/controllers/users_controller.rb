@@ -123,6 +123,7 @@ class UsersController < ApplicationController
   def crear_usuario_evaluador
     @user = User.new(user_params)
     @user.role = 4
+    @user.nombre = @user.evaluador.nombre
     @generated_password = Devise.friendly_token.first(8)
     @user.encrypted_password =  @generated_password
     @user.send_reset_password_instructions

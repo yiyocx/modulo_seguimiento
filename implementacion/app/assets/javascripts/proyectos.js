@@ -15,6 +15,8 @@ $(function(){
           document.getElementById("definir_evaluador").style.visibility = "visible";
           $('#enlace_informe').attr('href', '/becarios/' + id + '/informe_final');
           $('#descargar_informe').attr('href', '/becarios/' + id + '/descargar_informe_final');
+          // $('#enlace_asignar_evaluador').attr('href', '/becarios/' + id + '/asignar_evaluador_informe_final');
+
         }
         else{
           document.getElementById("enlace_informe").style.visibility = "hidden";
