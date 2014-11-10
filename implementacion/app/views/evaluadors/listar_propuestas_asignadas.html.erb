@@ -11,7 +11,6 @@
             <th>Numero del Contrato</th>
             <th>Fecha de inicio del Contrato</th>
             <th>Tipo de informe Seguimiento</th>
-            <th>EL TIPO</th>
             <th>Número de Informe</th>
             <th>Fecha de Cargue</th>
             <th>Opción</th>
@@ -27,8 +26,6 @@
             <td><%= propuesta.proyecto.contrato.num_contrato %></td>
             <td><%= propuesta.proyecto.contrato.fecha_inicio %></td>
             <td><%= select(:informe, :tipo, Informe.tipos, {include_blank: true}) %></td>
-            <td>
-            </td>
             <td><%= link_to propuesta.evaluacion.informe.numero, propuesta.evaluacion.informe.document.url(:original, false), target: '_blank' %></td>
             <td><%= propuesta.evaluacion.informe.document_updated_at %></td>
             <td>
