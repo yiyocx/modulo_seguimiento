@@ -1,6 +1,8 @@
 # Controlador de la clase Propuestas
 class PropuestasController < ApplicationController
-  before_action :set_propuesta, only: [:show, :edit, :update, :destroy, :evaluar_propuesta]
+  before_action :set_propuesta,
+                only: [:show, :edit, :update,
+                       :destroy, :evaluar_propuesta]
 
   # GET /propuestas
   # GET /propuestas.json
@@ -74,7 +76,8 @@ class PropuestasController < ApplicationController
     @informe.update_attributes(document: params[:informes][:document])
     @propuesta.estado = 'otro'
     @propuesta.save
-    redirect_to listar_propuestas_asignadas_evaluador_path(@propuesta.evaluacion.evaluador)
+    redirect_to listar_propuestas_asignadas_evaluador_path(
+      @propuesta.evaluacion.evaluador)
   end
 
   private

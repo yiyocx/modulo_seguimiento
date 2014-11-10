@@ -16,6 +16,7 @@
 #  index_evaluadors_on_user_id  (user_id)
 #
 
+# clase que representa un Evaluador
 class Evaluador < ActiveRecord::Base
   belongs_to :user
 end
