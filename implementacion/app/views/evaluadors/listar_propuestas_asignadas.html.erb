@@ -28,7 +28,10 @@
             <td><%= select(:informe, :tipo, Informe.tipos, {include_blank: true}) %></td>
             <td><%= propuesta.evaluacion.informe.numero %></td>
             <td><%= propuesta.evaluacion.informe.document_updated_at %></td>
-            <td><%= link_to 'Consultar Informe', informe_path(propuesta.evaluacion.informe) %></td>
+            <td>
+              <%= link_to 'Consultar Informe', informe_path(propuesta.evaluacion.informe) %><br><br>
+              <%= link_to 'Evaluar', evaluar_propuesta_propuesta_path(propuesta) %>
+            </td>
       <% end %>
 
     </tbody>

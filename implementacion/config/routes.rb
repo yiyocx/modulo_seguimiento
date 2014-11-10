@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  resources :propuestas
+  resources :propuestas do
+    member do
+      get :evaluar_propuesta
+      patch :procesar_evaluacion_propuesta
+    end
+  end
 
   resources :propuesta
 

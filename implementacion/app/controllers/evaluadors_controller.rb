@@ -29,6 +29,7 @@ class EvaluadorsController < ApplicationController
   def listar_propuestas_asignadas
     @evaluaciones_evaluador = Evaluacion.where(evaluador_id: @evaluador.id).ids
     @propuestas_asignadas = Propuesta.where(estado: "seguimiento").where("evaluacion_id IN (?)", @evaluaciones_evaluador)
+    
   end
 
   private

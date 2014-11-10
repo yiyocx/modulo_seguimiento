@@ -1,6 +1,6 @@
 # Controlador de la clase Propuestas
 class PropuestasController < ApplicationController
-  before_action :set_propuesta, only: [:show, :edit, :update, :destroy]
+  before_action :set_propuesta, only: [:show, :edit, :update, :destroy, :evaluar_propuesta]
 
   # GET /propuestas
   # GET /propuestas.json
@@ -63,6 +63,19 @@ class PropuestasController < ApplicationController
     end
   end
   # rubocop:enable Style/LineLength
+
+  def evaluar_propuesta
+    @el_informe = @propuesta.evaluacion.informe
+  end
+
+  def procesar_evaluacion_propuesta
+    @propuesta = Propuesta.find(params[:id])
+    @informe = @propuesta.evaluacion.informe
+    @informe.update_attributes(document: params[:informes][:document])
+    @propuesta.estado = 'otro'
+    @propuesta.save
+    redirect_to listar_propuestas_asignadas_evaluador_path(@propuesta.evaluacion.evaluador)
+  end
 
   private
 
