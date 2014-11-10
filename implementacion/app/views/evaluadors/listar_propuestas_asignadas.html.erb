@@ -1,0 +1,36 @@
+<h1>Propuestas Asignadas para Evaluar</h1>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Numero Convocatoria</th>
+            <th>Nombre Convocatoria</th>
+            <th>Nombre Propuesta</th>
+            <th>Numero Propuesta</th>
+            <th>Numero del Contrato</th>
+            <th>Fecha de inicio del Contrato</th>
+            <th>Tipo de informe Seguimiento</th>
+            <th>Número de Informe</th>
+            <th>Fecha de Cargue</th>
+            <th>Opción</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @propuestas_asignadas) do |propuesta| %>
+            <td><%= propuesta.proyecto.num_convocatoria %></td>
+            <td><%= propuesta.proyecto.nombre_convocatoria %></td>
+            <td><%= propuesta.nombre %></td>
+            <td><%= propuesta.numero %></td>
+            <td><%= propuesta.proyecto.contrato.num_contrato %></td>
+            <td><%= propuesta.proyecto.contrato.fecha_inicio %></td>
+            <td><%= select(:informe, :tipo, Informe.tipos, {include_blank: true}) %></td>
+            <td><%= propuesta.evaluacion.informe.numero %></td>
+            <td><%= propuesta.evaluacion.informe.document_updated_at %></td>
+            <td><%= link_to 'Consultar Informe', informe_path(propuesta.evaluacion.informe) %></td>
+      <% end %>
+
+    </tbody>
+  </table>
+</div>

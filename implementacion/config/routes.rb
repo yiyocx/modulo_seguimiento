@@ -62,6 +62,7 @@ Rails.application.routes.draw do
   resources :evaluadors do
     member do
      get :listar_informes_evaluador
+     get :listar_propuestas_asignadas
     end
   end
 

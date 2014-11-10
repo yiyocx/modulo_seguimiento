@@ -10,6 +10,7 @@
 #  evaluador_id              :integer
 #  informe_id                :integer
 #
+
 class Evaluacion < ActiveRecord::Base
   belongs_to :evaluador
   belongs_to :informe

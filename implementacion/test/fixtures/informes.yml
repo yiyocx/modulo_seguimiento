@@ -17,6 +17,7 @@
 #  becario_id            :integer
 #  evaluador_id          :integer
 #  evaluacion_id         :integer
+#  numero                :integer
 #
 # Indexes
 #

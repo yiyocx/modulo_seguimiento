@@ -1,6 +1,6 @@
 # Controlador de la case Evaluador
 class EvaluadorsController < ApplicationController
-  before_action :set_evaluador, only: [:show, :edit, :listar_informes_evaluador]
+  before_action :set_evaluador, only: [:show, :edit, :listar_informes_evaluador, :listar_propuestas_asignadas]
 
   # GET /evaluadors
   # GET /evaluadors.json
@@ -24,6 +24,11 @@ class EvaluadorsController < ApplicationController
 
   def listar_informes_evaluador
     @informes_evaluador = Informe.where(evaluador_id: @evaluador.id)
+  end
+
+  def listar_propuestas_asignadas
+    @evaluaciones_evaluador = Evaluacion.where(evaluador_id: @evaluador.id).ids
+    @propuestas_asignadas = Propuesta.where(estado: "seguimiento").where("evaluacion_id IN (?)", @evaluaciones_evaluador)
   end
 
   private

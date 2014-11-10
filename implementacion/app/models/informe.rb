@@ -17,6 +17,7 @@
 #  becario_id            :integer
 #  evaluador_id          :integer
 #  evaluacion_id         :integer
+#  numero                :integer
 #
 # Indexes
 #
@@ -29,6 +30,7 @@
 class Informe < ActiveRecord::Base
   # rubocop:disable Documentation
   has_attached_file :document, styles: { thumbnail: '60x60#' }
+  enum tipo: { 'Técnico' => 1, 'Financiero' => 2 }
   validates_attachment :document, content_type:
   { content_type: 'application/pdf' }
 
