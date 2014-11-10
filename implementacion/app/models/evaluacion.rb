@@ -11,6 +11,7 @@
 #  informe_id                :integer
 #
 
+# clase que representa una Evaluacion
 class Evaluacion < ActiveRecord::Base
   belongs_to :evaluador
   belongs_to :informe
