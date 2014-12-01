@@ -39,7 +39,7 @@ class BecariosController < ApplicationController
 
     respond_to do |format|
       if @becario.save
-        format.html { redirect_to @becario, notice: 'Becario was successfully created.' }
+        format.html { redirect_to @becario, notice: 'Becario fue creado correctamente.' }
         format.json { render :show, status: :created, location: @becario }
       else
         format.html { render :new }
@@ -54,7 +54,7 @@ class BecariosController < ApplicationController
     # authorize @becario
     respond_to do |format|
       if @becario.update(becario_params)
-        format.html { redirect_to @becario, notice: 'Becario was successfully updated.' }
+        format.html { redirect_to @becario, notice: 'Becario fue actualizado correctamente.' }
         format.json { render :show, status: :ok, location: @becario }
       else
         format.html { render :edit }
@@ -69,7 +69,7 @@ class BecariosController < ApplicationController
     @becario.destroy
     # authorize @becario
     respond_to do |format|
-      format.html { redirect_to becarios_url, notice: 'Becario was successfully destroyed.' }
+      format.html { redirect_to becarios_url, notice: 'Becario fue eliminado correctamente.' }
       format.json { head :no_content }
     end
   end

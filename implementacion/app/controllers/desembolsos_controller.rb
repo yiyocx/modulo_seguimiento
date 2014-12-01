@@ -30,7 +30,7 @@ class DesembolsosController < ApplicationController
 
     respond_to do |format|
       if @desembolso.save
-        format.html { redirect_to @desembolso, notice: 'Desembolso was successfully created.' }
+        format.html { redirect_to @desembolso, notice: 'Desembolso fue creado correctamente.' }
         format.json { render :show, status: :created, location: @desembolso }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class DesembolsosController < ApplicationController
   def update
     respond_to do |format|
       if @desembolso.update(desembolso_params)
-        format.html { redirect_to @desembolso, notice: 'Desembolso was successfully updated.' }
+        format.html { redirect_to @desembolso, notice: 'Desembolso fue actualizado correctamente.' }
         format.json { render :show, status: :ok, location: @desembolso }
       else
         format.html { render :edit }
@@ -58,7 +58,7 @@ class DesembolsosController < ApplicationController
   def destroy
     @desembolso.destroy
     respond_to do |format|
-      format.html { redirect_to desembolsos_url, notice: 'Desembolso was successfully destroyed.' }
+      format.html { redirect_to desembolsos_url, notice: 'Desembolso fue eliminado correctamente.' }
       format.json { head :no_content }
     end
   end

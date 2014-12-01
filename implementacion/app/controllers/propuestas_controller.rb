@@ -32,7 +32,7 @@ class PropuestasController < ApplicationController
 
     respond_to do |format|
       if @propuesta.save
-        format.html { redirect_to @propuesta, notice: 'Propuesta was successfully created.' }
+        format.html { redirect_to @propuesta, notice: 'Propuesta fue creada correctamente.' }
         format.json { render :show, status: :created, location: @propuesta }
       else
         format.html { render :new }
@@ -46,7 +46,7 @@ class PropuestasController < ApplicationController
   def update
     respond_to do |format|
       if @propuesta.update(propuesta_params)
-        format.html { redirect_to @propuesta, notice: 'Propuesta was successfully updated.' }
+        format.html { redirect_to @propuesta, notice: 'Propuesta fue actualizada correctamente.' }
         format.json { render :show, status: :ok, location: @propuesta }
       else
         format.html { render :edit }
@@ -60,7 +60,7 @@ class PropuestasController < ApplicationController
   def destroy
     @propuesta.destroy
     respond_to do |format|
-      format.html { redirect_to propuestas_url, notice: 'Propuesta was successfully destroyed.' }
+      format.html { redirect_to propuestas_url, notice: 'Propuesta fue eliminada correctamente.' }
       format.json { head :no_content }
     end
   end

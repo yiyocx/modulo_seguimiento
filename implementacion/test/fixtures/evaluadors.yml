@@ -20,12 +20,14 @@
 
 one:
   id: 1
-  area_conocimiento: El area de el meserismo
-  fecha_inicial: 2014-10-04
-  fecha_final: 2014-10-04
+  area_conocimiento: Administración de Bases de Datos
+  fecha_inicial: 2013-07-04
+  fecha_final: 2014-12-14
+  nombre: Daniela Gonzales Ferrer
 
 two:
   id: 2
-  area_conocimiento: MyString
-  fecha_inicial: 2014-10-04
-  fecha_final: 2014-10-04
+  area_conocimiento: Seguridad Informatica
+  fecha_inicial: 2012-11-07
+  fecha_final: 2014-12-18
+  nombre: Gustavo Londoño Mejia

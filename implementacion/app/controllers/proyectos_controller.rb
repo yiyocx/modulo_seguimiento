@@ -33,7 +33,7 @@ class ProyectosController < ApplicationController
 
     respond_to do |format|
       if @proyecto.save
-        format.html { redirect_to @proyecto, notice: 'Proyecto was successfully created.' }
+        format.html { redirect_to @proyecto, notice: 'Proyecto fue creado correctamente.' }
         format.json { render :show, status: :created, location: @proyecto }
       else
         format.html { render :new }
@@ -47,7 +47,7 @@ class ProyectosController < ApplicationController
   def update
     respond_to do |format|
       if @proyecto.update(proyecto_params)
-        format.html { redirect_to @proyecto, notice: 'Proyecto was successfully updated.' }
+        format.html { redirect_to @proyecto, notice: 'Proyecto fue actualizado correctamente.' }
         format.json { render :show, status: :ok, location: @proyecto }
       else
         format.html { render :edit }
@@ -61,7 +61,7 @@ class ProyectosController < ApplicationController
   def destroy
     @proyecto.destroy
     respond_to do |format|
-      format.html { redirect_to proyectos_url, notice: 'Proyecto was successfully destroyed.' }
+      format.html { redirect_to proyectos_url, notice: 'Proyecto fue eliminado correctamente.' }
       format.json { head :no_content }
     end
   end
