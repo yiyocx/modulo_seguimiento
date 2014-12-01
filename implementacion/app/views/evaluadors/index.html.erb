@@ -1,8 +1,4 @@
 <div class="page-header">
-      <%= link_to new_evaluador_path, :class => 'btn btn-primary' do %>
-        <span class="glyphicon glyphicon-plus"></span>
-        Nuevo Evaluador
-      <% end %>
   <h1>Lista de evaluadores</h1>
 </div>
 
@@ -15,9 +11,7 @@
             <th>Fecha Inicial</th>
             <th>Fecha Final</th>
             <th>Nombre</th>
-            <th></th>
-        <th></th>
-        <th></th>
+            <th>Opciones</th>
       </tr>
     </thead>
 
@@ -29,8 +23,6 @@
             <td><%= evaluador.fecha_final %></td>
             <td><%= evaluador.nombre %></td>
             <td><%= link_to 'Ver', evaluador %></td>
-        <td><%= link_to 'Editar', edit_evaluador_path(evaluador) %></td>
-        <td><%= link_to 'Eliminar', evaluador, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
       <% end %>
     </tbody>
   </table>
