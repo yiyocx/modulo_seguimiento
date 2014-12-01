@@ -73,11 +73,16 @@ class PropuestasController < ApplicationController
   def procesar_evaluacion_propuesta
     @propuesta = Propuesta.find(params[:id])
     @informe = @propuesta.evaluacion.informe
-    @informe.update_attributes(document: params[:informes][:document])
-    @propuesta.estado = 'otro'
-    @propuesta.save
-    redirect_to listar_propuestas_asignadas_evaluador_path(
-      @propuesta.evaluacion.evaluador)
+    if !params[:informes].nil? and
+       params[:informes][:document].content_type.eql?("application/pdf")
+      @informe.update_attributes(document: params[:informes][:document])
+      @propuesta.estado = 'otro'
+      @propuesta.save
+      redirect_to listar_propuestas_asignadas_evaluador_path(
+        @propuesta.evaluacion.evaluador)
+    else
+      redirect_to evaluar_propuesta_propuesta_path(@propuesta), alert: 'Por favor ingrese un archivo PDF'
+    end
   end
 
   private
@@ -90,6 +95,6 @@ class PropuestasController < ApplicationController
   # Never trust parameters from the scary internet,
   # only allow the white list through.
   def propuesta_params
-    params.require(:propuesta).permit(:numero, :nombre, :estado, :proyecto_id)
+    params.require(:propuesta).permit(:numero, :nombre, :estado, :proyecto_id, params[:informes][:document])
   end
 end

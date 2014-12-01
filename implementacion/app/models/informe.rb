@@ -31,8 +31,11 @@ class Informe < ActiveRecord::Base
   # rubocop:disable Documentation
   has_attached_file :document, styles: { thumbnail: '60x60#' }
   enum tipo: { 'Técnico' => 1, 'Financiero' => 2 }
+  validates_presence_of (:document)
   validates_attachment :document, content_type:
-  { content_type: 'application/pdf' }
+  { content_type: ['application/pdf'], message: "Solo se permiten archivos pdf" }
+  # validates_format_of :document, with: %r{\.(pdf)$}i, message: "Solo se permiten archivos pdf", multiline: true
+  # validates_attachment_content_type :document, content_type: ['application/pdf', 'pdf'], 
 
   belongs_to :becario
   belongs_to :user
