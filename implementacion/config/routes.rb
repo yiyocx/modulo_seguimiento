@@ -64,7 +64,7 @@ Rails.application.routes.draw do
 
   resources :visita_tecnicas
 
-  resources :evaluadors, only: :index do
+  resources :evaluadors, only: [:index, :show] do
     member do
      get :listar_informes_evaluador
      get :listar_propuestas_asignadas
