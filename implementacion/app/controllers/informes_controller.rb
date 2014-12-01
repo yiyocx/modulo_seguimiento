@@ -32,7 +32,7 @@ class InformesController < ApplicationController
 
     respond_to do |format|
       if @informe.save
-        format.html { redirect_to @informe, notice: 'Informe was successfully created.' }
+        format.html { redirect_to @informe, notice: 'Informe fue creado correctamente.' }
         format.json { render :show, status: :created, location: @informe }
       else
         format.html { render :new }
@@ -46,7 +46,7 @@ class InformesController < ApplicationController
   def update
     respond_to do |format|
       if @informe.update(informe_params)
-        format.html { redirect_to @informe, notice: 'Informe was successfully updated.' }
+        format.html { redirect_to @informe, notice: 'Informe fue actualizado correctamente.' }
         format.json { render :show, status: :ok, location: @informe }
       else
         format.html { render :edit }
@@ -60,7 +60,7 @@ class InformesController < ApplicationController
   def destroy
     @informe.destroy
     respond_to do |format|
-      format.html { redirect_to informes_url, notice: 'Informe was successfully destroyed.' }
+      format.html { redirect_to informes_url, notice: 'Informe fue eliminado correctamente.' }
       format.json { head :no_content }
     end
   end

@@ -30,7 +30,7 @@ class VisitaTecnicasController < ApplicationController
 
     respond_to do |format|
       if @visita_tecnica.save
-        format.html { redirect_to @visita_tecnica, notice: 'Visita tecnica was successfully created.' }
+        format.html { redirect_to @visita_tecnica, notice: 'Visita técnica fue creada correctamente.' }
         format.json { render :show, status: :created, location: @visita_tecnica }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class VisitaTecnicasController < ApplicationController
   def update
     respond_to do |format|
       if @visita_tecnica.update(visita_tecnica_params)
-        format.html { redirect_to @visita_tecnica, notice: 'Visita tecnica was successfully updated.' }
+        format.html { redirect_to @visita_tecnica, notice: 'Visita técnica fue actualizada correctamente.' }
         format.json { render :show, status: :ok, location: @visita_tecnica }
       else
         format.html { render :edit }
@@ -58,7 +58,7 @@ class VisitaTecnicasController < ApplicationController
   def destroy
     @visita_tecnica.destroy
     respond_to do |format|
-      format.html { redirect_to visita_tecnicas_url, notice: 'Visita tecnica was successfully destroyed.' }
+      format.html { redirect_to visita_tecnicas_url, notice: 'Visita técnica fue eliminada correctamente.' }
       format.json { head :no_content }
     end
   end

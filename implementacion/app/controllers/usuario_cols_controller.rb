@@ -30,7 +30,7 @@ class UsuarioColsController < ApplicationController
 
     respond_to do |format|
       if @usuario_col.save
-        format.html { redirect_to @usuario_col, notice: 'Usuario col was successfully created.' }
+        format.html { redirect_to @usuario_col, notice: 'Usuario Colciencias fue creado correctamente.' }
         format.json { render :show, status: :created, location: @usuario_col }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class UsuarioColsController < ApplicationController
   def update
     respond_to do |format|
       if @usuario_col.update(usuario_col_params)
-        format.html { redirect_to @usuario_col, notice: 'Usuario col was successfully updated.' }
+        format.html { redirect_to @usuario_col, notice: 'Usuario Colciencias fue actualizado correctamente.' }
         format.json { render :show, status: :ok, location: @usuario_col }
       else
         format.html { render :edit }
@@ -58,7 +58,7 @@ class UsuarioColsController < ApplicationController
   def destroy
     @usuario_col.destroy
     respond_to do |format|
-      format.html { redirect_to usuario_cols_url, notice: 'Usuario col was successfully destroyed.' }
+      format.html { redirect_to usuario_cols_url, notice: 'Usuario Colciencias fue eliminado correctamente.' }
       format.json { head :no_content }
     end
   end
