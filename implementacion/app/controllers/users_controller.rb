@@ -159,6 +159,8 @@ class UsersController < ApplicationController
                                   :departamento_nacimiento,
                                   :genero, :email, :telefono,
                                   :direccion_residencial, :ciudad,
-                                  :direccion_profesional])
+                                  :direccion_profesional],
+                                 evaluador_attributes:
+                                 [:area_conocimiento, :fecha_inicial, :fecha_final, :nombre])
   end
 end
