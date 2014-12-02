@@ -3,13 +3,14 @@
     <span class="glyphicon glyphicon-plus"></span>
     Nuevo Usuario col
   <% end %>
-  <h1>Lista de usuario_cols</h1>
+  <h1>Lista de Usuarios Colciencias</h1>
 </div>
 
 <div class="table-responsive">
   <table class="table table-striped table-bordered table-hover">
     <thead>
       <tr>
+        <th>Nombre</th>
         <th></th>
         <th></th>
         <th></th>
@@ -18,6 +19,7 @@
 
     <tbody>
       <%= content_tag_for(:tr, @usuario_cols) do |usuario_col| %>
+        <td><%= usuario_col.nombre %></td>
         <td><%= link_to 'Ver', usuario_col %></td>
         <td><%= link_to 'Editar', edit_usuario_col_path(usuario_col) %></td>
         <td><%= link_to 'Eliminar', usuario_col, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
