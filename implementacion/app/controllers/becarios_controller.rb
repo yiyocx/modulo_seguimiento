@@ -5,6 +5,8 @@ class BecariosController < ApplicationController
                                      :informe_final, :descargar_informe_final,
                                      :asignar_evaluador_informe_final]
 
+  before_filter :is_becario, only: :index                                   
+
   # after_action :verify_authorized
 
   # GET /becarios
@@ -95,6 +97,18 @@ class BecariosController < ApplicationController
   end
 
   private
+
+  def is_becario
+
+    if current_user.role.eql? 'evaluador'
+      redirect_to evaluador_path(current_user.evaluador.id), notice: 'No tiene permiso para acceder a esta vista' unless current_user.role.eql? 'becario'
+    end
+
+    # TODO Implementar la relación de Usuario Colciencias con el modelo User del devise para que esto funcione.
+    # if current_user.role.eql? 'colciencias'
+    #   redirect_to usuario_cols_path(current_user.colciencias.id), notice: 'No tiene permiso para acceder a esta vista' unless current_user.role.eql? 'becario'
+    # end
+  end
 
   # Use callbacks to share common setup or constraints between actions.
   def set_becario
