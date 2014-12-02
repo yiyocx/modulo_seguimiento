@@ -86,10 +86,10 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     @user.role = 2
     @user.nombre = @user.becario.nombre
-    @generated_password = Devise.friendly_token.first(8)
-    @user.encrypted_password =  @generated_password
+    # @generated_password = Devise.friendly_token.first(8)
+    # @user.encrypted_password =  @generated_password
     @user.email = @user.becario.email
-    @user.send_reset_password_instructions
+    # @user.send_reset_password_instructions
 
     respond_to do |format|
       if @user.save
@@ -125,8 +125,8 @@ class UsersController < ApplicationController
     @user.role = 4
     @user.nombre = @user.evaluador.nombre
     @generated_password = Devise.friendly_token.first(8)
-    @user.encrypted_password =  @generated_password
-    @user.send_reset_password_instructions
+    # @user.encrypted_password =  @generated_password
+    # @user.send_reset_password_instructions
 
     respond_to do |format|
       if @user.save
@@ -150,7 +150,7 @@ class UsersController < ApplicationController
   # Never trust parameters from the scary internet,
   # only allow the white list through.
   def user_params
-    params.require(:user).permit(:nombre, :becario_id, :email,
+    params.require(:user).permit(:nombre, :becario_id, :email, :password,
                                  becario_attributes:
                                  [:condonacion_beneficiarios,
                                   :cumple_requisitos,

@@ -13,6 +13,10 @@ class ApplicationController < ActionController::Base
     if resource.role.eql? 'becario'
       becario_path(resource.becario)
     end
+
+    if resource.role.eql? 'evaluador'
+      evaluador_path(resource.evaluador)
+    end
     # rubocop:enable Style/IfUnlessModifier, Style/GuardClause
   end
 end
