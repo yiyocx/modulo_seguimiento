@@ -24,6 +24,7 @@ one:
   fecha_inicial: 2013-07-04
   fecha_final: 2014-12-14
   nombre: Daniela Gonzales Ferrer
+  user_id: 2
 
 two:
   id: 2
@@ -31,3 +32,4 @@ two:
   fecha_inicial: 2012-11-07
   fecha_final: 2014-12-18
   nombre: Gustavo Londoño Mejia
+  user_id: 2
