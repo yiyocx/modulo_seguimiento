@@ -25,11 +25,13 @@
 #  created_at                :datetime
 #  updated_at                :datetime
 #  user_id                   :integer
+#  departamento_id           :integer
 #
 # Indexes
 #
-#  index_becarios_on_contrato_id  (contrato_id)
-#  index_becarios_on_user_id      (user_id)
+#  index_becarios_on_contrato_id      (contrato_id)
+#  index_becarios_on_departamento_id  (departamento_id)
+#  index_becarios_on_user_id          (user_id)
 #
 
 require 'test_helper'

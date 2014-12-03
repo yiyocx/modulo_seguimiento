@@ -55,15 +55,15 @@
     </div>
   </div>
   <div class="form-group">
-    <%= f.label :departamento_nacimiento, :class => "col-sm-2 control-label" %>
+    <%= f.label :departamento_id, :class => "col-sm-2 control-label" %>
     <div class="col-sm-10">
-      <%= f.text_field :departamento_nacimiento, :class => "form-control" %>
+      <%= f.collection_select :departamento_id, Departamento.all, :id, :nombre, {}, {:class => "form-control chosen-select"} %>
     </div>
   </div>
   <div class="form-group">
     <%= f.label :genero, :class => "col-sm-2 control-label" %>
     <div class="col-sm-10">
-      <%= f.text_field :genero, :class => "form-control" %>
+    <%= f.collection_select :genero, Becario.generos, :first, :first, {}, :class => "form-control chosen-select" %>
     </div>
   </div>
   <div class="form-group">

@@ -95,7 +95,6 @@ class PropuestasController < ApplicationController
     elsif current_user.role.eql? 'colciencias'
       redirect_to usuario_col_path(current_user.usuario_col.id), notice: 'No tiene permiso para acceder a esta vista' unless current_user.role.eql? 'evaluador'
     end
-
   end
 
   # Use callbacks to share common setup or constraints between actions.
