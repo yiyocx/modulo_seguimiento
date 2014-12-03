@@ -46,7 +46,7 @@ one:
   apellido2: Camargo
   fecha_nacimiento: 1990-10-18
   departamento_nacimiento: Risaralda
-  genero: Masculino
+  genero: 1
   telefono: 3112887489
   direccion_residencial: Urb/ Corrales Bloque 3 Apto 102
   ciudad: Pereira
@@ -70,7 +70,7 @@ two:
   apellido2: Rodriguez
   fecha_nacimiento: 1988-07-15
   departamento_nacimiento: Quindio
-  genero: Masculino
+  genero: 1
   telefono: 3138230442
   direccion_residencial: Villa Leon Bloque A Apto 303
   ciudad: Pereira
