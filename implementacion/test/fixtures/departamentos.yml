@@ -11,7 +11,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  nombre: MyString
+  id: 1
+  nombre: Risaralda
 
 two:
-  nombre: MyString
+  id: 2
+  nombre: Quindio

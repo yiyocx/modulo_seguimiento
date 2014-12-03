@@ -46,7 +46,7 @@ one:
   apellido2: Camargo
   fecha_nacimiento: 1990-10-18
   departamento_nacimiento: Risaralda
-  genero: Hombre
+  genero: Masculino
   telefono: 3112887489
   direccion_residencial: Urb/ Corrales Bloque 3 Apto 102
   ciudad: Pereira
@@ -57,6 +57,8 @@ one:
   registro_pasantia: UNAD
   contrato_id: 1
   user_id: 3
+  email: pepe@becario.com
+  departamento_id: 1
 
 two:
   id: 2
@@ -68,7 +70,7 @@ two:
   apellido2: Rodriguez
   fecha_nacimiento: 1988-07-15
   departamento_nacimiento: Quindio
-  genero: Hombre
+  genero: Masculino
   telefono: 3138230442
   direccion_residencial: Villa Leon Bloque A Apto 303
   ciudad: Pereira
@@ -79,3 +81,5 @@ two:
   registro_pasantia: Uniandes
   contrato_id: 1
   user_id: 3
+  email: pepe@becario.com
+  departamento_id: 2
