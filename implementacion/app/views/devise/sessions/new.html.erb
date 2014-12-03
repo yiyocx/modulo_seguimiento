@@ -1,25 +1,62 @@
-<h2>Sign in</h2>
+</br>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-group">
-    <%= f.label :email, :class => "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= f.email_field :email, autofocus: true, :class => "form-control" %>
+  <div class="container">
+  
+    <div class="row">
+
+      <div class="col-sm-7">
+        <div class="jumbotron">
+          <h1>
+            <i class="fa fa-users"></i>
+            Bienvenidos
+          </h1>
+          <h3>Modulo de Seguimiento</h3>
+
+          <p>Seguimiento a Proyectos de la Comunidad Colciencias</p>
+        </div>
+      </div>
+
+      <div class="col-sm-5">
+
+        <div class="panel panel-default">
+          <div class="panel-heading">Ingresar</div>
+
+          <div class="panel-body">
+            
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <div class="form-group">
+              <%= f.label :email, :class => "col-sm-2 control-label" %>
+              <div class="col-sm-10">
+                <%= f.email_field :email, autofocus: true, :class => "form-control" %>
+              </div>
+            </div>
+            <br></br>
+            <div class="form-group">
+              <%= f.label :password, :class => "col-sm-2 control-label" %>
+              <div class="col-sm-10">
+                <%= f.password_field :password, autocomplete: "off", :class => "form-control" %>
+              </div>
+            </div>
+
+            <% if devise_mapping.rememberable? -%>
+              <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+            <% end -%>
+
+            <div><%= f.submit "Iniciar Sesión", :class => "btn btn-primary btn-block" %></div>
+
+          <% end %>
+
+          <%= render "devise/shared/links" %>
+          </div>
+
+        </div>
+
+        
+
+      </div>
+
     </div>
+
+
+
   </div>
-  <br></br>
-  <div class="form-group">
-    <%= f.label :password, :class => "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= f.password_field :password, autocomplete: "off", :class => "form-control" %>
-    </div>
-  </div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
-
-  <div><%= f.submit "Sign in" %></div>
-<% end %>
-
-<%= render "devise/shared/links" %>
