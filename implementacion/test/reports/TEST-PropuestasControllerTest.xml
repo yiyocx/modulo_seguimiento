@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="PropuestasControllerTest" tests="7" time="0.108854059" failures="6" errors="1" skipped="0" assertions="6" timestamp="2014-12-02T21:58:28-05:00">
+  <testcase name="test_should_create_propuesta" time="0.026552047" assertions="1">
+    <failure type="Minitest::Assertion" message="&quot;Propuesta.count&quot; didn't change by 1....">
+"Propuesta.count" didn't change by 1.
+Expected: 3
+  Actual: 2 (Minitest::Assertion)
+/home/gustavo/repos/rails/modulo_seguimiento/implementacion/test/controllers/propuestas_controller_test.rb:21    </failure>
+  </testcase>
+  <testcase name="test_should_destroy_propuesta" time="0.013086095" assertions="1">
+    <failure type="Minitest::Assertion" message="&quot;Propuesta.count&quot; didn't change by -1....">
+"Propuesta.count" didn't change by -1.
+Expected: 1
+  Actual: 2 (Minitest::Assertion)
+/home/gustavo/repos/rails/modulo_seguimiento/implementacion/test/controllers/propuestas_controller_test.rb:54    </failure>
+  </testcase>
+  <testcase name="test_should_get_edit" time="0.005672088" assertions="1">
+    <failure type="Minitest::Assertion" message="Expected response to be a &lt;success&gt;, but was &lt;302&gt;">
+Expected response to be a &lt;success&gt;, but was &lt;302&gt; (Minitest::Assertion)
+/home/gustavo/repos/rails/modulo_seguimiento/implementacion/test/controllers/propuestas_controller_test.rb:40    </failure>
+  </testcase>
+  <testcase name="test_should_get_index" time="0.005854448" assertions="1">
+    <failure type="Minitest::Assertion" message="Expected response to be a &lt;success&gt;, but was &lt;302&gt;">
+Expected response to be a &lt;success&gt;, but was &lt;302&gt; (Minitest::Assertion)
+/home/gustavo/repos/rails/modulo_seguimiento/implementacion/test/controllers/propuestas_controller_test.rb:11    </failure>
+  </testcase>
+  <testcase name="test_should_get_new" time="0.007743017" assertions="1">
+    <failure type="Minitest::Assertion" message="Expected response to be a &lt;success&gt;, but was &lt;302&gt;">
+Expected response to be a &lt;success&gt;, but was &lt;302&gt; (Minitest::Assertion)
+/home/gustavo/repos/rails/modulo_seguimiento/implementacion/test/controllers/propuestas_controller_test.rb:17    </failure>
+  </testcase>
+  <testcase name="test_should_show_propuesta" time="0.006703161" assertions="1">
+    <failure type="Minitest::Assertion" message="Expected response to be a &lt;success&gt;, but was &lt;302&gt;">
+Expected response to be a &lt;success&gt;, but was &lt;302&gt; (Minitest::Assertion)
+/home/gustavo/repos/rails/modulo_seguimiento/implementacion/test/controllers/propuestas_controller_test.rb:35    </failure>
+  </testcase>
+  <testcase name="test_should_update_propuesta" time="0.006471421" assertions="0">
+    <error type="ActionController::UrlGenerationError" message="ActionController::UrlGenerationError: No route matches {:action=&gt;&quot;show&quot;, :controller=&gt;&quot;propuestas&quot;, :id=&gt;nil} missing required keys: [:id]...">
+ActionController::UrlGenerationError: No route matches {:action=&gt;"show", :controller=&gt;"propuestas", :id=&gt;nil} missing required keys: [:id]
+    test/controllers/propuestas_controller_test.rb:50:in `block in &lt;class:PropuestasControllerTest&gt;' (ActionController::UrlGenerationError)
+/home/gustavo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:192    </error>
+  </testcase>
+</testsuite>

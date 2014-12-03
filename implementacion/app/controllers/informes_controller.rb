@@ -4,6 +4,8 @@ class InformesController < ApplicationController
                                      :destroy, :evaluar_informe,
                                      :procesar_evaluacion]
 
+  before_filter :is_evaluador, only: [:evaluar_informe]
+
   # GET /informes
   # GET /informes.json
   def index
@@ -85,6 +87,14 @@ class InformesController < ApplicationController
   end
 
   private
+
+  def is_evaluador
+    if current_user.role.eql? 'becario'
+      redirect_to becario_path(current_user.becario.id), notice: 'No tiene permiso para acceder a esta vista' unless current_user.role.eql? 'evaluador'
+    elsif current_user.role.eql? 'colciencias'
+      redirect_to usuario_col_path(current_user.usuario_col.id), notice: 'No tiene permiso para acceder a esta vista' unless current_user.role.eql? 'evaluador'
+    end
+  end
 
   # Use callbacks to share common setup or constraints between actions.
   def set_informe

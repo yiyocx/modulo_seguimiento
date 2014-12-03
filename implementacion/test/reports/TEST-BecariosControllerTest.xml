@@ -1,41 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="BecariosControllerTest" tests="7" time="0.11308713" failures="0" errors="4" skipped="0" assertions="8" timestamp="2014-11-05T16:59:38-05:00">
-  <testcase name="test_should_create_becario" time="0.015754311" assertions="3">
+<testsuite name="BecariosControllerTest" tests="7" time="0.077620415" failures="6" errors="1" skipped="0" assertions="6" timestamp="2014-12-02T21:58:28-05:00">
+  <testcase name="test_should_create_becario" time="0.045981476" assertions="1">
+    <failure type="Minitest::Assertion" message="&quot;Becario.count&quot; didn't change by 1....">
+"Becario.count" didn't change by 1.
+Expected: 3
+  Actual: 2 (Minitest::Assertion)
+/home/gustavo/repos/rails/modulo_seguimiento/implementacion/test/controllers/becarios_controller_test.rb:21    </failure>
   </testcase>
-  <testcase name="test_should_destroy_becario" time="0.00769277" assertions="3">
+  <testcase name="test_should_destroy_becario" time="0.011169162" assertions="1">
+    <failure type="Minitest::Assertion" message="&quot;Becario.count&quot; didn't change by -1....">
+"Becario.count" didn't change by -1.
+Expected: 1
+  Actual: 2 (Minitest::Assertion)
+/home/gustavo/repos/rails/modulo_seguimiento/implementacion/test/controllers/becarios_controller_test.rb:59    </failure>
   </testcase>
-  <testcase name="test_should_get_edit" time="0.030682525" assertions="0">
-    <error type="ActionView::Template::Error" message="ActionView::Template::Error: couldn't find file 'jquery.ui.core'...">
-ActionView::Template::Error: couldn't find file 'jquery.ui.core'
-  (in /home/yiyo/dev/modulo_seguimiento/implementacion/app/assets/stylesheets/application.css:16)
-    app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___4473830424599349827_70130814648260'
-    test/controllers/becarios_controller_test.rb:33:in `block in &lt;class:BecariosControllerTest&gt;' (ActionView::Template::Error)
-/home/yiyo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sprockets-2.11.0/lib/sprockets/context.rb:106    </error>
+  <testcase name="test_should_get_edit" time="0.007630089" assertions="1">
+    <failure type="Minitest::Assertion" message="Expected response to be a &lt;success&gt;, but was &lt;302&gt;">
+Expected response to be a &lt;success&gt;, but was &lt;302&gt; (Minitest::Assertion)
+/home/gustavo/repos/rails/modulo_seguimiento/implementacion/test/controllers/becarios_controller_test.rb:42    </failure>
   </testcase>
-  <testcase name="test_should_get_index" time="0.022906318" assertions="0">
-    <error type="ActionView::Template::Error" message="ActionView::Template::Error: couldn't find file 'jquery.ui.core'...">
-ActionView::Template::Error: couldn't find file 'jquery.ui.core'
-  (in /home/yiyo/dev/modulo_seguimiento/implementacion/app/assets/stylesheets/application.css:16)
-    app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___4473830424599349827_70130814648260'
-    test/controllers/becarios_controller_test.rb:9:in `block in &lt;class:BecariosControllerTest&gt;' (ActionView::Template::Error)
-/home/yiyo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sprockets-2.11.0/lib/sprockets/context.rb:106    </error>
+  <testcase name="test_should_get_index" time="0.008076931" assertions="1">
+    <failure type="Minitest::Assertion" message="Expected response to be a &lt;success&gt;, but was &lt;302&gt;">
+Expected response to be a &lt;success&gt;, but was &lt;302&gt; (Minitest::Assertion)
+/home/gustavo/repos/rails/modulo_seguimiento/implementacion/test/controllers/becarios_controller_test.rb:11    </failure>
   </testcase>
-  <testcase name="test_should_get_new" time="0.023865741" assertions="0">
-    <error type="ActionView::Template::Error" message="ActionView::Template::Error: couldn't find file 'jquery.ui.core'...">
-ActionView::Template::Error: couldn't find file 'jquery.ui.core'
-  (in /home/yiyo/dev/modulo_seguimiento/implementacion/app/assets/stylesheets/application.css:16)
-    app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___4473830424599349827_70130814648260'
-    test/controllers/becarios_controller_test.rb:15:in `block in &lt;class:BecariosControllerTest&gt;' (ActionView::Template::Error)
-/home/yiyo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sprockets-2.11.0/lib/sprockets/context.rb:106    </error>
+  <testcase name="test_should_get_new" time="0.007424269" assertions="1">
+    <failure type="Minitest::Assertion" message="Expected response to be a &lt;success&gt;, but was &lt;302&gt;">
+Expected response to be a &lt;success&gt;, but was &lt;302&gt; (Minitest::Assertion)
+/home/gustavo/repos/rails/modulo_seguimiento/implementacion/test/controllers/becarios_controller_test.rb:17    </failure>
   </testcase>
-  <testcase name="test_should_show_becario" time="0.017505104" assertions="0">
-    <error type="ActionView::Template::Error" message="ActionView::Template::Error: couldn't find file 'jquery.ui.core'...">
-ActionView::Template::Error: couldn't find file 'jquery.ui.core'
-  (in /home/yiyo/dev/modulo_seguimiento/implementacion/app/assets/stylesheets/application.css:16)
-    app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___4473830424599349827_70130814648260'
-    test/controllers/becarios_controller_test.rb:28:in `block in &lt;class:BecariosControllerTest&gt;' (ActionView::Template::Error)
-/home/yiyo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sprockets-2.11.0/lib/sprockets/context.rb:106    </error>
+  <testcase name="test_should_show_becario" time="0.00560218" assertions="1">
+    <failure type="Minitest::Assertion" message="Expected response to be a &lt;success&gt;, but was &lt;302&gt;">
+Expected response to be a &lt;success&gt;, but was &lt;302&gt; (Minitest::Assertion)
+/home/gustavo/repos/rails/modulo_seguimiento/implementacion/test/controllers/becarios_controller_test.rb:37    </failure>
   </testcase>
-  <testcase name="test_should_update_becario" time="0.005436117" assertions="2">
+  <testcase name="test_should_update_becario" time="0.007162712" assertions="0">
+    <error type="ActionController::UrlGenerationError" message="ActionController::UrlGenerationError: No route matches {:action=&gt;&quot;show&quot;, :controller=&gt;&quot;becarios&quot;, :id=&gt;nil} missing required keys: [:id]...">
+ActionController::UrlGenerationError: No route matches {:action=&gt;"show", :controller=&gt;"becarios", :id=&gt;nil} missing required keys: [:id]
+    test/controllers/becarios_controller_test.rb:55:in `block in &lt;class:BecariosControllerTest&gt;' (ActionController::UrlGenerationError)
+/home/gustavo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:192    </error>
   </testcase>
 </testsuite>

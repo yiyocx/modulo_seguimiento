@@ -1,51 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="EvaluacionsControllerTest" tests="7" time="0.078409126" failures="0" errors="6" skipped="0" assertions="3" timestamp="2014-11-05T16:59:38-05:00">
-  <testcase name="test_should_create_evaluacion" time="0.017394272" assertions="0">
-    <error type="NoMethodError" message="NoMethodError: undefined method `informe' for #&lt;Evaluacion:0x007f9137e42bc0&gt;...">
-NoMethodError: undefined method `informe' for #&lt;Evaluacion:0x007f9137e42bc0&gt;
-    test/controllers/evaluacions_controller_test.rb:21:in `block (2 levels) in &lt;class:EvaluacionsControllerTest&gt;'
-    test/controllers/evaluacions_controller_test.rb:20:in `block in &lt;class:EvaluacionsControllerTest&gt;' (NoMethodError)
-/home/yiyo/dev/modulo_seguimiento/implementacion/test/controllers/evaluacions_controller_test.rb:20    </error>
+<testsuite name="EvaluacionsControllerTest" tests="7" time="0.061337965" failures="6" errors="1" skipped="0" assertions="6" timestamp="2014-12-02T21:58:29-05:00">
+  <testcase name="test_should_create_evaluacion" time="0.082457477" assertions="1">
+    <failure type="Minitest::Assertion" message="&quot;Evaluacion.count&quot; didn't change by 1....">
+"Evaluacion.count" didn't change by 1.
+Expected: 3
+  Actual: 2 (Minitest::Assertion)
+/home/gustavo/repos/rails/modulo_seguimiento/implementacion/test/controllers/evaluacions_controller_test.rb:21    </failure>
   </testcase>
-  <testcase name="test_should_destroy_evaluacion" time="0.00832446" assertions="3">
+  <testcase name="test_should_destroy_evaluacion" time="0.015226932" assertions="1">
+    <failure type="Minitest::Assertion" message="&quot;Evaluacion.count&quot; didn't change by -1....">
+"Evaluacion.count" didn't change by -1.
+Expected: 1
+  Actual: 2 (Minitest::Assertion)
+/home/gustavo/repos/rails/modulo_seguimiento/implementacion/test/controllers/evaluacions_controller_test.rb:55    </failure>
   </testcase>
-  <testcase name="test_should_get_edit" time="0.015476897" assertions="0">
-    <error type="ActionView::Template::Error" message="ActionView::Template::Error: undefined method `informe' for #&lt;Evaluacion:0x007f9137647498&gt;...">
-ActionView::Template::Error: undefined method `informe' for #&lt;Evaluacion:0x007f9137647498&gt;
-    app/views/evaluacions/_form.html.erb:36:in `block in _app_views_evaluacions__form_html_erb__4230383325149853750_70130837413760'
-    app/views/evaluacions/_form.html.erb:1:in `_app_views_evaluacions__form_html_erb__4230383325149853750_70130837413760'
-    app/views/evaluacions/edit.html.erb:13:in `_app_views_evaluacions_edit_html_erb___630723196032558414_70130837469520'
-    test/controllers/evaluacions_controller_test.rb:33:in `block in &lt;class:EvaluacionsControllerTest&gt;' (ActionView::Template::Error)
-/home/yiyo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activemodel-4.1.6/lib/active_model/attribute_methods.rb:435    </error>
+  <testcase name="test_should_get_edit" time="0.006035827" assertions="1">
+    <failure type="Minitest::Assertion" message="Expected response to be a &lt;success&gt;, but was &lt;302&gt;">
+Expected response to be a &lt;success&gt;, but was &lt;302&gt; (Minitest::Assertion)
+/home/gustavo/repos/rails/modulo_seguimiento/implementacion/test/controllers/evaluacions_controller_test.rb:40    </failure>
   </testcase>
-  <testcase name="test_should_get_index" time="0.008839919" assertions="0">
-    <error type="ActionView::Template::Error" message="ActionView::Template::Error: undefined method `informe' for #&lt;Evaluacion:0x007f91371aa390&gt;...">
-ActionView::Template::Error: undefined method `informe' for #&lt;Evaluacion:0x007f91371aa390&gt;
-    app/views/evaluacions/index.html.erb:28:in `block in _app_views_evaluacions_index_html_erb___4091624342935879479_70130835817020'
-    app/views/evaluacions/index.html.erb:24:in `_app_views_evaluacions_index_html_erb___4091624342935879479_70130835817020'
-    test/controllers/evaluacions_controller_test.rb:9:in `block in &lt;class:EvaluacionsControllerTest&gt;' (ActionView::Template::Error)
-/home/yiyo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activemodel-4.1.6/lib/active_model/attribute_methods.rb:435    </error>
+  <testcase name="test_should_get_index" time="0.00599671" assertions="1">
+    <failure type="Minitest::Assertion" message="Expected response to be a &lt;success&gt;, but was &lt;302&gt;">
+Expected response to be a &lt;success&gt;, but was &lt;302&gt; (Minitest::Assertion)
+/home/gustavo/repos/rails/modulo_seguimiento/implementacion/test/controllers/evaluacions_controller_test.rb:11    </failure>
   </testcase>
-  <testcase name="test_should_get_new" time="0.008101876" assertions="0">
-    <error type="ActionView::Template::Error" message="ActionView::Template::Error: undefined method `informe' for #&lt;Evaluacion:0x007f913702c888&gt;...">
-ActionView::Template::Error: undefined method `informe' for #&lt;Evaluacion:0x007f913702c888&gt;
-    app/views/evaluacions/_form.html.erb:36:in `block in _app_views_evaluacions__form_html_erb__4230383325149853750_70130837413760'
-    app/views/evaluacions/_form.html.erb:1:in `_app_views_evaluacions__form_html_erb__4230383325149853750_70130837413760'
-    app/views/evaluacions/new.html.erb:9:in `_app_views_evaluacions_new_html_erb___3536037938033954739_70130834936740'
-    test/controllers/evaluacions_controller_test.rb:15:in `block in &lt;class:EvaluacionsControllerTest&gt;' (ActionView::Template::Error)
-/home/yiyo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activemodel-4.1.6/lib/active_model/attribute_methods.rb:435    </error>
+  <testcase name="test_should_get_new" time="0.007445292" assertions="1">
+    <failure type="Minitest::Assertion" message="Expected response to be a &lt;success&gt;, but was &lt;302&gt;">
+Expected response to be a &lt;success&gt;, but was &lt;302&gt; (Minitest::Assertion)
+/home/gustavo/repos/rails/modulo_seguimiento/implementacion/test/controllers/evaluacions_controller_test.rb:17    </failure>
   </testcase>
-  <testcase name="test_should_show_evaluacion" time="0.007083459" assertions="0">
-    <error type="ActionView::Template::Error" message="ActionView::Template::Error: undefined method `informe' for #&lt;Evaluacion:0x007f9136fb6688&gt;...">
-ActionView::Template::Error: undefined method `informe' for #&lt;Evaluacion:0x007f9136fb6688&gt;
-    app/views/evaluacions/show.html.erb:24:in `_app_views_evaluacions_show_html_erb___2752463155868539074_70130834711320'
-    test/controllers/evaluacions_controller_test.rb:28:in `block in &lt;class:EvaluacionsControllerTest&gt;' (ActionView::Template::Error)
-/home/yiyo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activemodel-4.1.6/lib/active_model/attribute_methods.rb:435    </error>
+  <testcase name="test_should_show_evaluacion" time="0.00778164" assertions="1">
+    <failure type="Minitest::Assertion" message="Expected response to be a &lt;success&gt;, but was &lt;302&gt;">
+Expected response to be a &lt;success&gt;, but was &lt;302&gt; (Minitest::Assertion)
+/home/gustavo/repos/rails/modulo_seguimiento/implementacion/test/controllers/evaluacions_controller_test.rb:35    </failure>
   </testcase>
-  <testcase name="test_should_update_evaluacion" time="0.002632479" assertions="0">
-    <error type="NoMethodError" message="NoMethodError: undefined method `informe' for #&lt;Evaluacion:0x007f9136f128d0&gt;...">
-NoMethodError: undefined method `informe' for #&lt;Evaluacion:0x007f9136f128d0&gt;
-    test/controllers/evaluacions_controller_test.rb:38:in `block in &lt;class:EvaluacionsControllerTest&gt;' (NoMethodError)
-/home/yiyo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activemodel-4.1.6/lib/active_model/attribute_methods.rb:435    </error>
+  <testcase name="test_should_update_evaluacion" time="0.010986315" assertions="0">
+    <error type="ActionController::UrlGenerationError" message="ActionController::UrlGenerationError: No route matches {:action=&gt;&quot;show&quot;, :controller=&gt;&quot;evaluacions&quot;, :id=&gt;nil} missing required keys: [:id]...">
+ActionController::UrlGenerationError: No route matches {:action=&gt;"show", :controller=&gt;"evaluacions", :id=&gt;nil} missing required keys: [:id]
+    test/controllers/evaluacions_controller_test.rb:51:in `block in &lt;class:EvaluacionsControllerTest&gt;' (ActionController::UrlGenerationError)
+/home/gustavo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:192    </error>
   </testcase>
 </testsuite>

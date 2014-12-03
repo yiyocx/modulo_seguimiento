@@ -4,6 +4,8 @@ class ProyectosController < ApplicationController
                                       :becarios_informe_final,
                                       :informes_por_convocatoria,
                                       :actualizar_informes]
+  before_filter :is_colciencias, only: [:listar_evaluadores]
+  before_filter :is_becario, only: [:informes_por_convocatoria]
 
   # GET /proyectos
   # GET /proyectos.json
@@ -95,6 +97,22 @@ class ProyectosController < ApplicationController
   end
 
   private
+
+  def is_colciencias
+    if current_user.role.eql? 'evaluador'
+      redirect_to evaluador_path(current_user.evaluador.id), notice: 'No tiene permiso para acceder a esta vista' unless current_user.role.eql? 'colciencias'
+    elsif current_user.role.eql? 'becario'
+      redirect_to becario_path(current_user.becario.id), notice: 'No tiene permiso para acceder a esta vista' unless current_user.role.eql? 'colciencias'
+    end
+  end
+
+  def is_becario
+    if current_user.role.eql? 'evaluador'
+      redirect_to evaluador_path(current_user.evaluador.id), notice: 'No tiene permiso para acceder a esta vista' unless current_user.role.eql? 'becario'
+    elsif current_user.role.eql? 'colciencias'
+      redirect_to usuario_col_path(current_user.usuario_col.id), notice: 'No tiene permiso para acceder a esta vista' unless current_user.role.eql? 'becario'
+    end
+  end
 
   # Use callbacks to share common setup or constraints between actions.
   def set_proyecto

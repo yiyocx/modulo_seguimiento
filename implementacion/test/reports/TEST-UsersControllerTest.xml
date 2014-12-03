@@ -1,50 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="UsersControllerTest" tests="7" time="0.108928832" failures="0" errors="5" skipped="0" assertions="5" timestamp="2014-11-05T16:59:38-05:00">
-  <testcase name="test_should_create_user" time="0.033183459" assertions="0">
-    <error type="ActionView::Template::Error" message="ActionView::Template::Error: couldn't find file 'jquery.ui.core'...">
-ActionView::Template::Error: couldn't find file 'jquery.ui.core'
-  (in /home/yiyo/dev/modulo_seguimiento/implementacion/app/assets/stylesheets/application.css:16)
-    app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___4473830424599349827_70130814648260'
-    app/controllers/users_controller.rb:41:in `block (2 levels) in create'
-    app/controllers/users_controller.rb:36:in `create'
-    test/controllers/users_controller_test.rb:21:in `block (2 levels) in &lt;class:UsersControllerTest&gt;'
-    test/controllers/users_controller_test.rb:20:in `block in &lt;class:UsersControllerTest&gt;' (ActionView::Template::Error)
-/home/yiyo/dev/modulo_seguimiento/implementacion/test/controllers/users_controller_test.rb:20    </error>
+<testsuite name="UsersControllerTest" tests="6" time="0.068927962" failures="5" errors="1" skipped="0" assertions="5" timestamp="2014-12-02T21:58:28-05:00">
+  <testcase name="test_should_destroy_user" time="0.058099561" assertions="1">
+    <failure type="Minitest::Assertion" message="&quot;User.count&quot; didn't change by -1....">
+"User.count" didn't change by -1.
+Expected: 3
+  Actual: 4 (Minitest::Assertion)
+/home/gustavo/repos/rails/modulo_seguimiento/implementacion/test/controllers/users_controller_test.rb:39    </failure>
   </testcase>
-  <testcase name="test_should_destroy_user" time="0.011263692" assertions="3">
+  <testcase name="test_should_get_edit" time="0.00820844" assertions="1">
+    <failure type="Minitest::Assertion" message="Expected response to be a &lt;success&gt;, but was &lt;302&gt;">
+Expected response to be a &lt;success&gt;, but was &lt;302&gt; (Minitest::Assertion)
+/home/gustavo/repos/rails/modulo_seguimiento/implementacion/test/controllers/users_controller_test.rb:27    </failure>
   </testcase>
-  <testcase name="test_should_get_edit" time="0.021525126" assertions="0">
-    <error type="ActionView::Template::Error" message="ActionView::Template::Error: couldn't find file 'jquery.ui.core'...">
-ActionView::Template::Error: couldn't find file 'jquery.ui.core'
-  (in /home/yiyo/dev/modulo_seguimiento/implementacion/app/assets/stylesheets/application.css:16)
-    app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___4473830424599349827_70130814648260'
-    test/controllers/users_controller_test.rb:33:in `block in &lt;class:UsersControllerTest&gt;' (ActionView::Template::Error)
-/home/yiyo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sprockets-2.11.0/lib/sprockets/context.rb:106    </error>
+  <testcase name="test_should_get_index" time="0.005992803" assertions="1">
+    <failure type="Minitest::Assertion" message="Expected response to be a &lt;success&gt;, but was &lt;302&gt;">
+Expected response to be a &lt;success&gt;, but was &lt;302&gt; (Minitest::Assertion)
+/home/gustavo/repos/rails/modulo_seguimiento/implementacion/test/controllers/users_controller_test.rb:11    </failure>
   </testcase>
-  <testcase name="test_should_get_index" time="0.019037675" assertions="0">
-    <error type="ActionView::Template::Error" message="ActionView::Template::Error: couldn't find file 'jquery.ui.core'...">
-ActionView::Template::Error: couldn't find file 'jquery.ui.core'
-  (in /home/yiyo/dev/modulo_seguimiento/implementacion/app/assets/stylesheets/application.css:16)
-    app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___4473830424599349827_70130814648260'
-    test/controllers/users_controller_test.rb:9:in `block in &lt;class:UsersControllerTest&gt;' (ActionView::Template::Error)
-/home/yiyo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sprockets-2.11.0/lib/sprockets/context.rb:106    </error>
+  <testcase name="test_should_get_new" time="0.007149027" assertions="1">
+    <failure type="Minitest::Assertion" message="Expected response to be a &lt;success&gt;, but was &lt;302&gt;">
+Expected response to be a &lt;success&gt;, but was &lt;302&gt; (Minitest::Assertion)
+/home/gustavo/repos/rails/modulo_seguimiento/implementacion/test/controllers/users_controller_test.rb:17    </failure>
   </testcase>
-  <testcase name="test_should_get_new" time="0.013432316" assertions="0">
-    <error type="ActionView::Template::Error" message="ActionView::Template::Error: couldn't find file 'jquery.ui.core'...">
-ActionView::Template::Error: couldn't find file 'jquery.ui.core'
-  (in /home/yiyo/dev/modulo_seguimiento/implementacion/app/assets/stylesheets/application.css:16)
-    app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___4473830424599349827_70130814648260'
-    test/controllers/users_controller_test.rb:15:in `block in &lt;class:UsersControllerTest&gt;' (ActionView::Template::Error)
-/home/yiyo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sprockets-2.11.0/lib/sprockets/context.rb:106    </error>
+  <testcase name="test_should_show_user" time="0.0091916" assertions="1">
+    <failure type="Minitest::Assertion" message="Expected response to be a &lt;success&gt;, but was &lt;302&gt;">
+Expected response to be a &lt;success&gt;, but was &lt;302&gt; (Minitest::Assertion)
+/home/gustavo/repos/rails/modulo_seguimiento/implementacion/test/controllers/users_controller_test.rb:22    </failure>
   </testcase>
-  <testcase name="test_should_show_user" time="0.019763224" assertions="0">
-    <error type="ActionView::Template::Error" message="ActionView::Template::Error: couldn't find file 'jquery.ui.core'...">
-ActionView::Template::Error: couldn't find file 'jquery.ui.core'
-  (in /home/yiyo/dev/modulo_seguimiento/implementacion/app/assets/stylesheets/application.css:16)
-    app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___4473830424599349827_70130814648260'
-    test/controllers/users_controller_test.rb:28:in `block in &lt;class:UsersControllerTest&gt;' (ActionView::Template::Error)
-/home/yiyo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sprockets-2.11.0/lib/sprockets/context.rb:106    </error>
-  </testcase>
-  <testcase name="test_should_update_user" time="0.00493918" assertions="2">
+  <testcase name="test_should_update_user" time="0.006656713" assertions="0">
+    <error type="ActionController::UrlGenerationError" message="ActionController::UrlGenerationError: No route matches {:action=&gt;&quot;show&quot;, :controller=&gt;&quot;users&quot;, :id=&gt;nil} missing required keys: [:id]...">
+ActionController::UrlGenerationError: No route matches {:action=&gt;"show", :controller=&gt;"users", :id=&gt;nil} missing required keys: [:id]
+    test/controllers/users_controller_test.rb:35:in `block in &lt;class:UsersControllerTest&gt;' (ActionController::UrlGenerationError)
+/home/gustavo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:192    </error>
   </testcase>
 </testsuite>

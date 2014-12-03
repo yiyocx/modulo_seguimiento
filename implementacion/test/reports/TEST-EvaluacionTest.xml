@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="EvaluacionTest" tests="3" time="0.049326366" failures="0" errors="0" skipped="0" assertions="5" timestamp="2014-11-05T16:59:38-05:00">
-  <testcase name="test_Ingreso_de_una_nueva_evaluacion" time="0.003597703" assertions="1">
+<testsuite name="EvaluacionTest" tests="2" time="0.077685923" failures="0" errors="0" skipped="0" assertions="3" timestamp="2014-12-02T21:58:29-05:00">
+  <testcase name="test_Ingreso_de_una_nueva_evaluacion" time="0.005906269" assertions="1">
   </testcase>
-  <testcase name="test_Los_datos_de_prueba_estan_registrados" time="0.002360743" assertions="2">
-  </testcase>
-  <testcase name="test_la_evaluacion_del_50%_pertenece_a_un_evaluador_con_area_de_conocimiento_en_meserismo" time="0.002329776" assertions="2">
+  <testcase name="test_Los_datos_de_prueba_estan_registrados" time="0.004990579" assertions="2">
   </testcase>
 </testsuite>

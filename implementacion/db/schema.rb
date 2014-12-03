@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141201171219) do
+ActiveRecord::Schema.define(version: 20141203015518) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -197,18 +197,23 @@ ActiveRecord::Schema.define(version: 20141201171219) do
     t.string   "nombre"
     t.integer  "becario_id"
     t.integer  "evaluador_id"
+    t.integer  "usuario_col_id"
   end
 
   add_index "users", ["becario_id"], name: "index_users_on_becario_id", using: :btree
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["evaluador_id"], name: "index_users_on_evaluador_id", using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  add_index "users", ["usuario_col_id"], name: "index_users_on_usuario_col_id", using: :btree
 
   create_table "usuario_cols", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "nombre"
+    t.integer  "user_id"
   end
+
+  add_index "usuario_cols", ["user_id"], name: "index_usuario_cols_on_user_id", using: :btree
 
   create_table "visita_tecnicas", force: true do |t|
     t.text     "observacion"

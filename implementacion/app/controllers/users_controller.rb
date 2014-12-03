@@ -105,9 +105,10 @@ class UsersController < ApplicationController
   def crear_usuario_colciencias
     @user = User.new(user_params)
     @user.role = 3
-    @generated_password = Devise.friendly_token.first(8)
-    @user.encrypted_password =  @generated_password
-    @user.send_reset_password_instructions
+    @user.nombre = @user.usuario_col.nombre
+    # @generated_password = Devise.friendly_token.first(8)
+    # @user.encrypted_password =  @generated_password
+    # @user.send_reset_password_instructions
 
     respond_to do |format|
       if @user.save
@@ -124,7 +125,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     @user.role = 4
     @user.nombre = @user.evaluador.nombre
-    @generated_password = Devise.friendly_token.first(8)
+    # @generated_password = Devise.friendly_token.first(8)
     # @user.encrypted_password =  @generated_password
     # @user.send_reset_password_instructions
 
@@ -161,6 +162,8 @@ class UsersController < ApplicationController
                                   :direccion_residencial, :ciudad,
                                   :direccion_profesional],
                                  evaluador_attributes:
-                                 [:area_conocimiento, :fecha_inicial, :fecha_final, :nombre])
+                                 [:area_conocimiento, :fecha_inicial, :fecha_final, :nombre],
+                                  usuario_col_attributes:
+                                  [:nombre])
   end
 end

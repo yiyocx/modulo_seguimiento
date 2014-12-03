@@ -19,6 +19,7 @@
 #  nombre                 :string(255)
 #  becario_id             :integer
 #  evaluador_id           :integer
+#  usuario_col_id         :integer
 #
 # Indexes
 #
@@ -26,6 +27,7 @@
 #  index_users_on_email                 (email) UNIQUE
 #  index_users_on_evaluador_id          (evaluador_id)
 #  index_users_on_reset_password_token  (reset_password_token) UNIQUE
+#  index_users_on_usuario_col_id        (usuario_col_id)
 #
 
 # Clase que representa a un usuario
@@ -39,6 +41,8 @@ class User < ActiveRecord::Base
 
   has_one :becario
   has_one :evaluador
+  has_one :usuario_col
   accepts_nested_attributes_for :becario
   accepts_nested_attributes_for :evaluador
+  accepts_nested_attributes_for :usuario_col
 end

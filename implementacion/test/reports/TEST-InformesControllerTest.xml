@@ -1,41 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="InformesControllerTest" tests="7" time="0.112597511" failures="0" errors="4" skipped="0" assertions="8" timestamp="2014-11-05T16:59:37-05:00">
-  <testcase name="test_should_create_informe" time="0.020196485" assertions="3">
+<testsuite name="InformesControllerTest" tests="7" time="0.096800992" failures="6" errors="1" skipped="0" assertions="6" timestamp="2014-12-02T21:58:28-05:00">
+  <testcase name="test_should_create_informe" time="0.029899958" assertions="1">
+    <failure type="Minitest::Assertion" message="&quot;Informe.count&quot; didn't change by 1....">
+"Informe.count" didn't change by 1.
+Expected: 3
+  Actual: 2 (Minitest::Assertion)
+/home/gustavo/repos/rails/modulo_seguimiento/implementacion/test/controllers/informes_controller_test.rb:22    </failure>
   </testcase>
-  <testcase name="test_should_destroy_informe" time="0.007423153" assertions="3">
+  <testcase name="test_should_destroy_informe" time="0.007986984" assertions="1">
+    <failure type="Minitest::Assertion" message="&quot;Informe.count&quot; didn't change by -1....">
+"Informe.count" didn't change by -1.
+Expected: 1
+  Actual: 2 (Minitest::Assertion)
+/home/gustavo/repos/rails/modulo_seguimiento/implementacion/test/controllers/informes_controller_test.rb:53    </failure>
   </testcase>
-  <testcase name="test_should_get_edit" time="0.027802178" assertions="0">
-    <error type="ActionView::Template::Error" message="ActionView::Template::Error: couldn't find file 'jquery.ui.core'...">
-ActionView::Template::Error: couldn't find file 'jquery.ui.core'
-  (in /home/yiyo/dev/modulo_seguimiento/implementacion/app/assets/stylesheets/application.css:16)
-    app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___4473830424599349827_70130814648260'
-    test/controllers/informes_controller_test.rb:34:in `block in &lt;class:InformesControllerTest&gt;' (ActionView::Template::Error)
-/home/yiyo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sprockets-2.11.0/lib/sprockets/context.rb:106    </error>
+  <testcase name="test_should_get_edit" time="0.005962976" assertions="1">
+    <failure type="Minitest::Assertion" message="Expected response to be a &lt;success&gt;, but was &lt;302&gt;">
+Expected response to be a &lt;success&gt;, but was &lt;302&gt; (Minitest::Assertion)
+/home/gustavo/repos/rails/modulo_seguimiento/implementacion/test/controllers/informes_controller_test.rb:40    </failure>
   </testcase>
-  <testcase name="test_should_get_index" time="0.018491719" assertions="0">
-    <error type="ActionView::Template::Error" message="ActionView::Template::Error: couldn't find file 'jquery.ui.core'...">
-ActionView::Template::Error: couldn't find file 'jquery.ui.core'
-  (in /home/yiyo/dev/modulo_seguimiento/implementacion/app/assets/stylesheets/application.css:16)
-    app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___4473830424599349827_70130814648260'
-    test/controllers/informes_controller_test.rb:10:in `block in &lt;class:InformesControllerTest&gt;' (ActionView::Template::Error)
-/home/yiyo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sprockets-2.11.0/lib/sprockets/context.rb:106    </error>
+  <testcase name="test_should_get_index" time="0.007041959" assertions="1">
+    <failure type="Minitest::Assertion" message="Expected response to be a &lt;success&gt;, but was &lt;302&gt;">
+Expected response to be a &lt;success&gt;, but was &lt;302&gt; (Minitest::Assertion)
+/home/gustavo/repos/rails/modulo_seguimiento/implementacion/test/controllers/informes_controller_test.rb:12    </failure>
   </testcase>
-  <testcase name="test_should_get_new" time="0.018857077" assertions="0">
-    <error type="ActionView::Template::Error" message="ActionView::Template::Error: couldn't find file 'jquery.ui.core'...">
-ActionView::Template::Error: couldn't find file 'jquery.ui.core'
-  (in /home/yiyo/dev/modulo_seguimiento/implementacion/app/assets/stylesheets/application.css:16)
-    app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___4473830424599349827_70130814648260'
-    test/controllers/informes_controller_test.rb:16:in `block in &lt;class:InformesControllerTest&gt;' (ActionView::Template::Error)
-/home/yiyo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sprockets-2.11.0/lib/sprockets/context.rb:106    </error>
+  <testcase name="test_should_get_new" time="0.007199866" assertions="1">
+    <failure type="Minitest::Assertion" message="Expected response to be a &lt;success&gt;, but was &lt;302&gt;">
+Expected response to be a &lt;success&gt;, but was &lt;302&gt; (Minitest::Assertion)
+/home/gustavo/repos/rails/modulo_seguimiento/implementacion/test/controllers/informes_controller_test.rb:18    </failure>
   </testcase>
-  <testcase name="test_should_show_informe" time="0.018532873" assertions="0">
-    <error type="ActionView::Template::Error" message="ActionView::Template::Error: couldn't find file 'jquery.ui.core'...">
-ActionView::Template::Error: couldn't find file 'jquery.ui.core'
-  (in /home/yiyo/dev/modulo_seguimiento/implementacion/app/assets/stylesheets/application.css:16)
-    app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___4473830424599349827_70130814648260'
-    test/controllers/informes_controller_test.rb:29:in `block in &lt;class:InformesControllerTest&gt;' (ActionView::Template::Error)
-/home/yiyo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sprockets-2.11.0/lib/sprockets/context.rb:106    </error>
+  <testcase name="test_should_show_informe" time="0.005735156" assertions="1">
+    <failure type="Minitest::Assertion" message="Expected response to be a &lt;success&gt;, but was &lt;302&gt;">
+Expected response to be a &lt;success&gt;, but was &lt;302&gt; (Minitest::Assertion)
+/home/gustavo/repos/rails/modulo_seguimiento/implementacion/test/controllers/informes_controller_test.rb:35    </failure>
   </testcase>
-  <testcase name="test_should_update_informe" time="0.00568552" assertions="2">
+  <testcase name="test_should_update_informe" time="0.006094005" assertions="0">
+    <error type="ActionController::UrlGenerationError" message="ActionController::UrlGenerationError: No route matches {:action=&gt;&quot;show&quot;, :controller=&gt;&quot;informes&quot;, :id=&gt;nil} missing required keys: [:id]...">
+ActionController::UrlGenerationError: No route matches {:action=&gt;"show", :controller=&gt;"informes", :id=&gt;nil} missing required keys: [:id]
+    test/controllers/informes_controller_test.rb:49:in `block in &lt;class:InformesControllerTest&gt;' (ActionController::UrlGenerationError)
+/home/gustavo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:192    </error>
   </testcase>
 </testsuite>

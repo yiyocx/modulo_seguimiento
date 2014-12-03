@@ -18,7 +18,7 @@
             <td><%= informe.es_final %></td>
             <td><%= informe.fecha %></td>
             <td><%= informe.tipo %></td>
-            <td><%= link_to 'Evaluar', evaluar_informe_informe_path %></td>
+            <td><%= link_to 'Evaluar', evaluar_informe_informe_path(informe.id) %></td>
       <% end %>
     </tbody>
   </table>

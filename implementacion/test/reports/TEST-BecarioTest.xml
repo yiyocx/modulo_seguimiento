@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="BecarioTest" tests="2" time="0.035486716" failures="0" errors="0" skipped="0" assertions="3" timestamp="2014-11-05T16:59:37-05:00">
-  <testcase name="test_Ingreso_de_un_nuevo_becario" time="0.211135629" assertions="1">
+<testsuite name="BecarioTest" tests="2" time="0.087355166" failures="0" errors="0" skipped="0" assertions="3" timestamp="2014-12-02T21:58:28-05:00">
+  <testcase name="test_Ingreso_de_un_nuevo_becario" time="0.054233916" assertions="1">
   </testcase>
-  <testcase name="test_Los_datos_de_prueba_estan_registrados" time="0.00391663" assertions="2">
+  <testcase name="test_Los_datos_de_prueba_estan_registrados" time="0.003451066" assertions="2">
   </testcase>
 </testsuite>

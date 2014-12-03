@@ -1,41 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="VisitaTecnicasControllerTest" tests="7" time="0.140275219" failures="0" errors="4" skipped="0" assertions="8" timestamp="2014-11-05T16:59:37-05:00">
-  <testcase name="test_should_create_visita_tecnica" time="0.013082309" assertions="3">
+<testsuite name="VisitaTecnicasControllerTest" tests="7" time="0.078782992" failures="6" errors="1" skipped="0" assertions="6" timestamp="2014-12-02T21:58:28-05:00">
+  <testcase name="test_should_create_visita_tecnica" time="0.023424141" assertions="1">
+    <failure type="Minitest::Assertion" message="&quot;VisitaTecnica.count&quot; didn't change by 1....">
+"VisitaTecnica.count" didn't change by 1.
+Expected: 3
+  Actual: 2 (Minitest::Assertion)
+/home/gustavo/repos/rails/modulo_seguimiento/implementacion/test/controllers/visita_tecnicas_controller_test.rb:21    </failure>
   </testcase>
-  <testcase name="test_should_destroy_visita_tecnica" time="0.00838099" assertions="3">
+  <testcase name="test_should_destroy_visita_tecnica" time="0.007795823" assertions="1">
+    <failure type="Minitest::Assertion" message="&quot;VisitaTecnica.count&quot; didn't change by -1....">
+"VisitaTecnica.count" didn't change by -1.
+Expected: 1
+  Actual: 2 (Minitest::Assertion)
+/home/gustavo/repos/rails/modulo_seguimiento/implementacion/test/controllers/visita_tecnicas_controller_test.rb:51    </failure>
   </testcase>
-  <testcase name="test_should_get_edit" time="0.022662634" assertions="0">
-    <error type="ActionView::Template::Error" message="ActionView::Template::Error: couldn't find file 'jquery.ui.core'...">
-ActionView::Template::Error: couldn't find file 'jquery.ui.core'
-  (in /home/yiyo/dev/modulo_seguimiento/implementacion/app/assets/stylesheets/application.css:16)
-    app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___4473830424599349827_70130814648260'
-    test/controllers/visita_tecnicas_controller_test.rb:33:in `block in &lt;class:VisitaTecnicasControllerTest&gt;' (ActionView::Template::Error)
-/home/yiyo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sprockets-2.11.0/lib/sprockets/context.rb:106    </error>
+  <testcase name="test_should_get_edit" time="0.006010404" assertions="1">
+    <failure type="Minitest::Assertion" message="Expected response to be a &lt;success&gt;, but was &lt;302&gt;">
+Expected response to be a &lt;success&gt;, but was &lt;302&gt; (Minitest::Assertion)
+/home/gustavo/repos/rails/modulo_seguimiento/implementacion/test/controllers/visita_tecnicas_controller_test.rb:38    </failure>
   </testcase>
-  <testcase name="test_should_get_index" time="0.017963313" assertions="0">
-    <error type="ActionView::Template::Error" message="ActionView::Template::Error: couldn't find file 'jquery.ui.core'...">
-ActionView::Template::Error: couldn't find file 'jquery.ui.core'
-  (in /home/yiyo/dev/modulo_seguimiento/implementacion/app/assets/stylesheets/application.css:16)
-    app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___4473830424599349827_70130814648260'
-    test/controllers/visita_tecnicas_controller_test.rb:9:in `block in &lt;class:VisitaTecnicasControllerTest&gt;' (ActionView::Template::Error)
-/home/yiyo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sprockets-2.11.0/lib/sprockets/context.rb:106    </error>
+  <testcase name="test_should_get_index" time="0.007827601" assertions="1">
+    <failure type="Minitest::Assertion" message="Expected response to be a &lt;success&gt;, but was &lt;302&gt;">
+Expected response to be a &lt;success&gt;, but was &lt;302&gt; (Minitest::Assertion)
+/home/gustavo/repos/rails/modulo_seguimiento/implementacion/test/controllers/visita_tecnicas_controller_test.rb:11    </failure>
   </testcase>
-  <testcase name="test_should_get_new" time="0.0186645" assertions="0">
-    <error type="ActionView::Template::Error" message="ActionView::Template::Error: couldn't find file 'jquery.ui.core'...">
-ActionView::Template::Error: couldn't find file 'jquery.ui.core'
-  (in /home/yiyo/dev/modulo_seguimiento/implementacion/app/assets/stylesheets/application.css:16)
-    app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___4473830424599349827_70130814648260'
-    test/controllers/visita_tecnicas_controller_test.rb:15:in `block in &lt;class:VisitaTecnicasControllerTest&gt;' (ActionView::Template::Error)
-/home/yiyo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sprockets-2.11.0/lib/sprockets/context.rb:106    </error>
+  <testcase name="test_should_get_new" time="0.009272264" assertions="1">
+    <failure type="Minitest::Assertion" message="Expected response to be a &lt;success&gt;, but was &lt;302&gt;">
+Expected response to be a &lt;success&gt;, but was &lt;302&gt; (Minitest::Assertion)
+/home/gustavo/repos/rails/modulo_seguimiento/implementacion/test/controllers/visita_tecnicas_controller_test.rb:17    </failure>
   </testcase>
-  <testcase name="test_should_show_visita_tecnica" time="0.049740907" assertions="0">
-    <error type="ActionView::Template::Error" message="ActionView::Template::Error: couldn't find file 'jquery.ui.core'...">
-ActionView::Template::Error: couldn't find file 'jquery.ui.core'
-  (in /home/yiyo/dev/modulo_seguimiento/implementacion/app/assets/stylesheets/application.css:16)
-    app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___4473830424599349827_70130814648260'
-    test/controllers/visita_tecnicas_controller_test.rb:28:in `block in &lt;class:VisitaTecnicasControllerTest&gt;' (ActionView::Template::Error)
-/home/yiyo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sprockets-2.11.0/lib/sprockets/context.rb:106    </error>
+  <testcase name="test_should_show_visita_tecnica" time="0.008138051" assertions="1">
+    <failure type="Minitest::Assertion" message="Expected response to be a &lt;success&gt;, but was &lt;302&gt;">
+Expected response to be a &lt;success&gt;, but was &lt;302&gt; (Minitest::Assertion)
+/home/gustavo/repos/rails/modulo_seguimiento/implementacion/test/controllers/visita_tecnicas_controller_test.rb:33    </failure>
   </testcase>
-  <testcase name="test_should_update_visita_tecnica" time="0.004333504" assertions="2">
+  <testcase name="test_should_update_visita_tecnica" time="0.009058621" assertions="0">
+    <error type="ActionController::UrlGenerationError" message="ActionController::UrlGenerationError: No route matches {:action=&gt;&quot;show&quot;, :controller=&gt;&quot;visita_tecnicas&quot;, :id=&gt;nil} missing required keys: [:id]...">
+ActionController::UrlGenerationError: No route matches {:action=&gt;"show", :controller=&gt;"visita_tecnicas", :id=&gt;nil} missing required keys: [:id]
+    test/controllers/visita_tecnicas_controller_test.rb:47:in `block in &lt;class:VisitaTecnicasControllerTest&gt;' (ActionController::UrlGenerationError)
+/home/gustavo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:192    </error>
   </testcase>
 </testsuite>

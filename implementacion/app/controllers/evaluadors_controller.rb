@@ -4,6 +4,8 @@ class EvaluadorsController < ApplicationController
                 only: [:show, :edit, :listar_informes_evaluador,
                        :listar_propuestas_asignadas]
 
+  before_filter :is_evaluador, only: [:listar_propuestas_asignadas]
+
   # GET /evaluadors
   # GET /evaluadors.json
   def index
@@ -36,6 +38,14 @@ class EvaluadorsController < ApplicationController
   end
 
   private
+
+  def is_evaluador
+    if current_user.role.eql? 'becario'
+      redirect_to becario_path(current_user.becario.id), notice: 'No tiene permiso para acceder a esta vista' unless current_user.role.eql? 'evaluador'
+    elsif current_user.role.eql? 'colciencias'
+      redirect_to usuario_col_path(current_user.usuario_col.id), notice: 'No tiene permiso para acceder a esta vista' unless current_user.role.eql? 'evaluador'
+    end
+  end
 
   # Use callbacks to share common setup or constraints between actions.
   def set_evaluador
