@@ -33,7 +33,7 @@
   <dd><%= @becario.fecha_nacimiento %></dd>
 
   <dt>Departamento Nacimiento:</dt>
-  <dd><%= @becario.departamento_nacimiento %></dd>
+  <dd><%= @becario.try(:departamento).try(:nombre) %></dd>
 
   <dt>Género:</dt>
   <dd><%= @becario.genero %></dd>
